@@ -1,0 +1,32 @@
+name: Deploy to nonk.dev
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install trunk
+        run: cargo install trunk
+      - name: Build
+        run: trunk build
+      - name: Copy the files
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          source: dist
+          rm: true
+          strip_components: 1
+          target: ${{ secrets.WEBSITE_PATH }}/dist
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}

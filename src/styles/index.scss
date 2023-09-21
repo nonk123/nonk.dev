@@ -1,0 +1,126 @@
+$background-primary: #1E1E28;
+$background-secondary: #3C3C46;
+
+$text-color: #F2F2F2;
+$accent-color: #2ECC40;
+
+$nav-size: max(300px, 20vw);
+
+* {
+    font-family: Helvetica;
+}
+
+body, div#root {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: $background-primary;
+}
+
+nav {
+    position: fixed;
+
+    width: $nav-size; /* TODO: support mobile */
+    height: 100vh;
+
+    background: $background-secondary;
+
+    overflow: hidden;
+}
+
+main {
+    width: calc(100vw - $nav-size);
+    margin-left: $nav-size;
+    overflow-y: auto;
+}
+
+nav > div {
+	width: 100%;
+    display: block;
+	padding: 0.5em 1em;
+    box-sizing: border-box;
+}
+
+img#logo {
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+    padding: 1em;
+}
+
+h1, h2, p, span {
+    color: $text-color;
+    text-decoration-color: $text-color;
+}
+
+a {
+    color: $accent-color;
+    text-decoration-color: $accent-color;
+}
+
+a.link {
+    text-decoration: none;
+
+    > span {
+        color: $text-color;
+        text-decoration: underline;
+        text-decoration-color: $text-color;
+        vertical-align: middle;
+    }
+}
+
+i.icon {
+    color: $text-color;
+    font-size: 1.8em;
+}
+
+div#links {
+    width: 100%;
+    text-align: center;
+
+    > a {
+        display: block;
+    }
+}
+
+article.project {
+    display: grid;
+
+    grid-template-areas:
+	    "title . thumb"
+	    "desc  . thumb"
+	    ".     . thumb";
+    grid-template-columns: 600px 1em auto;
+    grid-template-rows: min-content auto auto;
+
+    width: 100%;
+
+	padding: 1em;
+    box-sizing: border-box;
+
+    > img {
+	    grid-area: thumb;
+	    border-radius: 10px;
+        width: auto;
+        height: 200px;
+    }
+
+    > span {
+	    grid-area: title;
+
+        > h1 {
+            display: inline;
+        }
+    }
+
+    > p {
+	    grid-area: desc;
+    }
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
