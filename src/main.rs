@@ -28,21 +28,23 @@ fn init(_: Url, _: &mut impl Orders<Msg>) -> Model {
         repo: "nonk.dev".to_string(),
         thumbnail: "/static/logo.png".to_string(),
         title: "This Website".to_string(),
-        description: r#"Not much to say about it except that it's made in Rust."#.to_string(),
+        description:
+            r#"Not much to say about it except that it's made in Rust. It looks great though."#
+                .to_string(),
     };
 
     let schwungus = Project {
         owner: RepoOwner::SchwungusSoftware,
         repo: "schwungus.software".to_string(),
-        thumbnail: "https://schwungus.software/assets/logo.png".to_string(),
+        thumbnail: "/static/schwung.png".to_string(),
         title: "Schwungus Software Homepage".to_string(),
-        description: r#"Comes with a landing page and a bunch of documentation!"#.to_string(),
+        description: r#"Comes with a landing page and a whole documentation section!"#.to_string(),
     };
 
     let catspeak_compiler = Project {
         owner: RepoOwner::SchwungusSoftware,
         repo: "catspeak-compiler".to_string(),
-        thumbnail: "/static/catspeak-compiler.png".to_string(),
+        thumbnail: "https://github.com/katsaii/catspeak-lang/raw/main/catspeak-logo-dark.svg".to_string(),
         title: "Catspeak Compiler".to_string(),
         description: r#"A work-in-progress compiler for the Catspeak modding language. Compiles to Catspeak IR, which can be loaded into your project to obfuscate production code and skip directly to codegen."#.to_string(),
     };
@@ -58,18 +60,21 @@ fn view(model: &Model) -> impl IntoNodes<Msg> {
     let projects: Vec<_> = model.projects.iter().map(project).collect();
 
     vec![
+        div![C!["background"]],
         nav![
             div![
                 img![
                     attrs! {
                         At::Id => "logo",
                         At::Src => "/static/logo.png",
+                        At::Alt => "nonk's meh face",
                     }
                 ],
             ],
             div![
                 id!("links"),
                 link("brands", "github", "nonk123", "https://github.com/nonk123"),
+                link("brands", "discord", "adhfjlkadshfljk", "https://discord.com/users/268677450144153611"),
                 link("regular", "envelope", "me@nonk.dev", "mailto:me@nonk.dev"),
             ],
             div![
@@ -79,26 +84,37 @@ fn view(model: &Model) -> impl IntoNodes<Msg> {
                 p!["By the way, I am part of ", a![attrs! { At::Href => "https://schwungus.software" }, "Schwungus Software"], "."],
             ],
         ],
-        main![projects],
+        main![
+            h1!["My Projects"],
+            div![
+                projects
+            ],
+        ],
     ]
 }
 
 fn project(project: &Project) -> Node<Msg> {
-    let repo_link = project.repo_link();
-
     article![
         C!["project"],
-        span![
-            a![
-                C!["link"],
-                attrs! { At::Href => repo_link },
-                icon("brands", "github")
+        div![
+            C!["description"],
+            span![
+                a![
+                    C!["link"],
+                    attrs! { At::Href => project.repo_link() },
+                    icon("brands", "github")
+                ],
+                h2![&project.title]
             ],
-            " ",
-            h1![&project.title]
+            p![&project.description],
         ],
-        p![&project.description],
-        img![attrs! { At::Src => project.thumbnail }],
+        div![
+            C!["thumbnail"],
+            img![attrs! {
+                At::Src => project.thumbnail,
+                "loading" => "lazy",
+            }]
+        ],
     ]
 }
 
