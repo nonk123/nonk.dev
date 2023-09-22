@@ -3,7 +3,6 @@ use seed::{prelude::*, *};
 
 use crate::{
     data::{Project, RepoOwner},
-    utils::icon_link,
     Model, Msg,
 };
 
@@ -63,7 +62,7 @@ impl Tab {
         }
     }
 
-    pub fn view(&self, model: &Model) -> Vec<Node<Msg>> {
+    pub fn view(&self, _: &Model) -> Vec<Node<Msg>> {
         match self {
             Self::Projects => {
                 let projects: Vec<_> = PROJECTS.iter().map(project).collect();
@@ -79,20 +78,22 @@ impl Tab {
 fn project(project: &Project) -> Node<Msg> {
     article![
         C!["project"],
-        div![
-            C!["description"],
-            span![
-                icon_link("brands", "github", &project.repo_link()),
-                h2![&project.title]
+        a![
+            attrs! {
+                At::Href => &project.repo_link(),
+            },
+            div![
+                C!["description"],
+                h2![&project.title],
+                p![&project.description],
             ],
-            p![&project.description],
-        ],
-        div![
-            C!["thumbnail"],
-            img![attrs! {
-                At::Src => project.thumbnail,
-                "loading" => "lazy",
-            }]
+            div![
+                C!["thumbnail"],
+                img![attrs! {
+                    At::Src => project.thumbnail,
+                    "loading" => "lazy",
+                }]
+            ]
         ],
     ]
 }

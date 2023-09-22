@@ -6,8 +6,6 @@ $accent-color: #2ECC40;
 
 $border-color: #111111;
 
-$angry-timer: 2s;
-
 * {
     font-family: Helvetica;
 }
@@ -34,8 +32,7 @@ div.background {
     height: 100vh;
 
     animation-name: background;
-    animation-delay: $angry-timer;
-    animation-duration: 2s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 
@@ -119,38 +116,6 @@ img#logo {
 
     box-sizing: border-box;
     padding: 1em;
-
-    animation-name: logo;
-    animation-delay: $angry-timer;
-    animation-duration: 0.5s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes logo {
-    0% {
-        left: 0;
-        top: 0;
-    }
-    20% {
-        left: 5px;
-        top: 10px;
-    }
-    40% {
-        left: 20px;
-        top: -8px;
-    }
-    60% {
-        left: -30px;
-        top: 18px;
-    }
-    80% {
-        left: 22px;
-        top: -12px;
-    }
-    100% {
-        left: -12px;
-        top: 30px;
-    }
 }
 
 h1, h2, p, span {
@@ -213,21 +178,13 @@ article.project {
 	padding: 1em;
     box-sizing: border-box;
 
+    > a {
+        text-decoration: none;
+    }
+
     div.description {
         display: block;
-
-        > span {
-            display: block;
-            text-align: center;
-
-            > a {
-                margin-right: 1ex;
-            }
-
-            > h2 {
-                display: inline;
-            }
-        }
+        text-align: center;
 
         > p {
             display: block;
