@@ -81,6 +81,7 @@ fn project(project: &Project) -> Node<Msg> {
         a![
             attrs! {
                 At::Href => &project.repo_link(),
+                At::Target => "_blank",
             },
             div![
                 C!["description"],
