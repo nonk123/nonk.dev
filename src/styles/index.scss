@@ -4,6 +4,8 @@ $background-secondary: #3C3C46;
 $text-color: #F2F2F2;
 $accent-color: #2ECC40;
 
+$border-color: #111111;
+
 $angry-timer: 2s;
 
 * {
@@ -50,6 +52,10 @@ div.background {
 }
 
 nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
     width: 20%;
     height: 100vh;
 
@@ -57,37 +63,51 @@ nav {
 
     > div {
 	    width: 100%;
-        display: block;
-	    padding: 0.5em 1em;
+	    padding: 0 1em;
         box-sizing: border-box;
     }
 }
 
-main {
-    $gap: 18px;
+div#container {
+    display: flex;
+    flex-direction: column;
 
     width: 60%;
+    height: 100vh;
+    margin-bottom: 1em;
 
-    overflow-y: auto;
-
-    > h1 {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 0;
-    }
-
-    > div {
-        width: 100%;
-
+    > div#tabs {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        gap: 3ex;
         justify-content: center;
-        gap: $gap;
 
-        padding: $gap;
         box-sizing: border-box;
 
+        margin-top: 1em;
+
+        > a {
+            color: $text-color;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.4em;
+
+            &.selected {
+                animation: select 0.6s forwards;
+            }
+        }
+    }
+
+    > main {
+        overflow-y: auto;
+    }
+
+    @keyframes select {
+        from {
+            color: $text-color;
+        }
+        to {
+            color: $accent-color;
+        }
     }
 }
 
@@ -161,20 +181,34 @@ i.icon {
 
 div#links {
     width: 100%;
-    text-align: center;
 
-    > a {
-        display: block;
-    }
+    display: flex;
+    justify-content: center;
+    gap: 1ex;
+}
+
+div#projects {
+    $gap: 18px;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $gap;
+
+    padding: $gap;
+    box-sizing: border-box;
 }
 
 article.project {
-    border: 1px solid $accent-color;
+    border: 1px solid $border-color;
     border-radius: 20px;
 
-    max-width: 500px;
+    width: 420px;
 
-    background: linear-gradient(30deg, $background-secondary, $background-primary);
+    background: linear-gradient(15deg, $background-secondary, $background-primary);
 
 	padding: 1em;
     box-sizing: border-box;
@@ -197,7 +231,7 @@ article.project {
 
         > p {
             display: block;
-            width: 70%;
+            width: 80%;
             text-align: center;
             margin: 0 auto;
         }

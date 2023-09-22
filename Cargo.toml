@@ -10,6 +10,7 @@ opt-level = "s"
 [dependencies]
 console_error_panic_hook = "0.1.7"
 console_log = { version = "1.0.0", features = ["color"] }
+enum-iterator = "1.4.1"
 eyre = "0.6.8"
 log = { version = "0.4.20", features = ["std"] }
 seed = { version = "0.10.0", features = ["routing"] }
