@@ -24,28 +24,17 @@ div#root {
     justify-content: space-evenly;
 }
 
-div.background {
+div#background {
     position: fixed;
     z-index: -1;
 
     width: 100vw;
     height: 100vh;
 
-    animation-name: background;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-
-    background: $background-primary;
-}
-
-@keyframes background {
-    from {
-        background: $background-primary;
-    }
-    to {
-        background: $background-secondary;
-    }
+    background-image: radial-gradient($background-secondary, transparent 4px);
+    background-color: $background-primary;
+    background-position: 0 0;
+    background-size: 4px 4px;
 }
 
 nav {
@@ -144,6 +133,12 @@ i.icon {
     font-size: 1.8em;
 }
 
+div#bio {
+    border-radius: 0  0 0 5px;
+    border-left: 1px solid $text-color;
+    border-bottom: 1px solid $text-color;
+}
+
 div#links {
     width: 100%;
 
@@ -168,17 +163,20 @@ div#projects {
 }
 
 article.project {
+    $roundness: 18px;
+
     border: 1px solid $border-color;
-    border-radius: 20px;
+    border-radius: $roundness;
 
     width: 420px;
-
-    background: linear-gradient(15deg, $background-secondary, $background-primary);
 
 	padding: 1em;
     box-sizing: border-box;
 
+    background: linear-gradient(to bottom, $accent-color, $accent-color $roundness, $background-secondary $roundness, $background-primary);
+
     > a {
+        background: transparent;
         text-decoration: none;
     }
 

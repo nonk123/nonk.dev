@@ -127,7 +127,7 @@ fn view(model: &Model) -> impl IntoNodes<Msg> {
         .collect();
 
     vec![
-        div![C!["background"]],
+        div![id!("background")],
         nav![
             div![img![
                 el_ref(&model.angry_face),
@@ -137,9 +137,11 @@ fn view(model: &Model) -> impl IntoNodes<Msg> {
                     At::Id => "logo",
                     At::Src => "/static/logo.png",
                     At::Alt => "nonk's meh face",
+                    At::Draggable => false,
                 }
             ],],
             div![
+                id!("bio"),
                 p!["Hi! I'm nonk."],
                 p!["I love exploring unconventional ideas and implementing them in Rust."],
                 p!["Feel free to check out my projects."],
