@@ -20,7 +20,7 @@ const PROJECTS: &[Project] = {
         repo: "schwungus.software",
         thumbnail: "/static/schwung.png",
         title: "Schwungus Software",
-        description: r#"I contributed to the landing page and self-hosted it."#,
+        description: r#"Contributions to shared projects and hosting the official website."#,
     };
 
     let catspeak_compiler = Project {
@@ -57,8 +57,8 @@ impl Tab {
 
     pub fn name(&self) -> &'static str {
         match self {
-            Self::Projects => "My Projects",
-            Self::Blog => "My Blog",
+            Self::Projects => "Projects",
+            Self::Blog => "Blog",
         }
     }
 

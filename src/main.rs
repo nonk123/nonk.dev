@@ -146,7 +146,7 @@ fn view(model: &Model) -> impl IntoNodes<Msg> {
                 p!["I love exploring unconventional ideas and implementing them in Rust."],
                 p!["Feel free to check out my projects."],
                 p![
-                    "By the way, I am part of ",
+                    "I am also part of ",
                     a![
                         attrs! {
                             At::Href => "https://schwungus.software",
@@ -165,7 +165,7 @@ fn view(model: &Model) -> impl IntoNodes<Msg> {
                     "discord",
                     "https://discord.com/users/268677450144153611"
                 ),
-                icon_link("regular", "envelope", "mailto:me@nonk.dev"),
+                icon_link("solid", "envelope", "mailto:me@nonk.dev"),
             ],
         ],
         div![
