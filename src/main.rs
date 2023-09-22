@@ -146,7 +146,10 @@ fn view(model: &Model) -> impl IntoNodes<Msg> {
                 p![
                     "By the way, I am part of ",
                     a![
-                        attrs! { At::Href => "https://schwungus.software" },
+                        attrs! {
+                            At::Href => "https://schwungus.software",
+                            At::Target => "_blank",
+                        },
                         "Schwungus Software"
                     ],
                     "."
