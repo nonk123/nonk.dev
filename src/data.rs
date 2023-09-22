@@ -1,9 +1,9 @@
 pub struct Project {
     pub owner: RepoOwner,
-    pub repo: String,
-    pub title: String,
-    pub description: String,
-    pub thumbnail: String,
+    pub repo: &'static str,
+    pub title: &'static str,
+    pub description: &'static str,
+    pub thumbnail: &'static str,
 }
 
 pub enum RepoOwner {
