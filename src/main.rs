@@ -56,7 +56,7 @@ impl Model {
             let direction = (rand::thread_rng().gen::<f64>() - 0.5) * 2.0;
 
             let distance = rand::thread_rng().gen::<f64>().max(0.4);
-            let distance = distance * 50.0;
+            let distance = distance * 20.0;
 
             let left = direction * distance;
             let top = (1.0 - direction.powi(2)) * distance;
@@ -64,9 +64,10 @@ impl Model {
             // TODO: use the CSS description struct.
             let style = format!(
                 r#"
-left: {left}px;
-top: {top}px;
-transition: left {delay}ms, top {delay}ms;"#
+                left: {left}%;
+                top: {top}%;
+                transition: left {delay}ms, top {delay}ms;
+                "#
             );
 
             angry_face.set_attribute("style", &style).unwrap();
