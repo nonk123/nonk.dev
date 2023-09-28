@@ -10,7 +10,8 @@ $border-color: #111111;
     font-family: Helvetica;
 }
 
-body, div#root {
+body,
+div#root {
     width: 100vw;
     height: 100vh;
 
@@ -45,11 +46,9 @@ nav {
     width: 20%;
     height: 100vh;
 
-    overflow: hidden;
-
-    > div {
-	    width: 100%;
-	    padding: 0 1em;
+    >div {
+        width: 100%;
+        padding: 0 1em;
         box-sizing: border-box;
     }
 }
@@ -62,16 +61,15 @@ div#container {
     height: 100vh;
     margin-bottom: 1em;
 
-    > div#tabs {
+    >div#tabs {
         display: flex;
+
         gap: 3ex;
         justify-content: center;
 
-        box-sizing: border-box;
+        margin: 1em 0;
 
-        margin-top: 1em;
-
-        > a {
+        >a {
             color: $text-color;
             text-decoration: none;
             font-weight: bold;
@@ -83,7 +81,7 @@ div#container {
         }
     }
 
-    > main {
+    >main {
         overflow-y: auto;
     }
 
@@ -91,6 +89,7 @@ div#container {
         from {
             color: $text-color;
         }
+
         to {
             color: $accent-color;
         }
@@ -107,7 +106,10 @@ img#logo {
     padding: 1em;
 }
 
-h1, h2, p, span {
+h1,
+h2,
+p,
+span {
     color: $text-color;
     text-decoration-color: $text-color;
 }
@@ -120,7 +122,7 @@ a {
 a.link {
     text-decoration: none;
 
-    > span {
+    >span {
         color: $text-color;
         text-decoration: underline;
         text-decoration-color: $text-color;
@@ -134,7 +136,7 @@ i.icon {
 }
 
 div#bio {
-    border-radius: 0  0 0 5px;
+    border-radius: 0 0 0 5px;
     border-left: 1px solid $text-color;
     border-bottom: 1px solid $text-color;
 }
@@ -148,18 +150,15 @@ div#links {
 }
 
 div#projects {
-    $gap: 18px;
+    display: flex;
+    flex-flow: row wrap;
 
     width: 100%;
+    gap: 2em;
 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    margin-bottom: 1em;
+
     justify-content: center;
-    gap: $gap;
-
-    padding: $gap;
-    box-sizing: border-box;
 }
 
 article.project {
@@ -170,12 +169,12 @@ article.project {
 
     width: 420px;
 
-	padding: 1em;
+    padding: 1em;
     box-sizing: border-box;
 
     background: linear-gradient(to bottom, $accent-color, $accent-color $roundness, $background-secondary $roundness, $background-primary);
 
-    > a {
+    >a {
         background: transparent;
         text-decoration: none;
     }
@@ -184,7 +183,7 @@ article.project {
         display: block;
         text-align: center;
 
-        > p {
+        >p {
             display: block;
             width: 80%;
             text-align: center;
@@ -198,7 +197,7 @@ article.project {
         width: 100%;
         height: 300px;
 
-        > img {
+        >img {
             display: block;
 
             margin: 0 auto;
