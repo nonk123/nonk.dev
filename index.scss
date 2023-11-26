@@ -1,6 +1,18 @@
+$narrow: 800px;
+
+@mixin narrow {
+    @media only screen and (max-width: $narrow) {
+        @content;
+    }
+}
+
 * {
     font-family: Helvetica, sans-serif;
     color: white;
+
+    @include narrow {
+        font-size: 3vmax;
+    }
 }
 
 html {
@@ -33,11 +45,9 @@ div#static {
 
     padding: 1em;
     box-sizing: border-box;
-}
 
-@media (max-width: 800px) {
-    div#static {
-	display: none;
+    @include narrow {
+        display: none;
     }
 }
 
@@ -73,12 +83,14 @@ img.big-logo {
     height: 100%;
 }
 
-img.fire-pillar {
-    height: 200px;
-}
+img {
+    &.fire-pillar, &.devil-fire {
+        height: 200px;
+    }
 
-img.devil-fire {
-    height: 200px;
+    &.fire1 {
+        height: 120px;
+    }
 }
 
 div#title-container {
@@ -90,11 +102,11 @@ div#title-container {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-}
 
-div#title-container > strong {
+    > strong {
     width: 100%;
     text-align: center;
+    }
 }
 
 div.down-hand-container {
@@ -110,8 +122,4 @@ strong {
     color: red;
     font-size: 2em;
     text-transform: uppercase;
-}
-
-.fire1 {
-    height: 120px;
 }

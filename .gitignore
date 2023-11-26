@@ -1,4 +1,5 @@
-/target
-/dist
+static/index.css
+static/index.css.map
 
+\#*
 *~
