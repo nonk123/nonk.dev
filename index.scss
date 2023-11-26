@@ -1,4 +1,4 @@
-$narrow: 800px;
+$narrow: 700px;
 
 @mixin narrow {
     @media only screen and (max-width: $narrow) {
@@ -11,7 +11,7 @@ $narrow: 800px;
     color: white;
 
     @include narrow {
-        font-size: 3vmax;
+        font-size: 3vmin;
     }
 }
 
@@ -77,7 +77,7 @@ div.slide {
 }
 
 div#super-container {
-    $logo-height: 300px;
+    $logo-height: 14em;
     height: calc($logo-height + 60px);
 
     display: flex;
@@ -111,11 +111,11 @@ img.big-logo {
 
 img {
     &.fire-pillar, &.devil-fire {
-        height: 200px;
+        height: 10em;
     }
 
     &.fire1 {
-        height: 120px;
+        height: 8em;
     }
 }
 
@@ -141,7 +141,7 @@ div.down-hand-container {
 
     display: flex;
     flex-flow: row nowrap;
-    gap: 50px;
+    gap: 3em;
 }
 
 div#check-out {
@@ -165,10 +165,10 @@ div.projects {
     gap: 1em;
 
     > a {
-        max-height: 400px;
+        flex: 0 1;
 
         > img {
-            height: 100%;
+            max-height: 16em;
             width: auto;
         }
     }
