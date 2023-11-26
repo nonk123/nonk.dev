@@ -36,6 +36,8 @@ div#static {
     top: 0;
     left: 0;
 
+    z-index: -1000;
+
     width: 100vw;
     height: 100vh;
 
@@ -54,7 +56,13 @@ div#static {
 div.slide {
     scroll-snap-align: start none;
 
-    width: 50vmax;
+    width: 60vw;
+
+    @include narrow {
+        width: 100vw;
+        padding: 1em;
+    }
+
     margin: 0 auto;
 
     height: 100vh;
@@ -73,6 +81,7 @@ div#logo-container {
 
     display: flex;
     flex: row nowrap;
+    align-items: end;
     gap: 1em;
 
     padding-bottom: 1em;
@@ -104,8 +113,8 @@ div#title-container {
     align-items: center;
 
     > strong {
-    width: 100%;
-    text-align: center;
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -116,6 +125,36 @@ div.down-hand-container {
     display: flex;
     flex-flow: row nowrap;
     gap: 50px;
+}
+
+div#check-out {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+}
+
+div.projects {
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1em;
+
+    > a {
+        max-height: 400px;
+
+        > img {
+            height: 100%;
+            width: auto;
+        }
+    }
 }
 
 strong {
