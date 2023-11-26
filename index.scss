@@ -76,16 +76,33 @@ div.slide {
     gap: 0.5em;
 }
 
-div#logo-container {
-    height: 300px;
+div#super-container {
+    $logo-height: 300px;
+    height: calc($logo-height + 60px);
 
     display: flex;
-    flex: row nowrap;
-    align-items: end;
-    gap: 1em;
+    flex-flow: column nowrap;
 
-    padding-bottom: 1em;
-    border-bottom: 1px solid white;
+    > div#logo-container {
+        height: $logo-height;
+
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: end;
+        gap: 1em;
+    }
+
+    > div.stairs {
+        position: relative;
+        top: -2px;
+
+        flex: 1 1 auto;
+
+        $c1: darkgray;
+        $c2: gray;
+
+        background: repeating-linear-gradient($c1, $c1 5px, $c2 15px)
+    }
 }
 
 img.big-logo {
