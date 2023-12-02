@@ -167,14 +167,14 @@ div.projects {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     gap: 1em;
 
     > a {
         flex: 0 1;
 
         > img {
-            max-height: 16em;
+            max-height: 12em;
             width: auto;
         }
     }
