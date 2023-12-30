@@ -1,6 +1,6 @@
 $narrow: 669px;
 
-@mixin narrow {
+@mixin if-narrow {
     @media only screen and (max-width: $narrow) {
         @content;
     }
@@ -10,14 +10,14 @@ $narrow: 669px;
     font-family: Helvetica, sans-serif;
     color: white;
 
-    @include narrow {
+    @include if-narrow {
         font-size: 3vmin;
     }
 }
 
 html {
     scroll-snap-type: y mandatory;
-    overflow: scroll;
+    overflow-y: auto;
 }
 
 html, body {
@@ -53,7 +53,7 @@ div#static {
     padding: 1em;
     box-sizing: border-box;
 
-    @include narrow {
+    @include if-narrow {
         display: none;
     }
 }
@@ -63,7 +63,7 @@ div.slide {
 
     width: 60vw;
 
-    @include narrow {
+    @include if-narrow {
         width: 100vw;
         padding: 1em;
     }
