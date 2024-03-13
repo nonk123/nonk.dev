@@ -1,0 +1,106 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	box-sizing: border-box;
+
+	font-size: 16px;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+
+	color: #EEF0F2;
+	background: #141414;
+}
+
+#root {
+	display: grid;
+
+	width: 100ex;
+	height: 100%;
+
+	margin: 0 auto;
+	padding: 1em 0;
+
+	overflow-y: hidden;
+
+	grid-template-rows: 1fr 1em;
+	grid-template-columns: 72% 28%;
+	grid-template-areas:
+		"cont side"
+		"foot foot";
+}
+
+header {
+	grid-area: head;
+}
+
+footer {
+	grid-area: foot;
+	text-align: end;
+}
+
+nav {
+	grid-area: side;
+}
+
+main {
+	grid-area: cont;
+	overflow-y: auto;
+}
+
+nav, main {
+	padding: 1ex 1em;
+}
+
+h1::before {
+	content: "# ";
+}
+
+ul {
+    margin: 0;
+	padding: 0;
+
+    padding-left: 2ex;
+
+	list-style-type: none;
+}
+
+ul > li::before {
+    content: "- ";
+}
+
+ul.links > li::before {
+	content: "> ";
+}
+
+p, h1, ul {
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+
+a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a {
+	color: #14EE14;
+}
+
+a:visited {
+	color: #149914;
+}
+
+a::before {
+	content: "[";
+}
+
+a::after {
+	content: "]";
+}
