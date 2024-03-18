@@ -1,0 +1,108 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	box-sizing: border-box;
+
+	font-size: 16px;
+	font-family: 'Consolas', monospace;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	flex-flow: column nowrap;
+
+	color: #EEF0F2;
+	background: #141414;
+
+	overflow-y: hidden;
+}
+
+#root {
+	display: flex;
+	flex-flow: row wrap;
+
+	width: calc(min(100ex, 100%));
+	flex: 1 0;
+
+	margin: 0 auto;
+	padding: 1em 0;
+
+	overflow-y: auto;
+}
+
+header, footer {
+    height: 1em;
+}
+
+header {
+	text-align: center;
+}
+
+footer {
+	text-align: end;
+}
+
+nav {
+	width: calc(min(28ex, 100%));
+}
+
+main {
+    width: calc(min(72ex, 100%));
+}
+
+nav, main {
+	padding: 1ex 1em;
+}
+
+h1::before {
+	content: "# ";
+}
+
+ul {
+    margin: 0;
+	padding: 0;
+
+    padding-left: 2ex;
+
+	list-style-type: none;
+}
+
+ul > li::before {
+    content: "- ";
+}
+
+ul.links > li::before {
+	content: "> ";
+}
+
+p, h1, ul {
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+
+a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a {
+	color: #14EE14;
+}
+
+a:visited {
+	color: #149914;
+}
+
+a::before {
+	content: "[";
+}
+
+a::after {
+	content: "]";
+}
