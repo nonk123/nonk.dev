@@ -19,47 +19,50 @@ body {
     flex-flow: column nowrap;
 
     color: #EEF0F2;
-    background: #141414;
-
-    overflow-y: hidden;
+    background: #171717;
 }
 
 #root {
     display: flex;
     flex-flow: row wrap;
 
-    width: calc(min(100ex, 100%));
+    align-content: center;
+    justify-content: center;
+
+    width: 100%;
     flex: 1 0;
 
     margin: 0 auto;
-    padding: 1em 0;
-
-    overflow-y: auto;
+    padding: 1ex 1em;
+    gap: 1em 1ex;
 }
 
 header,
 footer {
-    height: 1em;
+    height: max-content;
 }
 
 header {
     text-align: center;
+    background: #0C0C0C;
+    padding: 0.5em;
 }
 
 footer {
     text-align: end;
 }
 
-nav {
-    width: calc(min(28ex, 100%));
+main {
+    max-width: 72ex;
 }
 
-main {
-    width: calc(min(72ex, 100%));
+nav {
+    max-width: 25ex;
 }
 
 nav,
 main {
+    background: #0C0C0C;
     padding: 1ex 1em;
 }
 
