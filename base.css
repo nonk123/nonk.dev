@@ -1,108 +1,118 @@
-html, body {
-	margin: 0;
-	padding: 0;
+html,
+body {
+    margin: 0;
+    padding: 0;
 }
 
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 
-	font-size: 16px;
-	font-family: 'Consolas', monospace;
+    font-size: 16px;
+    font-family: 'Consolas', monospace;
 }
 
 body {
-	width: 100vw;
-	height: 100vh;
+    width: 100vw;
+    height: 100vh;
 
-	display: flex;
-	flex-flow: column nowrap;
+    display: flex;
+    flex-flow: column nowrap;
 
-	color: #EEF0F2;
-	background: #141414;
+    color: #EEF0F2;
+    background: #141414;
 
-	overflow-y: hidden;
+    overflow-y: hidden;
 }
 
 #root {
-	display: flex;
-	flex-flow: row wrap;
+    display: flex;
+    flex-flow: row wrap;
 
-	width: calc(min(100ex, 100%));
-	flex: 1 0;
+    width: calc(min(100ex, 100%));
+    flex: 1 0;
 
-	margin: 0 auto;
-	padding: 1em 0;
+    margin: 0 auto;
+    padding: 1em 0;
 
-	overflow-y: auto;
+    overflow-y: auto;
 }
 
-header, footer {
+header,
+footer {
     height: 1em;
 }
 
 header {
-	text-align: center;
+    text-align: center;
 }
 
 footer {
-	text-align: end;
+    text-align: end;
 }
 
 nav {
-	width: calc(min(28ex, 100%));
+    width: calc(min(28ex, 100%));
 }
 
 main {
     width: calc(min(72ex, 100%));
 }
 
-nav, main {
-	padding: 1ex 1em;
+nav,
+main {
+    padding: 1ex 1em;
 }
 
 h1::before {
-	content: "# ";
+    content: "# ";
 }
 
 ul {
     margin: 0;
-	padding: 0;
+    padding: 0;
 
     padding-left: 2ex;
 
-	list-style-type: none;
+    list-style-type: none;
 }
 
-ul > li::before {
+ul>li::before {
     content: "- ";
 }
 
-ul.links > li::before {
-	content: "> ";
+ul.links>li::before {
+    content: "> ";
 }
 
-p, h1, ul {
-	margin-top: 0;
-	margin-bottom: 1em;
-}
-
-a {
-	text-decoration: none;
-	font-weight: bold;
+p,
+h1,
+ul {
+    margin-top: 0;
+    margin-bottom: 1em;
 }
 
 a {
-	color: #14EE14;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a {
+    color: #14EE14;
 }
 
 a:visited {
-	color: #149914;
+    color: #149914;
 }
 
 a::before {
-	content: "[";
+    content: "[";
 }
 
 a::after {
-	content: "]";
+    content: "]";
+}
+
+a.kill-link {
+    cursor: help;
+    text-decoration: dotted;
 }
