@@ -6,21 +6,21 @@ body {
 
 * {
     box-sizing: border-box;
-
-    font-size: 13pt;
-    font-family: 'Consolas', monospace;
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
+    font-size: 13pt;
+    font-family: 'Consolas', monospace;
+
+    min-height: 100vh;
 
     display: flex;
     flex-flow: column nowrap;
 
     color: #EEF0F2;
-
     background: repeating-linear-gradient(86deg, #2F2020, #20202F 16%, #202F20 32%, #2F2020 48%);
+
+    overflow-y: auto;
 }
 
 #root {
@@ -28,10 +28,14 @@ body {
     flex-flow: row wrap;
 
     align-content: center;
-    justify-content: center;
+    justify-content: stretch;
 
-    width: 100%;
-    flex: 1 0;
+    align-items: stretch;
+    justify-items: stretch;
+
+    max-width: 100ex;
+    height: max-content;
+    flex: 1;
 
     margin: 0 auto;
     padding: 1ex 1em;
@@ -40,8 +44,7 @@ body {
 
 header,
 footer {
-    height: max-content;
-
+    flex: 0 0 max-content;
     background: #0C0C0C;
     padding: 0.5em;
 }
@@ -55,11 +58,11 @@ footer {
 }
 
 main {
-    max-width: 72ex;
+    flex: 1 66ex;
 }
 
 nav {
-    max-width: 25ex;
+    flex: 1 24ex;
 }
 
 nav,
@@ -69,6 +72,14 @@ main {
 
     border-radius: 0.8em;
     border: 3px solid #0A0A0A;
+}
+
+main {
+    text-align: justify;
+}
+
+h1 {
+    font-size: 1.2rem;
 }
 
 h1::before {
