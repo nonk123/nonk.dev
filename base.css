@@ -83,7 +83,7 @@ h1 {
 }
 
 h1::before {
-    content: "# ";
+    content: "§ ";
 }
 
 ul {
@@ -100,7 +100,7 @@ ul>li::before {
 }
 
 ul.links>li::before {
-    content: "> ";
+    content: "-> ";
 }
 
 p,
