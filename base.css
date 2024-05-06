@@ -7,7 +7,7 @@ body {
 * {
     box-sizing: border-box;
 
-    font-size: 16px;
+    font-size: 13pt;
     font-family: 'Consolas', monospace;
 }
 
@@ -19,7 +19,8 @@ body {
     flex-flow: column nowrap;
 
     color: #EEF0F2;
-    background: #171717;
+
+    background: repeating-linear-gradient(86deg, #2F2020, #20202F 16%, #202F20 32%, #2F2020 48%);
 }
 
 #root {
@@ -34,18 +35,19 @@ body {
 
     margin: 0 auto;
     padding: 1ex 1em;
-    gap: 1em 1ex;
+    gap: 1em 1em;
 }
 
 header,
 footer {
     height: max-content;
+
+    background: #0C0C0C;
+    padding: 0.5em;
 }
 
 header {
     text-align: center;
-    background: #0C0C0C;
-    padding: 0.5em;
 }
 
 footer {
@@ -64,6 +66,9 @@ nav,
 main {
     background: #0C0C0C;
     padding: 1ex 1em;
+
+    border-radius: 0.8em;
+    border: 3px solid #0A0A0A;
 }
 
 h1::before {
@@ -116,6 +121,13 @@ a::after {
 }
 
 a.kill-link {
+    color: #EE1414;
+    font-weight: normal;
+
     cursor: help;
     text-decoration: dotted;
+}
+
+strong {
+    color: #FFFFFF;
 }
