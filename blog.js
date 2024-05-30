@@ -1,5 +1,5 @@
 function initArticlesIndex(articles) {
-    const maxTitleLen = 14;
+    const maxTitleLen = 24;
     const linksRoot = document.getElementById("links");
 
     for (const article of articles) {
@@ -10,7 +10,7 @@ function initArticlesIndex(articles) {
         link.onclick = () => { fetch(file).then((r) => r.text()).then((content) => setArticle(article.title, content)); };
 
         if (article.title.length > maxTitleLen) {
-        	link.textContent = article.title.slice(0, maxTitleLen).trim() + "...";
+        	link.textContent = article.title.slice(0, maxTitleLen - 3).trim() + "...";
         } else {
             link.textContent = article.title;
         }
