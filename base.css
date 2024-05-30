@@ -33,13 +33,12 @@ body {
     align-items: stretch;
     justify-items: stretch;
 
-    max-width: 100ex;
+    max-width: 82ch;
     height: max-content;
     flex: 1;
 
     margin: 0 auto;
-    padding: 1ex 1em;
-    gap: 1em 1em;
+    gap: 1ch 1em;
 }
 
 header,
@@ -58,17 +57,17 @@ footer {
 }
 
 main {
-    flex: 1 66ex;
+    flex: 1 56ch;
 }
 
 nav {
-    flex: 1 24ex;
+    flex: 1 24ch;
 }
 
 nav,
 main {
     background: #0C0C0C;
-    padding: 1ex 1em;
+    padding: 1ch 1em;
 
     border-radius: 0.8em;
     border: 3px solid #0A0A0A;
@@ -90,7 +89,7 @@ ul {
     margin: 0;
     padding: 0;
 
-    padding-left: 2ex;
+    padding-left: 2ch;
 
     list-style-type: none;
 }
