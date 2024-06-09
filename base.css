@@ -28,7 +28,7 @@ body {
     flex-flow: row wrap;
 
     align-content: center;
-    justify-content: stretch;
+    justify-content: center;
 
     align-items: stretch;
     justify-items: stretch;
@@ -38,7 +38,10 @@ body {
     flex: 1;
 
     margin: 0 auto;
+    padding: 1ch 1em;
     gap: 1ch 1em;
+
+    box-sizing: content-box;
 }
 
 header,
@@ -57,11 +60,11 @@ footer {
 }
 
 main {
-    flex: 1 56ch;
+    flex: 56ch;
 }
 
 nav {
-    flex: 1 24ch;
+    flex: 24ch;
 }
 
 nav,
