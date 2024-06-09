@@ -9,6 +9,8 @@ body {
 }
 
 body {
+    overflow-y: auto;
+
     font-size: 13pt;
     font-family: 'Consolas', monospace;
 
@@ -60,7 +62,6 @@ body {
 
 main {
     grid-area: main;
-    overflow-y: auto;
 }
 
 main, #root {
