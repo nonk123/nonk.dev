@@ -44,19 +44,19 @@ body {
     background:
         repeating-linear-gradient(to right, #111111 0, #111111 1px, transparent 2px, transparent 20px),
         repeating-linear-gradient(to bottom, #111111 0, #111111 1px, transparent 2px, transparent 20px),
-        #333333;
-    background-size: 20px;
+        repeating-linear-gradient(to right, #353030 0, #353030 20px, #303530 21px, #303530 40px, #303035 41px, #303035 60px);
+    background-size: 60px 20px;
 
-    animation: scroll-bg 1s linear infinite;
+    animation: scroll-bg 3.1s linear infinite;
 }
 
 @keyframes scroll-bg {
     0% {
-        background-position: 10px 10px;
+        background-position: 60px 20px;
     }
 
     100% {
-        background-position: -10px -10px;
+        background-position: 0 0;
     }
 }
 
