@@ -18,12 +18,42 @@ body {
     flex-flow: column nowrap;
 
     color: #EEF0F2;
-    background: repeating-linear-gradient(86deg, #2F2020, #20202F 16%, #202F20 32%, #2F2020 48%);
 
     overflow-y: auto;
 }
 
+#background {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    z-index: -1000;
+
+    width: 100vw;
+    height: 100vh;
+
+    background:
+        repeating-linear-gradient(to right, #000000 0, transparent 1px, transparent 19px, #000000 20px),
+        repeating-linear-gradient(to bottom, #000000 0, transparent 1px, transparent 19px, #000000 20px),
+        #202020;
+    background-size: 20px;
+
+    animation: scroll-bg 1s linear infinite;
+}
+
+@keyframes scroll-bg {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -20px -20px;
+    }
+}
+
 #root {
+    background: transparent;
+
     display: flex;
     flex-flow: row wrap;
 
@@ -38,8 +68,8 @@ body {
     flex: 1;
 
     margin: 0 auto;
-    padding: 1em 1ch;
-    gap: 1em 1ch;
+    padding: 1ex 1ch;
+    gap: 2ex 2ch;
 
     box-sizing: content-box;
 }
@@ -74,6 +104,7 @@ main {
 
     border-radius: 0.8em;
     border: 3px solid #0A0A0A;
+    box-shadow: 0.5ch 0.5ex #000000;
 }
 
 main {
@@ -108,8 +139,8 @@ ul.links>li::before {
 p,
 h1,
 ul {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 1rex;
+    margin-bottom: 1rex;
 }
 
 a {
