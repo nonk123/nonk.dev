@@ -38,8 +38,8 @@ body {
     flex: 1;
 
     margin: 0 auto;
-    padding: 1ch 1em;
-    gap: 1ch 1em;
+    padding: 1em 1ch;
+    gap: 1em 1ch;
 
     box-sizing: content-box;
 }
@@ -48,7 +48,7 @@ header,
 footer {
     flex: 0 0 max-content;
     background: #0C0C0C;
-    padding: 0.5em;
+    padding: 0.5em 1ch;
 }
 
 header {
@@ -70,7 +70,7 @@ nav {
 nav,
 main {
     background: #0C0C0C;
-    padding: 1ch 1em;
+    padding: 0 1ch;
 
     border-radius: 0.8em;
     border: 3px solid #0A0A0A;
@@ -108,8 +108,8 @@ ul.links>li::before {
 p,
 h1,
 ul {
-    margin-top: 0;
-    margin-bottom: 1em;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 a {
