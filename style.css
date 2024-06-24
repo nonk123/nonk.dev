@@ -115,6 +115,14 @@ nav, article {
     border: 3px solid #0A0A0A;
 }
 
+header {
+    border-bottom: 3px solid #0A0A0A;
+}
+
+footer {
+    border-top: 3px solid #0A0A0A;
+}
+
 article {
     padding: 1ex 1ch;
     text-align: justify;
