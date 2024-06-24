@@ -85,7 +85,6 @@ main, #root {
 
 header,
 footer {
-    background: #0C0C0CC0;
     padding: 0.5em 1ch;
 }
 
@@ -107,12 +106,15 @@ nav {
     flex: 20ch;
 }
 
-nav, article {
-    background: #0C0C0CC0;
-    padding: 0 1ch;
+nav, article, header, footer {
+    background: #0C0C0CD0;
+}
 
+nav, article {
     border-radius: 0.8em;
     border: 3px solid #0A0A0A;
+
+    padding: 0 1ch;
 }
 
 header {
