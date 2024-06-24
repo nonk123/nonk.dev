@@ -116,11 +116,13 @@ nav, article {
 }
 
 article {
+    padding: 1ex 1ch;
     text-align: justify;
 }
 
 h1 {
     font-size: 1.2rem;
+    margin: 0;
 }
 
 h1::before {
@@ -129,9 +131,9 @@ h1::before {
 
 ul {
     margin: 0;
-    padding: 0;
+    margin-left: 2ch;
 
-    padding-left: 2ch;
+    padding: 0;
 
     list-style-type: none;
 }
@@ -144,9 +146,9 @@ ul.links>li::before {
     content: "-> ";
 }
 
-p, h1, ul, li {
-    margin-top: 1ex;
-    margin-bottom: 1ex;
+p, ul {
+    margin-top: 1rem;
+    margin-bottom: 0;
 }
 
 a {
