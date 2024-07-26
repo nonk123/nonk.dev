@@ -15,7 +15,7 @@ function applyState(state) {
 }
 
 function initArticlesIndex(articles) {
-    const maxTitleLen = 24;
+    const maxTitleLen = 20;
     const linksRoot = document.getElementById("links");
 
     for (const article of articles) {

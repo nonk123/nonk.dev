@@ -99,11 +99,15 @@ footer {
 }
 
 article {
-    flex: 60ch;
+    flex: 56ch;
 }
 
 nav {
-    flex: 20ch;
+    flex: 24ch;
+}
+
+article, nav {
+    min-height: 16em;
 }
 
 nav, article, header, footer {
@@ -180,6 +184,10 @@ a::before {
 
 a::after {
     content: "]";
+}
+
+#links a::before, #links a::after {
+    content: "";
 }
 
 a.kill-link {
