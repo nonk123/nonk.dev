@@ -6,11 +6,11 @@ function initArticlesIndex(articles) {
         const link = document.createElement("a");
         link.style.cursor = "pointer";
 
-        const file = `/articles/${article.date}.txt`;
+        const file = `/blog/articles/${article.date}.txt`;
         link.onclick = () => { fetch(file).then((r) => r.text()).then((content) => setArticle(article.title, content)); };
 
         if (article.title.length > maxTitleLen) {
-        	link.textContent = article.title.slice(0, maxTitleLen - 3).trim() + "...";
+            link.textContent = article.title.slice(0, maxTitleLen - 3).trim() + "...";
         } else {
             link.textContent = article.title;
         }
@@ -23,21 +23,22 @@ function setArticle(title, content) {
     const paragraphs = content.split("\n\n");
 
     const ps = paragraphs.map((par) => {
-		const p = document.createElement("p");
-		p.textContent = par;
-		return p;
+        const p = document.createElement("p");
+        p.textContent = par;
+        return p;
     });
 
-    const root = document.getElementById("content");
+    const root = document.getElementsByTagName("article").item(0);
     root.textContent = "";
 
-	const header = document.createElement("h1");
-	header.textContent = title;
+    const header = document.createElement("h1");
+    header.textContent = title;
     root.appendChild(header);
 
+    // XXX: can't terse this up to just `root.appendChild` due to JS retardation...
     ps.forEach((p) => root.appendChild(p));
 }
 
 setArticle("nonk's blog", "Hi and welcome to my blog!\n\nCheck out some of my spiciest articles by clicking the links on the right.");
 
-fetch("/articles.json").then((x) => x.json()).then(initArticlesIndex);
+fetch("/blog/listing.json").then((x) => x.json()).then(initArticlesIndex);
