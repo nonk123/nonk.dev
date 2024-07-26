@@ -1,3 +1,5 @@
+initLastUpdatedDate();
+
 addEventListener("popstate", (event) => applyState(event.state));
 
 const defaultState = { file: "/blog/articles/hello.txt", article: { title: "nonk's blog" } };
@@ -65,4 +67,17 @@ function setArticle(title, content) {
 
     // XXX: can't terse this up to just `root.appendChild` due to JS retardation...
     ps.forEach((p) => root.appendChild(p));
+}
+
+function initLastUpdatedDate() {
+    /// NOTE: I need lowercase English month names regardless of the user's locale.
+    const monthFmt = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
+
+    const date = new Date(document.lastModified);
+    const monthName = monthFmt[date.getMonth()];
+    const year = date.getFullYear();
+
+    const lastUpdated = document.getElementById("last-updated");
+    const fancy = `${monthName} ${year}`;
+    lastUpdated.textContent = fancy;
 }
