@@ -193,3 +193,19 @@ a.kill-link {
 strong {
     color: #FFFFFF;
 }
+
+main.fade-main-in {
+    animation-name: fade-main-in;
+    animation-timing-function: fade-in;
+    animation-duration: 0.5s;
+}
+
+@keyframes fade-main-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
