@@ -1,3 +1,3 @@
 # nonk.dev
 
-My awesome website. [See it live](https://nonk.dev).
+My gorgeous website. [See it live](https://nonk.dev).
