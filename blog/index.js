@@ -1,3 +1,17 @@
+addEventListener("popstate", (event) => applyState(event.state));
+
+const defaultState = { file: "/blog/articles/hello.txt", article: { title: "nonk's blog" } };
+history.replaceState(defaultState, "")
+applyState(defaultState);
+
+fetch("/blog/listing.json").then((x) => x.json()).then(initArticlesIndex);
+
+function applyState(state) {
+    fetch(state.file).then((r) => r.text()).then((content) => {
+        setArticle(state.article.title, content);
+    });
+}
+
 function initArticlesIndex(articles) {
     const maxTitleLen = 24;
     const linksRoot = document.getElementById("links");
@@ -7,7 +21,12 @@ function initArticlesIndex(articles) {
         link.style.cursor = "pointer";
 
         const file = `/blog/articles/${article.date}.txt`;
-        link.onclick = () => { fetch(file).then((r) => r.text()).then((content) => setArticle(article.title, content)); };
+
+        link.onclick = () => {
+            const state = { article: article, file: file };
+            history.pushState(state, "");
+            applyState(state);
+        };
 
         if (article.title.length > maxTitleLen) {
             link.textContent = article.title.slice(0, maxTitleLen - 3).trim() + "...";
@@ -38,7 +57,3 @@ function setArticle(title, content) {
     // XXX: can't terse this up to just `root.appendChild` due to JS retardation...
     ps.forEach((p) => root.appendChild(p));
 }
-
-setArticle("nonk's blog", "Hi and welcome to my blog!\n\nCheck out some of my spiciest articles by clicking the links on the right.");
-
-fetch("/blog/listing.json").then((x) => x.json()).then(initArticlesIndex);
