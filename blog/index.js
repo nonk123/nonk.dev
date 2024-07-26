@@ -4,7 +4,9 @@ const defaultState = { file: "/blog/articles/hello.txt", article: { title: "nonk
 history.replaceState(defaultState, "")
 applyState(defaultState);
 
-fetch("/blog/listing.json").then((x) => x.json()).then(initArticlesIndex);
+fetch("/blog/listing.json")
+    .then((x) => x.json())
+    .then(initArticlesIndex);
 
 function applyState(state) {
     fetch(state.file).then((r) => r.text()).then((content) => {
@@ -39,6 +41,10 @@ function initArticlesIndex(articles) {
         root.appendChild(link);
         linksRoot.appendChild(root);
     }
+
+    const main = document.getElementsByTagName("main").item(0);
+    main.style.removeProperty("opacity");
+    main.className = "fade-main-in";
 }
 
 function setArticle(title, content) {
