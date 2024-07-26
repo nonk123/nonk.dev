@@ -17,6 +17,8 @@ function initArticlesIndex(articles) {
     const linksRoot = document.getElementById("links");
 
     for (const article of articles) {
+        const root = document.createElement("li");
+
         const link = document.createElement("a");
         link.style.cursor = "pointer";
 
@@ -34,7 +36,8 @@ function initArticlesIndex(articles) {
             link.textContent = article.title;
         }
 
-        linksRoot.appendChild(link);
+        root.appendChild(link);
+        linksRoot.appendChild(root);
     }
 }
 
