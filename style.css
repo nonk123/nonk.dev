@@ -204,12 +204,12 @@ strong {
 
 main.fade-main-in {
     animation-name: fade-main-in;
-    animation-timing-function: fade-in;
-    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-duration: 1s;
 }
 
 @keyframes fade-main-in {
-    0% {
+    0%, 50% {
         opacity: 0;
     }
 
