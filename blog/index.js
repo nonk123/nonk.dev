@@ -25,6 +25,7 @@ function initArticlesIndex(articles) {
 
         const link = document.createElement("a");
         link.style.cursor = "pointer";
+        root.appendChild(link);
 
         const file = `/blog/articles/${article.date}.txt`;
 
@@ -35,12 +36,12 @@ function initArticlesIndex(articles) {
         };
 
         if (article.title.length > maxTitleLen) {
-            link.textContent = article.title.slice(0, maxTitleLen - 3).trim() + "...";
+            link.textContent = article.title.slice(0, maxTitleLen - 3).trim();
+            root.appendChild(document.createTextNode("..."));
         } else {
             link.textContent = article.title;
         }
 
-        root.appendChild(link);
         linksRoot.appendChild(root);
     }
 
