@@ -106,10 +106,6 @@ nav {
     flex: 24ch;
 }
 
-article, nav {
-    min-height: 16em;
-}
-
 nav, article, header, footer {
     background: #0C0C0CD0;
 }
