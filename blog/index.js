@@ -2,7 +2,7 @@ initLastUpdatedDate();
 
 addEventListener("popstate", (event) => applyState(event.state));
 
-const defaultState = { file: "/blog/articles/hello.txt", article: { title: "nonk's blog" } };
+const defaultState = { file: "/blog/articles/hello.txt", article: { title: "nonk's blog" }, noWayBack: "" };
 history.replaceState(defaultState, "")
 applyState(defaultState);
 
@@ -13,7 +13,7 @@ fetch("/blog/listing.json", { cache: "no-store" })
 function applyState(state) {
     fetch(state.file, { cache: "no-store" })
         .then((r) => r.text())
-        .then((content) => setArticle(state.article.title, content));
+        .then((content) => setArticle(state, content));
 }
 
 function initArticlesIndex(articles) {
@@ -49,7 +49,7 @@ function initArticlesIndex(articles) {
     main.classList.remove("no-fade-in");
 }
 
-function setArticle(title, content) {
+function setArticle(state, content) {
     const paragraphs = content.split("\n\n");
 
     const ps = paragraphs.map((par) => {
@@ -62,11 +62,26 @@ function setArticle(title, content) {
     root.textContent = "";
 
     const header = document.createElement("h1");
-    header.textContent = title;
+    header.textContent = state.article.title;
     root.appendChild(header);
 
     // XXX: can't terse this up to just `root.appendChild` due to JS retardation...
     ps.forEach((p) => root.appendChild(p));
+
+    if (!("noWayBack" in state)) {
+        const butt = document.createElement("a");
+        butt.textContent = "go back";
+        butt.style.cursor = "pointer";
+        butt.onclick = () => history.back();
+
+        const wrapper = document.createElement("div");
+        wrapper.style.width = "100%";
+        wrapper.style.textAlign = "center";
+        wrapper.appendChild(butt);
+
+        root.appendChild(document.createElement("br"));
+        root.appendChild(wrapper);
+    }
 }
 
 function initLastUpdatedDate() {
