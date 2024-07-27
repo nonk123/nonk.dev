@@ -6,14 +6,14 @@ const defaultState = { file: "/blog/articles/hello.txt", article: { title: "nonk
 history.replaceState(defaultState, "")
 applyState(defaultState);
 
-fetch("/blog/listing.json")
+fetch("/blog/listing.json", { cache: "no-store" })
     .then((x) => x.json())
     .then(initArticlesIndex);
 
 function applyState(state) {
-    fetch(state.file).then((r) => r.text()).then((content) => {
-        setArticle(state.article.title, content);
-    });
+    fetch(state.file, { cache: "no-store" })
+        .then((r) => r.text())
+        .then((content) => setArticle(state.article.title, content));
 }
 
 function initArticlesIndex(articles) {
