@@ -202,13 +202,17 @@ strong {
     color: #FFFFFF;
 }
 
-main.fade-main-in {
-    animation-name: fade-main-in;
+main.no-fade-in {
+    opacity: 0;
+}
+
+.fade-in, main:not(.no-fade-in) {
+    animation-name: fade-in;
     animation-timing-function: ease-out;
     animation-duration: 1s;
 }
 
-@keyframes fade-main-in {
+@keyframes fade-in {
     0%, 50% {
         opacity: 0;
     }

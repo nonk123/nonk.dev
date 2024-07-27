@@ -46,8 +46,7 @@ function initArticlesIndex(articles) {
     }
 
     const main = document.getElementsByTagName("main").item(0);
-    main.style.removeProperty("opacity");
-    main.className = "fade-main-in";
+    main.classList.remove("no-fade-in");
 }
 
 function setArticle(title, content) {
