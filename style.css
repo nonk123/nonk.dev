@@ -29,17 +29,6 @@ body {
     grid-template-columns: 100%;
 
     color: #EEF0F2;
-}
-
-#background {
-    position: fixed;
-    left: 0;
-    top: 0;
-
-    z-index: -1000;
-
-    width: 100vw;
-    height: 100vh;
 
     background:
         repeating-linear-gradient(to right, #111111 0, #111111 1px, transparent 2px, transparent 20px),
