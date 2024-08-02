@@ -30,9 +30,11 @@ function initArticlesIndex(articles) {
         const file = `/blog/articles/${article.date}.txt`;
 
         link.onclick = () => {
-            const state = { article: article, file: file };
-            history.pushState(state, "");
-            applyState(state);
+            if (history.state.file != file) { // do not push duplicate state
+                const state = { article: article, file: file };
+                history.pushState(state, "");
+                applyState(state);
+            }
         };
 
         if (article.title.length > maxTitleLen) {
