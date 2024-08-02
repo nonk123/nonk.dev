@@ -68,7 +68,7 @@ main, #root {
     justify-content: center;
 
     margin: 0 auto;
-    padding: 1ex 1ch;
+    padding: 0;
     gap: 1ex 1ch;
 }
 
@@ -121,33 +121,56 @@ article {
 
 h1 {
     font-size: 1.2rem;
-    margin: 0;
 }
 
 h1::before {
     content: "§ ";
 }
 
-ul {
-    margin: 0;
-    margin-left: 2ch;
+ul, ul > li {
+    width: max-content;
+}
 
+ul.links {
+    width: 100%;
+}
+
+ul {
     padding: 0;
+    margin-left: 2ch;
 
     list-style-type: none;
 }
 
-ul>li::before {
+ul.links, ul.links > li {
+    margin: 0 auto;
+}
+
+ul.links > li {
+    width: max-content;
+}
+
+ul:not(.links)>li::before {
     content: "- ";
 }
 
-ul.links>li::before {
-    content: "-> ";
+h1, p, ul, center {
+    margin-top: 1ex;
+    margin-bottom: 1rem;
 }
 
-p, ul {
+center {
     margin-top: 1rem;
-    margin-bottom: 0;
+}
+
+center::before {
+    content: "-*- ";
+    float: left;
+}
+
+center::after {
+    content: " -*-";
+    float: right;
 }
 
 a {
