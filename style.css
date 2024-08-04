@@ -33,7 +33,7 @@ body {
     background:
         repeating-linear-gradient(to right, #111111 0, #111111 1px, transparent 2px, transparent 20px),
         repeating-linear-gradient(to bottom, #111111 0, #111111 1px, transparent 2px, transparent 20px),
-        repeating-linear-gradient(to right, #353030 0, #353030 20px, #303530 21px, #303530 40px, #303035 41px, #303035 60px);
+        repeating-linear-gradient(to right, #373030 0, #373030 20px, #303730 21px, #303730 40px, #303037 41px, #303037 60px);
     background-size: 60px 20px;
 
     animation: scroll-bg 3.1s linear infinite;
@@ -96,7 +96,7 @@ nav {
 }
 
 nav, article, header, footer {
-    background: #0C0C0CD0;
+    background: #1A1A1AB0;
 }
 
 nav, article {
