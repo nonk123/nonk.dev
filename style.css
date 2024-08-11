@@ -17,16 +17,10 @@ body {
     width: 100vw;
     height: 100vh;
 
-    display: grid;
-
-    grid-template-areas:
-        "head"
-        ".   "
-        "main"
-        ".   "
-        "foot";
-    grid-template-rows: auto minmax(1em, 1fr) max-content minmax(1em, 1fr) auto;
-    grid-template-columns: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
 
     color: #EEF0F2;
 
@@ -50,49 +44,32 @@ body {
 }
 
 main {
-    grid-area: main;
-}
-
-main, #root {
     background: transparent;
-}
 
-#root {
     display: flex;
     flex-flow: row wrap;
 
-    max-width: 90ch;
+    max-width: 100ch;
 
     align-items: stretch;
-    align-content: center;
     justify-content: center;
 
-    margin: 0 auto;
-    padding: 0;
+    padding: 1ex 1ch;
     gap: 1ex 1ch;
 }
 
 header,
 footer {
+    width: 100%;
     padding: 0.5em 1ch;
 }
 
 header {
-    grid-area: head;
     text-align: center;
 }
 
 footer {
-    grid-area: foot;
     text-align: end;
-}
-
-article {
-    flex: 56ch;
-}
-
-nav {
-    flex: 24ch;
 }
 
 nav, article, header, footer {
@@ -100,9 +77,12 @@ nav, article, header, footer {
 }
 
 nav, article {
+    max-width: 72ch;
+}
+
+main > * {
     border-radius: 0.8em;
     border: 3px solid #0A0A0A;
-
     padding: 0 1ch;
 }
 
@@ -115,7 +95,6 @@ footer {
 }
 
 article {
-    padding: 1ex 1ch;
     text-align: justify;
 }
 
@@ -142,35 +121,22 @@ ul {
     list-style-type: none;
 }
 
-ul.links, ul.links > li {
-    margin: 0 auto;
+ul > li {
+    margin-right: 2ch;
 }
 
-ul.links > li {
-    width: max-content;
-}
-
-ul:not(.links)>li::before {
+ul > li::before {
     content: "- ";
 }
 
-h1, p, ul, center {
-    margin-top: 1ex;
+h1, p, ul {
+    margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
-center {
-    margin-top: 1rem;
-}
-
-center::before {
-    content: "-*- ";
-    float: left;
-}
-
-center::after {
-    content: " -*-";
-    float: right;
+p {
+    height: max-content;
+    width: fit-content;
 }
 
 a {
