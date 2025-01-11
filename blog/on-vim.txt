@@ -1,0 +1,7 @@
+If someone asks you: "Huh, you use Vim? How much time have you saved in the past year, like 20 seconds?"
+
+Just tell them to flip off. It's not about saving time. It's about enjoying the frictionless flow of raw text editing.
+
+Vim and Co. doesn't distract you with having to switch between mouse and keyboard to jump between two lines. It doesn't force you to click through 5 separate menus to execute your code and to see the results, taking you out of the "coding trance". It stays out of your way. It lets you do what you're best at doing.
+
+By learning Vim's keybindings with your intuition, you dissipate a whole layer of indirection between your desired line of code and the mechanical hand movements needed to write it. If you know exactly what you want to input, you will do it effortlessly, as each Vim command binds directly to a mental step of the code editing process.
