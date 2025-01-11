@@ -196,29 +196,11 @@ a::after {
     content: "]";
 }
 
-#links a::before,
-#links a::after {
-    content: "";
-}
-
-a.kill-link {
-    color: #ee1414;
-    font-weight: normal;
-
-    cursor: help;
-    text-decoration: dotted;
-}
-
 strong {
     color: #ffffff;
 }
 
-main.no-fade-in {
-    opacity: 0;
-}
-
-.fade-in,
-main:not(.no-fade-in) {
+main {
     animation-name: fade-in;
     animation-timing-function: ease-out;
     animation-duration: 1s;
