@@ -71,6 +71,7 @@ main {
     flex-flow: row wrap;
 
     max-width: 100ch;
+    min-height: 400px;
 
     align-items: stretch;
     justify-content: center;
