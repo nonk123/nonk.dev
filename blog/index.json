@@ -1,0 +1,9 @@
+{
+  "default": "hello",
+  "articles": {
+    "hello": {
+      "date": "2025-01-11",
+      "title": "Hello there!"
+    }
+  }
+}
