@@ -103,9 +103,12 @@ footer {
     background: #1a1a1ab0;
 }
 
-nav,
 article {
     max-width: 72ch;
+}
+
+nav {
+    overflow-x: hidden;
 }
 
 main > * {
