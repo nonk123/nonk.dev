@@ -4,30 +4,51 @@ body {
     padding: 0;
 }
 
-* {
+body {
+    font-size: 20px;
+    font-family: "Consolas", monospace;
     box-sizing: border-box;
 }
 
+* {
+    font: inherit;
+    box-sizing: inherit;
+}
+
 body {
+    color: #eef0f2;
+
+    min-height: 100vh;
     overflow-y: auto;
-
-    font-size: 13pt;
-    font-family: 'Consolas', monospace;
-
-    width: 100vw;
-    height: 100vh;
 
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-between;
 
-    color: #EEF0F2;
-
-    background:
-        repeating-linear-gradient(to right, #111111 0, #111111 1px, transparent 2px, transparent 20px),
-        repeating-linear-gradient(to bottom, #111111 0, #111111 1px, transparent 2px, transparent 20px),
-        repeating-linear-gradient(to right, #373030 0, #373030 20px, #303730 21px, #303730 40px, #303037 41px, #303037 60px);
+    background: repeating-linear-gradient(
+            to right,
+            #111111 0,
+            #111111 1px,
+            transparent 2px,
+            transparent 20px
+        ),
+        repeating-linear-gradient(
+            to bottom,
+            #111111 0,
+            #111111 1px,
+            transparent 2px,
+            transparent 20px
+        ),
+        repeating-linear-gradient(
+            to right,
+            #373030 0,
+            #373030 20px,
+            #303730 21px,
+            #303730 40px,
+            #303037 41px,
+            #303037 60px
+        );
     background-size: 60px 20px;
 
     animation: scroll-bg 3.1s linear infinite;
@@ -65,33 +86,39 @@ footer {
 }
 
 header {
+    margin-bottom: 1ex;
     text-align: center;
 }
 
 footer {
+    margin-top: 1ex;
     text-align: end;
 }
 
-nav, article, header, footer {
-    background: #1A1A1AB0;
+nav,
+article,
+header,
+footer {
+    background: #1a1a1ab0;
 }
 
-nav, article {
+nav,
+article {
     max-width: 72ch;
 }
 
 main > * {
     border-radius: 0.8em;
-    border: 3px solid #0A0A0A;
+    border: 3px solid #0a0a0a;
     padding: 0 1ch;
 }
 
 header {
-    border-bottom: 3px solid #0A0A0A;
+    border-bottom: 3px solid #0a0a0a;
 }
 
 footer {
-    border-top: 3px solid #0A0A0A;
+    border-top: 3px solid #0a0a0a;
 }
 
 article {
@@ -99,14 +126,16 @@ article {
 }
 
 h1 {
-    font-size: 1.2rem;
+    font-size: 1.4em;
+    font-weight: bold;
 }
 
 h1::before {
     content: "§ ";
 }
 
-ul, ul > li {
+ul,
+ul > li {
     width: max-content;
 }
 
@@ -129,7 +158,9 @@ ul > li::before {
     content: "- ";
 }
 
-h1, p, ul {
+h1,
+p,
+ul {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
@@ -148,8 +179,9 @@ a:visited {
     color: #149914;
 }
 
-a, header > a:visited {
-    color: #14EE14;
+a,
+header > a:visited {
+    color: #14ee14;
 }
 
 a::before {
@@ -160,12 +192,13 @@ a::after {
     content: "]";
 }
 
-#links a::before, #links a::after {
+#links a::before,
+#links a::after {
     content: "";
 }
 
 a.kill-link {
-    color: #EE1414;
+    color: #ee1414;
     font-weight: normal;
 
     cursor: help;
@@ -173,21 +206,23 @@ a.kill-link {
 }
 
 strong {
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 main.no-fade-in {
     opacity: 0;
 }
 
-.fade-in, main:not(.no-fade-in) {
+.fade-in,
+main:not(.no-fade-in) {
     animation-name: fade-in;
     animation-timing-function: ease-out;
     animation-duration: 1s;
 }
 
 @keyframes fade-in {
-    0%, 50% {
+    0%,
+    50% {
         opacity: 0;
     }
 
