@@ -5,7 +5,10 @@
 {% block url %}/blog/{{ id }}.html{% endblock %}
 
 {% block content %}
-<h1>{{ title }}</h1>
+<div style="width: 100%; display: flex; flex-flow: row nowrap; justify-content: space-between;">
+    <h1>{{ title }}</h1>
+    <p style="text-align: right; font-size: 0.8em;">Posted: <strong>{{ date }}</strong></p>
+</div>
 {% for paragraph in paragraphs %}
 <p>{{ paragraph }}</p>
 {% endfor %}

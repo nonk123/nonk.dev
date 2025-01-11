@@ -40,6 +40,7 @@ with open("blog/index.json", "rt") as fp:
 def render_article(id, index = False):
     article = blog["articles"][id]
     title = article["title"]
+    date = article["date"]
 
     with open(os.path.join("blog", id + ".txt"), "rt") as fp:
         contents = fp.read()
@@ -48,7 +49,7 @@ def render_article(id, index = False):
     fmt_articles = [{"id": id, "title": article["title"]} for id, article in blog["articles"].items()]
 
     out_path = os.path.join(OUT_PATH, "blog", "index.html" if index else id + ".html")
-    ctx = {"id": id, "title": title, "paragraphs": paragraphs, "articles": fmt_articles}
+    ctx = {"id": id, "title": title, "date": date, "paragraphs": paragraphs, "articles": fmt_articles}
     env.get_template("article.html.j2").stream(ctx).dump(out_path)
 
 render("index.html.j2")
