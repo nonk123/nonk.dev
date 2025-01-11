@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>{% block title required %}{% endblock %}</title>
+    <meta name="description" content="{% block description required %}{% endblock %}" />
+    <link rel="canonical" href="https://nonk.dev{% block url required %}{% endblock %}" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="icon" type="image/x-icon" href="/favicon.png" />
+    <link rel="stylesheet" href="/style.css" />
+
+    <script async src="https://umami.schwung.us/script.js"
+        data-website-id="4d6f1497-24de-4a6e-9991-9931303cfa2c"></script>
+</head>
+
+<body>
+    <header>
+        <a href="/">About me</a>
+        {# <a href="/blog" title="Under construction!">Blog</a> #}
+    </header>
+    <main>
+        <article>
+            {% block content required %}{% endblock %}
+        </article>
+        <nav>
+            {% block links %}
+            <p>Socials:</p>
+            <ul class="links">
+                <li><a href="mailto:me@nonk.dev">Email</a></li>
+                <li><a href="https://github.com/nonk123">GitHub</a></li>
+                <li>
+                    <a href="https://discord.com/users/268677450144153611">Discord</a>
+                </li>
+            </ul>
+            <p>Friends:</p>
+            <ul class="links">
+                <li><a href="https://cantsleep.cc">Can't Sleep</a></li>
+            </ul>
+            <p>Collectives:</p>
+            <ul class="links">
+                <li><a href="https://schwung.us">Schwungus</a></li>
+            </ul>
+            {% endblock links %}
+        </nav>
+    </main>
+    <footer>
+        <a href="https://github.com/nonk123/nonk.dev">source code</a>
+    </footer>
+</body>
+
+</html>
