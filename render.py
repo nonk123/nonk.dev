@@ -22,7 +22,6 @@ else:
 os.mkdir(os.path.join(OUT_PATH, "blog"))
 
 shutil.copy("robots.txt", OUT_PATH)
-shutil.copy("sitemap.xml", OUT_PATH) # TODO: templatize
 shutil.copy("favicon.png", OUT_PATH)
 shutil.copy("style.css", OUT_PATH)
 
@@ -57,3 +56,6 @@ render_article(blog["default"], True)
 
 for id in blog["articles"].keys():
     render_article(id)
+
+out_path = os.path.join(OUT_PATH, "sitemap.xml")
+env.get_template("sitemap.xml.j2").stream(blog).dump(out_path)
