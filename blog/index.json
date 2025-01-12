@@ -1,13 +1,13 @@
 {
-  "default": "hello",
-  "articles": {
-    "hello": {
-      "date": "2025-01-11",
-      "title": "Hello there!"
-    },
-    "on-vim": {
-      "date": "2025-01-11",
-      "title": "On Vim and Co."
+    "default": "hello",
+    "articles": {
+        "hello": {
+            "date": "2025-01-11",
+            "title": "Hello there!"
+        },
+        "on-vim": {
+            "date": "2025-01-11",
+            "title": "On Vim and Co."
+        }
     }
-  }
 }
