@@ -70,11 +70,11 @@ main {
     display: flex;
     flex-flow: row wrap;
 
-    max-width: 100ch;
+    width: calc(min(100%, 100ch));
     min-height: 400px;
 
     align-items: stretch;
-    justify-content: center;
+    justify-content: stretch;
 
     padding: 1ex 1ch;
     gap: 1ex 1ch;
@@ -104,10 +104,11 @@ footer {
 }
 
 article {
-    max-width: 72ch;
+    flex: 7 0 64ch;
 }
 
 nav {
+    flex: 3 0 24ch;
     overflow-x: hidden;
 }
 
