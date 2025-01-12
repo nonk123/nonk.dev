@@ -104,11 +104,11 @@ footer {
 }
 
 article {
-    flex: 7 0 64ch;
+    flex: 7 1 64ch;
 }
 
 nav {
-    flex: 3 0 24ch;
+    flex: 3 1 24ch;
     overflow-x: hidden;
 }
 
@@ -141,10 +141,6 @@ h1::before {
 
 ul,
 ul > li {
-    width: max-content;
-}
-
-ul.links {
     width: 100%;
 }
 
