@@ -2,7 +2,7 @@
 
 {% block title %}nonk's blog | {{ title }}{% endblock %}
 {% block description %}&quot;{{ title }}&quot; from nonk's blog.{% endblock %}
-{% block url %}blog/{{ id }}.html{% endblock %}
+{% block url %}/blog/{{ id }}{% endblock %}
 
 {% block content %}
 <div style="width: 100%; display: flex; flex-flow: row nowrap; justify-content: space-between;">
@@ -18,7 +18,7 @@
 <p>Articles:</p>
 <ul class="links" hx-boost="true">
     {% for article in articles %}
-    <li><a href="/blog/{{ article.id }}.html">{{ article.title }}</a></li>
+    <li><a href="/blog/{{ article.id }}">{{ article.title }}</a></li>
     {% endfor %}
 </ul>
 {% endblock %}

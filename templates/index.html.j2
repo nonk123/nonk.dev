@@ -1,12 +1,14 @@
 {% extends "base.html.j2" %}
 
+{% set DESCRIPTION="A tinkerer, a sourcerer, and a self-hosting enthusiast." %}
+
 {% block title %}nonk's website{% endblock %}
-{% block description %}A web developer with a thing for cats.{% endblock %}
-{% block url %}index.html{% endblock %}
+{% block description %}{{ DESCRIPTION }}{% endblock %}
+{% block url %}/{% endblock %}
 
 {% block content %}
 <h1>nonk is here to help!</h1>
-<p>A tinkerer, a sourcerer, and a self-hosting enthusiast.</p>
+<p>{{ DESCRIPTION }}</p>
 <p>My interests in no particular order:</p>
 <ul>
     <li>

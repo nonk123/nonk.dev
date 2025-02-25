@@ -6,13 +6,11 @@ body {
 
 body {
     font-size: 20px;
-    font-family: "Consolas", monospace;
-    box-sizing: border-box;
 }
 
 * {
-    font: inherit;
-    box-sizing: inherit;
+    font-family: "Consolas", monospace;
+    box-sizing: border-box;
 }
 
 body {
