@@ -6,13 +6,12 @@
 
     <title>{% block title required %}{% endblock %}</title>
     <meta name="description" content="{% block description required %}{% endblock %}" />
-    <link rel="canonical" href="https://nonk.dev/{% block url required %}{% endblock %}" />
+    <link rel="canonical" href="https://nonk.dev{% block url required %}{% endblock %}" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Language" content="en" />
-    <meta name="robots" content="index, follow" />
 
-    <link rel="icon" type="image/x-icon" href="/favicon.png" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="stylesheet" href="/style.css" />
 
     <script async src="https://umami.schwung.us/script.js"
@@ -25,8 +24,8 @@
 
 <body>
     <header hx-boost="true">
-        <a href="/index.html">About me</a>
-        <a href="/blog/index.html" title="Under construction!">Blog</a>
+        <a href="/" rel="author">About me</a>
+        <a href="/blog" title="Under construction!">Blog</a>
     </header>
     <main>
         <article>
@@ -36,8 +35,8 @@
             {% block links %}
             <p>Socials:</p>
             <ul class="links">
-                <li><a href="mailto:me@nonk.dev">Email</a></li>
-                <li><a href="https://github.com/nonk123">GitHub</a></li>
+                <li><a href="mailto:me@nonk.dev" rel="me">Email</a></li>
+                <li><a href="https://github.com/nonk123" rel="me">GitHub</a></li>
                 <li>
                     <a href="https://discord.com/users/268677450144153611">Discord</a>
                 </li>
