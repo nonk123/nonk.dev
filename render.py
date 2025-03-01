@@ -20,10 +20,8 @@ else:
     os.mkdir(OUT_PATH)
 
 os.mkdir(os.path.join(OUT_PATH, "blog"))
-
+shutil.copytree("assets", os.path.join(OUT_PATH, "assets"))
 shutil.copy("robots.txt", OUT_PATH)
-shutil.copy("favicon.png", OUT_PATH)
-shutil.copy("style.css", OUT_PATH)
 
 env = Environment(
     loader=FileSystemLoader("templates"),
