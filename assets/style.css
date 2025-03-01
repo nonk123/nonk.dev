@@ -174,13 +174,12 @@ a {
     font-weight: bold;
 }
 
-a:visited {
-    color: #149914;
+a {
+    color: #14ee14;
 }
 
-a,
-header > a:visited {
-    color: #14ee14;
+a:visited {
+    color: #149914;
 }
 
 a::before {
@@ -189,6 +188,10 @@ a::before {
 
 a::after {
     content: "]";
+}
+
+p::before {
+    content: "> ";
 }
 
 strong {
