@@ -1,2 +1,0 @@
-favicon.png filter=lfs diff=lfs merge=lfs -text
-assets/favicon.png !text !filter !merge !diff
