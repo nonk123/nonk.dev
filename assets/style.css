@@ -5,11 +5,10 @@ body {
 }
 
 body {
-    font-size: 20px;
+    font: 20px "Consolas", monospace;
 }
 
 * {
-    font-family: "Consolas", monospace;
     box-sizing: border-box;
 }
 
@@ -170,12 +169,9 @@ p {
 }
 
 a {
+    color: #14ee14;
     text-decoration: none;
     font-weight: bold;
-}
-
-a {
-    color: #14ee14;
 }
 
 a:visited {
