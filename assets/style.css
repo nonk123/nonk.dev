@@ -5,7 +5,7 @@ body {
 }
 
 body {
-    font: 20px "Consolas", monospace;
+    font: 18px "Consolas", monospace;
 }
 
 * {
@@ -20,7 +20,7 @@ body {
     min-height: 100vh;
     margin: 0 auto;
 
-    padding: 1em 1ch;
+    padding: 12px;
     overflow-y: auto;
 
     display: flex;
