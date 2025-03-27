@@ -13,28 +13,31 @@
 
     <link rel="icon" type="image/png" href="/assets/favicon.png" />
     <link rel="stylesheet" href="/assets/style.css" />
+    <link rel="stylesheet" href="/assets/status-cafe.css" />
 
     <script async src="https://umami.schwung.us/script.js"
         data-website-id="4d6f1497-24de-4a6e-9991-9931303cfa2c"></script>
 
-    <script src="https://unpkg.com/htmx.org@2.0.4"
-        integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+"
-        crossorigin="anonymous"></script>
+    <script defer src="https://status.cafe/current-status.js?name=nonk"></script>
 </head>
 
 <body>
     <div class="bg-layer" id="bg-back"></div>
     <div class="bg-layer" id="bg-ascii"></div>
     <div class="bg-layer" id="bg-overlay"></div>
+
     <header>
         <a href="/" rel="author">About me</a>
         <a href="/blog" title="Under construction!">Blog</a>
     </header>
+
     <main>
-        <article>
-            {% block content required %}{% endblock %}
-        </article>
-        <nav>
+        {% block content required %}{% endblock %}
+        <section id="statuscafe">
+            <div id="statuscafe-username"></div>
+            <div id="statuscafe-content"></div>
+        </section>
+        <section id="links">
             {% block links %}
             <p>Socials:</p>
             <ul class="links">
@@ -53,8 +56,9 @@
                 <li><a href="https://schwung.us">Schwungus</a></li>
             </ul>
             {% endblock links %}
-        </nav>
+        </section>
     </main>
+
     <footer>
         <a href="https://github.com/nonk123/nonk.dev">source code</a>
     </footer>
