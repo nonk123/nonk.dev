@@ -47,9 +47,8 @@ body {
     background-image: url("https://q7x.ru/vga9x16.png");
     background-size: 288px 288px;
     background-repeat: repeat;
-    transform: scale(1.21);
-    filter: blur(1px) saturate(0.9);
-    opacity: 0.6;
+    image-rendering: pixelated;
+    opacity: 0.4;
     z-index: -1000;
 }
 
