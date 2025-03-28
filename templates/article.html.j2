@@ -11,14 +11,13 @@
         <p style="text-align: right; font-size: 0.8em;">Posted: <strong>{{ date }}</strong></p>
     </div>
 </section>
+
 {% for paragraph in paragraphs %}
 <section>
     <p>{{ paragraph }}</p>
 </section>
 {% endfor %}
-{% endblock %}
 
-{% block links %}
 <section>
     <p>Articles:</p>
     <ul class="links">
