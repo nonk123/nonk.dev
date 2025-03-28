@@ -37,8 +37,8 @@
             <div id="statuscafe-username"></div>
             <div id="statuscafe-content"></div>
         </section>
-        <section id="links">
-            {% block links %}
+        {% block links %}
+        <section>
             <p>Socials:</p>
             <ul class="links">
                 <li><a href="mailto:me@nonk.dev" rel="me">Email</a></li>
@@ -47,17 +47,21 @@
                     <a href="https://discord.com/users/268677450144153611">Discord</a>
                 </li>
             </ul>
+        </section>
+        <section>
             <p>Friends:</p>
             <ul class="links">
                 <li><a href="https://cantsleep.cc">Can't Sleep</a></li>
                 <li><a href="https://vilebeggar.github.io">Vile Beggar</a></li>
             </ul>
+        </section>
+        <section>
             <p>Collectives:</p>
             <ul class="links">
                 <li><a href="https://schwung.us">Schwungus</a></li>
             </ul>
-            {% endblock links %}
         </section>
+        {% endblock links %}
     </main>
 
     <footer>
