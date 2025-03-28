@@ -8,6 +8,11 @@
     <meta name="description" content="{% block description required %}{% endblock %}" />
     <link rel="canonical" href="https://nonk.dev{% block url required %}{% endblock %}" />
 
+    <meta property="og:title" content="{{ self.title() }}" />
+    <meta property="og:description" content="{{ self.description() }}" />
+    <meta property="og:image" content="https://nonk.dev/assets/logo.avif" />
+    <meta property="og:url" content="https://nonk.dev{{ self.url() }}" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Language" content="en" />
 
