@@ -1,0 +1,33 @@
+{% extends "base.html.j2" %}
+
+{% block title %}nonk's projects{% endblock %}
+{% block description %}A list of projects created and maintained by nonk.{% endblock %}
+{% block url %}/projects{% endblock %}
+{% block og_type %}profile{% endblock %}
+
+{% block content %}
+<section>
+    <h1>My projects</h1>
+    <p>Click the links for more info!</p>
+</section>
+<article>
+    <h2><a href="https://vga9x16.ru">vga9x16</a></h2>
+    <p>The API behind this site's randomized background.</p>
+</article>
+<article>
+    <h2><a href="https://schwung.us">schwung.us</a></h2>
+    <p>Me and my homies form the Schwungus collective.</p>
+</article>
+<article>
+    <h2><a href="https://github.com/nonk123/nonklib">nonklib</a></h2>
+    <p>Custom implementations of data structures I made as recreation.</p>
+</article>
+<article>
+    <h2><a href="https://github.com/nonk123/uptime-thing">uptime-thing</a></h2>
+    <p>A toy uptime monitoring app I was challenged to create.</p>
+</article>
+<article>
+    <h2><a href="https://подработка-павлово.рф">a local community website</a></h2>
+    <p>My first (and only) commercially backed project. $50 is $50.</p>
+</article>
+{% endblock %}

@@ -8,6 +8,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 global env, blog, OUT_PATH
 
 OUT_PATH = "out"
+MAKE_DIRS = ["blog", "projects"]
 
 SHARED_CTX = {
     "last_updated": time.strftime("%Y-%m-%d", time.gmtime()),
@@ -24,7 +25,9 @@ if os.path.exists(OUT_PATH):
 else:
     os.mkdir(OUT_PATH)
 
-os.mkdir(os.path.join(OUT_PATH, "blog"))
+for directory in MAKE_DIRS:
+    os.mkdir(os.path.join(OUT_PATH, directory))
+
 shutil.copytree("assets", os.path.join(OUT_PATH, "assets"))
 shutil.copy("robots.txt", OUT_PATH)
 
@@ -63,6 +66,7 @@ def render_article(id, index=False):
 
 
 render("index.html.j2")
+render("projects/index.html.j2")
 render_article(blog["default"], True)
 
 for id in blog["articles"].keys():

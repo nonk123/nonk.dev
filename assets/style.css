@@ -58,11 +58,20 @@ main {
     gap: 1em 1ch;
 }
 
+article,
 section {
     flex-grow: 1;
+}
+
+section {
     align-content: center;
 }
 
+.full-width {
+    width: 100%;
+}
+
+article,
 section,
 header,
 footer {
@@ -112,7 +121,8 @@ ul > li::before {
     content: "- ";
 }
 
-h1 {
+h1,
+h2 {
     margin-top: 0;
     margin-bottom: 1rem;
 }
