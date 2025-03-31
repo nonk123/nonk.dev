@@ -157,3 +157,21 @@ p::before {
 strong {
     color: #ffffff;
 }
+
+#chattable {
+    width: 300px;
+    height: 600px;
+
+    position: fixed;
+    left: 5px;
+    bottom: 5px;
+
+    border: none;
+    box-shadow: 0 0 3px 3px #197919;
+}
+
+@media (max-width: 1200px) {
+    #chattable {
+        display: none;
+    }
+}
