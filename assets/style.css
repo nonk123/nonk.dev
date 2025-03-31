@@ -168,6 +168,7 @@ strong {
 
     border: none;
     box-shadow: 0 0 3px 3px #197919;
+    background: #191919;
 }
 
 @media (max-width: 1200px) {
