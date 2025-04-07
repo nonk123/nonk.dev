@@ -1,7 +1,7 @@
 /.vscode/**/*
 !/.vscode/settings.json
 
-/venv
+/*venv
 /out
 
 \#*

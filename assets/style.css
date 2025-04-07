@@ -127,6 +127,10 @@ h2 {
     margin-bottom: 1rem;
 }
 
+h1.blog {
+    margin-bottom: 0;
+}
+
 ul {
     margin-top: 1em;
     margin-bottom: 0;
