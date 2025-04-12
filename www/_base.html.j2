@@ -1,19 +1,22 @@
+{# TODO: determine programmatically (AGAIN).#}
+{% set last_updated = "2025-04-12" %}
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8" />
 
-    <title>{% block title required %}{% endblock %}</title>
-    <meta name="description" content="{% block description required %}{% endblock %}" />
-    <link rel="canonical" href="https://nonk.dev{% block url required %}{% endblock %}" />
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="description" content="{% block description %}{% endblock %}" />
+    <link rel="canonical" href="https://nonk.dev{% block url %}{% endblock %}" />
 
     <meta property="og:title" content="{{ self.title() }}" />
     <meta property="og:description" content="{{ self.description() }}" />
     <meta property="og:image" content="https://nonk.dev/assets/logo.avif" />
     <meta property="og:url" content="https://nonk.dev{{ self.url() }}" />
     <meta property="og:site_name" content="nonk's website" />
-    <meta property="og:type" content="{% block og_type required %}{% endblock %}" />
+    <meta property="og:type" content="{% block og_type %}{% endblock %}" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Language" content="en" />
@@ -41,7 +44,7 @@
     </header>
 
     <main>
-        {% block content required %}{% endblock %}
+        {% block content %}{% endblock %}
         <section id="statuscafe">
             <div id="statuscafe-username"></div>
             <div id="statuscafe-content"></div>
