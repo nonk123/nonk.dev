@@ -111,6 +111,11 @@ code {
     }
 }
 
+i::before,
+i::after {
+    content: "_";
+}
+
 ul {
     padding: 0;
     list-style-type: none;
