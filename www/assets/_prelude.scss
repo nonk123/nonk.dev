@@ -1,0 +1,10 @@
+$white: #eef0f2;
+$black: #191919;
+$green: #14ee14;
+$darkgreen: #1f7f1f;
+
+@mixin mobile {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}

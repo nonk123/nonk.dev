@@ -1,3 +1,5 @@
+@use "www/assets/_prelude" as *;
+
 :root {
     --advanced-layout: true;
 }
@@ -19,8 +21,8 @@ body {
 body {
     font: 14px "Consolas", monospace;
 
-    color: #fafafa;
-    background: #191919;
+    color: $white;
+    background: $black;
 
     padding: 8px;
 }

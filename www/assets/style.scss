@@ -1,3 +1,5 @@
+@use "www/assets/_prelude" as *;
+
 html,
 body {
     margin: 0;
@@ -13,7 +15,7 @@ body {
 }
 
 body {
-    color: #eef0f2;
+    color: $white;
     background: transparent;
 
     width: calc(min(720px, 100vw));
@@ -91,8 +93,8 @@ footer {
 main > *,
 header,
 footer {
-    background: #191919;
-    box-shadow: 0 0 3px 3px #197919;
+    background: $black;
+    box-shadow: 0 0 3px 3px $darkgreen;
 }
 
 p {
@@ -137,13 +139,13 @@ ul {
 }
 
 a {
-    color: #14ee14;
+    color: $green;
     text-decoration: none;
     font-weight: bold;
 }
 
 a:visited {
-    color: #14a914;
+    color: $darkgreen;
 }
 
 a::before {
@@ -171,12 +173,10 @@ strong {
     bottom: 5px;
 
     border: none;
-    box-shadow: 0 0 3px 3px #197919;
+    box-shadow: 0 0 3px 3px $darkgreen;
     background: #191919;
-}
 
-@media (max-width: 1200px) {
-    #chattable {
+    @include mobile {
         display: none;
     }
 }
