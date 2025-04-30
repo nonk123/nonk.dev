@@ -1,21 +1,22 @@
 {% extends "_base.html" %}
 
-{% set DESCRIPTION="a tinkerer, a sourcerer, and a self-hosting enthusiast" %}
-
 {% block title %}homepage{% endblock %}
-{% block description %}{{ DESCRIPTION }}{% endblock %}
+{% block description %}a tinkerer, a sourcerer, and a self-hosting enthusiast{% endblock %}
 {% block url %}/{% endblock %}
 {% block og_type %}profile{% endblock %}
 
 {% block content %}
 <section class="full-width">
     <h1>nonk is here to help!</h1>
-    <p>{{ DESCRIPTION }}</p>
+    <p>{{ self.description() }}</p>
 </section>
+
 <section class="full-width">
     <p>check out <a href="/projects">my projects</a> too!</p>
 </section>
+
 {% include "_socials.html" %}
+
 <section>
     <p>my interests in no particular order:</p>
     <ul>
@@ -28,6 +29,7 @@
         <li>everything GNU/Linux</li>
     </ul>
 </section>
+
 <section>
     <p>found me useful? contact me!</p>
 </section>

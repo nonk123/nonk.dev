@@ -142,18 +142,18 @@ a {
     color: $green;
     text-decoration: none;
     font-weight: bold;
-}
 
-a:visited {
-    color: $darkgreen;
-}
+    &::before {
+        content: "[";
+    }
 
-a::before {
-    content: "[";
-}
+    &::after {
+        content: "]";
+    }
 
-a::after {
-    content: "]";
+    &:visited {
+        color: $darkgreen;
+    }
 }
 
 p::before {
