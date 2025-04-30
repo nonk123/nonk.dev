@@ -4,6 +4,12 @@
     "files.exclude": {
         "dist": true
     },
+    "files.associations": {
+        "**/blog/*.txt": "html"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
     "[jinja-html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },

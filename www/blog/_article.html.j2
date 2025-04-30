@@ -15,7 +15,7 @@
 
 {% for paragraph in paragraphs %}
 <section>
-    <p>{{ paragraph }}</p>
+    <p>{{ paragraph|safe }}</p>
 </section>
 {% endfor %}
 

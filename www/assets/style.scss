@@ -100,6 +100,16 @@ h1::before {
     content: "§ ";
 }
 
+code {
+    font-family: inherit;
+    color: $green;
+
+    &::before,
+    &::after {
+        content: "`";
+    }
+}
+
 ul {
     padding: 0;
     list-style-type: none;

@@ -1,0 +1,16 @@
+There is no such thing as overhead from calling native C functions: the loss in performance comes from the surrounding
+interpreted environment.
+
+Calling a C function by pointer, from the executor's standpoint, is just as quick as evaluating an expression in the
+language in question. But here's the catch:
+
+Say, we'd like to draw an image pointwise by using a native <code>putPixel</code> procedure. The pure-native
+implementation would take less than a millisecond to run on decent hardware. The interpreted implementation would
+struggle for minutes before it outputs anything.
+
+The amount of runtime the interpreter spends evaluating a nested loop and its scope boundaries, running garbage
+collection, boxing/unboxing dynamic values and performing type safety checks on them is orders of magnitude larger than
+how long a <code>putPixel</code> call would take.
+
+With that said, if you ever need to use a C library inside your JavaScript/Python project, consider whether you need
+JavaScript/Python <i>at all</i>.

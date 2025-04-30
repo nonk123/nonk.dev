@@ -4,7 +4,8 @@ for id, article in pairs(index.articles) do
     local contents = read("blog/" .. id .. ".txt");
     local paragraphs = {}
 
-    for paragraph in string.gmatch(contents, "[^\n]+[^\n]") do
+    contents = contents:gsub("([^\n])\n([^\n])", "%1 %2") .. "\n\n";
+    for paragraph in contents:gmatch("([^\n]-)(\n\n+)") do
         table.insert(paragraphs, paragraph);
     end
 
