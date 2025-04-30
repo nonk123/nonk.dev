@@ -8,3 +8,22 @@ $darkgreen: #1f7f1f;
         @content;
     }
 }
+
+@font-face {
+    font-family: Hack;
+    src: url("/assets/Hack-Regular.ttf") format("truetype");
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Hack, Consolas, monospace;
+}
+
+* {
+    box-sizing: border-box;
+}

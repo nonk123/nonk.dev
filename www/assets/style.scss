@@ -1,17 +1,7 @@
 @use "assets/_prelude" as *;
 
-html,
 body {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font: 18px "Consolas", monospace;
-}
-
-* {
-    box-sizing: border-box;
+    font-size: 17px;
 }
 
 body {
