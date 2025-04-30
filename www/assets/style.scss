@@ -180,3 +180,15 @@ strong {
         display: none;
     }
 }
+
+#statuscafe {
+    padding: 0.5em;
+
+    &-username {
+        margin-bottom: 0.5em;
+    }
+
+    &-content {
+        margin: 0 1em 0.5em 1em;
+    }
+}
