@@ -1,6 +1,8 @@
 /.vscode/**/*
 !/.vscode/settings.json
 
+/_sanity.lua
+
 /*venv
 /out
 /dist

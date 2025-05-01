@@ -1,6 +1,7 @@
 {
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "file",
+    "Lua.workspace.library": ["_sanity.lua"],
     "files.exclude": {
         "dist": true
     },
