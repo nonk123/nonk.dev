@@ -29,7 +29,7 @@
     <script>
         function toggleHam() {
             const elt = document.getElementById("sidebar");
-            const origDisplay = elt.style.display;
+            const origDisplay = elt.style.display.toString();
             if (origDisplay === "none") elt.style.display = "flex";
             if (origDisplay !== "none") elt.style.display = "none";
             if (!origDisplay.length) elt.style.display = "flex";
