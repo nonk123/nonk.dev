@@ -1,24 +1,97 @@
 @use "assets/_prelude" as *;
 
-body {
-    font-size: 17px;
+$vgap: minmax(1em, 1fr);
+
+@font-face {
+    font-family: Hack;
+    src: url("/assets/Hack-Regular.ttf") format("truetype");
 }
 
 body {
+    font-size: 17px;
+    z-index: 0;
+
     color: $white;
     background: transparent;
 
-    width: calc(min(720px, 100vw));
+    width: calc(min($WIDTH, 100vw));
     min-height: 100vh;
     margin: 0 auto;
 
     padding: 12px;
     overflow-y: auto;
 
+    display: grid;
+    gap: 0 1ch;
+    grid-template-areas:
+        "head head"
+        ".    .   "
+        "side main"
+        "side .   "
+        ".    .   "
+        "foot foot";
+    grid-template-rows: auto $vgap auto auto $vgap auto;
+    grid-template-columns: $sidebar-width 1fr;
+}
+
+#sidebar {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
-    gap: 1em 1ch;
+    gap: 1em;
+    grid-area: side;
+}
+
+#hamburger {
+    height: 3em;
+
+    grid-area: ham;
+    cursor: pointer;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 3px;
+
+    & > * {
+        width: 100%;
+        height: 3px;
+        background: $white;
+        border-radius: 1px;
+    }
+}
+
+#logo {
+    aspect-ratio: 1;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+@include mobile {
+    body {
+        width: calc(min($main-width, 100vw));
+
+        grid-template-areas:
+            "ham  head"
+            ".    .   "
+            "side side"
+            "main main"
+            ".    .   "
+            "foot foot";
+        grid-template-rows: auto $vgap auto auto $vgap auto;
+        grid-template-columns: 3ch 1fr;
+    }
+
+    #logo {
+        max-height: 128px;
+    }
+
+    #sidebar {
+        display: none;
+        margin-bottom: 1em;
+
+        flex-flow: row nowrap;
+        gap: 1em 1ch;
+    }
 }
 
 #bg-backside,
@@ -45,6 +118,8 @@ body {
 }
 
 main {
+    grid-area: main;
+
     display: flex;
     flex-flow: row wrap;
     align-items: flex-end;
@@ -52,7 +127,7 @@ main {
 }
 
 article,
-section {
+main > section {
     flex-grow: 1;
 }
 
@@ -73,19 +148,24 @@ footer {
 
 header {
     text-align: center;
+    grid-area: head;
 }
 
 footer {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    grid-area: foot;
 }
 
 main > *,
+#sidebar > *,
 header,
-footer {
+footer,
+#hamburger {
     background: $black;
     box-shadow: 0 0 3px 3px $darkgreen;
+    border: none;
 }
 
 p {
@@ -144,7 +224,7 @@ ul {
     margin-bottom: 0;
 }
 
-a {
+a:not(#me) {
     color: $green;
     text-decoration: none;
     font-weight: bold;
@@ -162,12 +242,22 @@ a {
     }
 }
 
+#me {
+    text-decoration: none;
+    font-weight: bold;
+
+    &,
+    &:visited {
+        color: $white;
+    }
+}
+
 strong {
     color: #ffffff;
 }
 
 #chattable {
-    width: 300px;
+    width: $chat-width;
     height: 600px;
 
     position: fixed;
@@ -178,7 +268,7 @@ strong {
     box-shadow: 0 0 3px 3px $darkgreen;
     background: #191919;
 
-    @include mobile {
+    @include narrow {
         display: none;
     }
 }

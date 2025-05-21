@@ -26,6 +26,16 @@
         data-website-id="4d6f1497-24de-4a6e-9991-9931303cfa2c"></script>
     {% endif %}
 
+    <script>
+        function toggleHam() {
+            const elt = document.getElementById("sidebar");
+            const origDisplay = elt.style.display;
+            if (origDisplay === "none") elt.style.display = "flex";
+            if (origDisplay !== "none") elt.style.display = "none";
+            if (!origDisplay.length) elt.style.display = "flex";
+        }
+    </script>
+
     <script src="https://iframe.chat/scripts/main.min.js"></script>
     <script src="/assets/status-cafe.js"></script>
 </head>
@@ -33,6 +43,20 @@
 <body>
     <div id="bg-backside"></div>
     <div id="bg-ascii"></div>
+
+    <button id="hamburger" onclick="toggleHam()">
+        {% for _ in range(0, 3) %}
+        <div></div>
+        {% endfor %}
+    </button>
+
+    <div id="sidebar">
+        <section>
+            <img id="logo" src="/assets/logo.avif"><br>
+            <p class="center">i'm <a href="https://github.com/nonk123" rel="me" id="me">@nonk123</a></p>
+        </section>
+        {% include "_socials.html" %}
+    </div>
 
     <header>
         <a href="/" rel="author">about me</a>

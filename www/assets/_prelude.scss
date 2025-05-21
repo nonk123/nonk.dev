@@ -1,17 +1,23 @@
+$main-width: 620px;
+$sidebar-width: 240px;
+$WIDTH: $main-width + $sidebar-width;
+$chat-width: 300px;
+
 $white: #eef0f2;
 $black: #191919;
 $green: #14ee14;
 $darkgreen: #1f7f1f;
 
-@mixin mobile {
-    @media (max-width: 1200px) {
+@mixin narrow {
+    @media (max-width: #{$WIDTH + $chat-width * 2}) {
         @content;
     }
 }
 
-@font-face {
-    font-family: Hack;
-    src: url("/assets/Hack-Regular.ttf") format("truetype");
+@mixin mobile {
+    @media (max-width: $WIDTH) {
+        @content;
+    }
 }
 
 html,
@@ -26,4 +32,8 @@ body {
 
 * {
     box-sizing: border-box;
+}
+
+p.center {
+    text-align: center;
 }
