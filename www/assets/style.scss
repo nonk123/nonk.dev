@@ -1,7 +1,5 @@
 @use "assets/_prelude" as *;
 
-$vgap: minmax(1em, 1fr);
-
 @font-face {
     font-family: Hack;
     src: url("/assets/Hack-Regular.ttf") format("truetype");
@@ -14,7 +12,7 @@ body {
     color: $white;
     background: transparent;
 
-    width: calc(min($WIDTH, 100vw));
+    width: max-content;
     min-height: 100vh;
     margin: 0 auto;
 
@@ -30,8 +28,9 @@ body {
         "side .   "
         ".    .   "
         "foot foot";
+    $vgap: minmax(1em, 1fr);
     grid-template-rows: auto $vgap auto auto $vgap auto;
-    grid-template-columns: $sidebar-width 1fr;
+    grid-template-columns: $sidebar-width $main-width;
 }
 
 #sidebar {
@@ -47,7 +46,7 @@ body {
     grid-area: ham;
     cursor: pointer;
 
-    display: flex;
+    display: none;
     flex-flow: column nowrap;
     justify-content: center;
     gap: 3px;
@@ -77,8 +76,11 @@ body {
             "main main"
             ".    .   "
             "foot foot";
-        grid-template-rows: auto $vgap auto auto $vgap auto;
         grid-template-columns: 3ch 1fr;
+    }
+
+    #hamburger {
+        display: flex;
     }
 
     #logo {
