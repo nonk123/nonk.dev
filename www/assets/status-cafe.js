@@ -1,9 +1,6 @@
-(function () {
-    fetch("https://status.cafe/users/nonk/status.json")
-        .then((r) => r.json())
-        .then(cafe);
-
-    function cafe(response) {
+fetch("https://status.cafe/users/nonk/status.json")
+    .then((r) => r.json())
+    .then((response) => {
         const usernameLink = document.createElement("a");
         usernameLink.href = "https://status.cafe/users/nonk";
         usernameLink.target = "_blank";
@@ -24,5 +21,4 @@
         username.appendChild(marginalia);
 
         content.innerHTML = response.content;
-    }
-})();
+    });
