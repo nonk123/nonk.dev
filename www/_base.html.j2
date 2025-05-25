@@ -7,19 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Language" content="en" />
 
-    <title>{% block title %}{% endblock %}</title>
+    <title>{% block what %}{% endblock %} | nonk's website</title>
     <meta name="description" content="{% block description %}{% endblock %}" />
     <link rel="canonical" href="https://nonk.dev{% block url %}{% endblock %}" />
 
-    <meta property="og:title" content="{{ self.title() }}" />
+    <meta property="og:title" content="{{ self.what() }}" />
     <meta property="og:description" content="{{ self.description() }}" />
     <meta property="og:image" content="https://nonk.dev/assets/logo.avif" />
     <meta property="og:url" content="https://nonk.dev{{ self.url() }}" />
     <meta property="og:site_name" content="nonk's website" />
-    <meta property="og:type" content="{% block og_type %}{% endblock %}" />
+    <meta property="og:type" content="{% block og_type %}profile{% endblock %}" />
 
     <link rel="icon" type="image/png" href="/assets/favicon.png" />
     <link rel="stylesheet" href="/assets/style.css" />
+
+    {% block head %}{% endblock %}
 
     {% if __prod %}
     <script async src="https://umami.schwung.us/script.js"
@@ -52,7 +54,7 @@
 
     <div id="sidebar">
         <section>
-            <img id="logo" src="/assets/logo.avif"><br>
+            <img id="logo" src="/assets/logo.avif" alt="A photo of a middle-aged plumber"><br>
             <p class="center">i'm <a href="https://github.com/nonk123" rel="me" id="me">@nonk123</a></p>
         </section>
         {% include "_socials.html" %}

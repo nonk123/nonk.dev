@@ -11,7 +11,8 @@ for id, article in pairs(index.articles) do
 
     local ctx = {
         id = id,
-        date = article.date,
+        date_pub = article.date_pub,
+        date_mod = article.date_mod or article.date_pub,
         title = article.title,
         paragraphs = paragraphs,
         all_articles = index.articles,
