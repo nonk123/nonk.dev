@@ -166,8 +166,8 @@ header,
 footer,
 #hamburger {
     background: $black;
-    box-shadow: 0 0 3px 3px $darkgreen;
-    border: none;
+    box-shadow: 0 0 2px 2px $darkgreen;
+    border: 1px solid $darkgreen;
 }
 
 p {
