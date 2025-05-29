@@ -133,6 +133,16 @@ main > section {
     flex-grow: 1;
 }
 
+#badges > div {
+    margin-top: 1em;
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+    justify-content: space-around;
+    gap: 1em 1ch;
+}
+
 section {
     align-content: start;
 }
@@ -226,7 +236,7 @@ ul {
     margin-bottom: 0;
 }
 
-a:not(#me) {
+a:not(:has(> img)) {
     color: $green;
     text-decoration: none;
     font-weight: bold;
