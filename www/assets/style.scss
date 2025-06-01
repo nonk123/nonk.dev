@@ -91,7 +91,7 @@ body {
         display: none;
         margin-bottom: 1em;
 
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
         gap: 1em 1ch;
     }
 }
