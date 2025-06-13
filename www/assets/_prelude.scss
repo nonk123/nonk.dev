@@ -20,6 +20,11 @@ $darkgreen: #1f7f1f;
     }
 }
 
+@font-face {
+    font-family: Hack;
+    src: url("https://nonk.dev/assets/Hack-Regular.ttf") format("truetype");
+}
+
 :root {
     color-scheme: only dark;
 }
@@ -31,7 +36,7 @@ body {
 }
 
 body {
-    font-family: Hack, Consolas, monospace;
+    font: 18px Hack, Consolas, monospace;
 }
 
 * {

@@ -1,14 +1,6 @@
 @use "assets/_prelude" as *;
 
-@font-face {
-    font-family: Hack;
-    src: url("/assets/Hack-Regular.ttf") format("truetype");
-}
-
 body {
-    font-size: 17px;
-    z-index: 0;
-
     color: $white;
     background: transparent;
 
@@ -20,7 +12,7 @@ body {
     overflow-y: auto;
 
     display: grid;
-    gap: 0 1ch;
+    gap: 0 20px;
     grid-template-areas:
         "head head"
         ".    .   "
@@ -182,6 +174,7 @@ footer,
 
 p {
     margin: 0;
+    text-align: justify;
 }
 
 h1 {
