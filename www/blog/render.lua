@@ -1,7 +1,7 @@
 local index = json("blog/index.json");
 
 for id, article in pairs(index.articles) do
-    local contents = read("blog/" .. id .. ".txt");
+    local contents = read("blog/md/" .. id .. ".txt");
     local paragraphs = {}
 
     contents = contents:gsub("([^\n])\n([^\n])", "%1 %2") .. "\n\n";
