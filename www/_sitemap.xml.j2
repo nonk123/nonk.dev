@@ -9,7 +9,7 @@
     {% for id, article in articles|items %}
     <url>
         <loc>https://nonk.dev/blog/{{ id }}</loc>
-        <lastmod>{{ article.date }}</lastmod>
+        <lastmod>{{ article.date_mod if article.date_mod else article.date_pub }}</lastmod>
         <priority>0.5</priority>
     </url>
     {% endfor %}
