@@ -53,5 +53,35 @@ body {
 }
 
 .msgWrapper {
-    border-top: 1px solid #fafafa;
+    border-top: 1px dashed #fafafa;
+    margin-bottom: 1em;
+}
+
+.allMessages {
+    padding: 0;
+    padding-top: 3px;
+    width: 100%;
+}
+
+.owner.badge {
+    display: none;
+
+    .senderInfo:has(&) {
+        color: $green;
+    }
+}
+
+.senderInfo {
+    display: block;
+    &::before {
+        content: "<";
+    }
+    &::after {
+        content: ">";
+    }
+}
+
+.msgBody {
+    display: inline;
+    margin-left: 2ch;
 }
