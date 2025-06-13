@@ -6,7 +6,7 @@
         "dist": true
     },
     "files.associations": {
-        "**/blog/*.txt": "html"
+        "**/blog/md/*.txt": "html"
     },
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
