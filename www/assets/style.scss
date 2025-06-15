@@ -130,7 +130,8 @@ main,
 #sidebar,
 header,
 footer,
-#hamburger {
+#hamburger,
+#chattable {
     background: $black;
     padding: 1ex 1ch;
     border-radius: 4px;
@@ -234,6 +235,7 @@ strong {
 #chattable {
     width: $chat-width;
     height: 600px;
+    padding: 0;
 
     position: fixed;
     left: 5px;
