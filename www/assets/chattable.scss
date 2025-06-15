@@ -73,6 +73,7 @@ body {
 
 .senderInfo {
     display: block;
+
     &::before {
         content: "<";
     }

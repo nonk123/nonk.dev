@@ -39,33 +39,25 @@
     </script>
 
     <script src="https://iframe.chat/scripts/main.min.js"></script>
-    <script src="/assets/status-cafe.js"></script>
+    <!-- TODO: bring back...
+    <script src="/assets/status-cafe.js"></script> -->
 </head>
 
 <body>
-    <div id="bg-backside"></div>
-    <div id="bg-ascii"></div>
+    <div id="background"></div>
 
     <button id="hamburger" onclick="toggleHam()">
-        {% for _ in range(0, 3) %}
-        <div></div>
-        {% endfor %}
+        {% for _ in range(0, 4) %}<div></div>{% endfor %}
     </button>
 
     <div id="sidebar">
-        <section>
-            <img id="logo" src="/assets/logo.avif" alt="A photo of a middle-aged plumber"><br>
+        <div id="profile">
+            <img id="logo" src="/assets/logo.avif" alt="Photo of a middle-aged plumber"><br>
             <p class="center">i'm <a href="https://github.com/nonk123" rel="nofollow me" id="me">@nonk123</a></p>
-        </section>
-        {% include "_socials.html" %}
-        <section id="badges">
-            <p>badges:</p>
-            <div>
-                <a rel="nofollow" href="https://notbyai.fyi">
-                    <img src="/assets/human.svg">
-                </a>
-            </div>
-        </section>
+        </div>
+        <div>
+            {% include "_socials.html" %}
+        </div>
     </div>
 
     <header>
@@ -76,10 +68,12 @@
 
     <main>
         {% block content %}{% endblock %}
+        <!-- TODO: bring back...
         <section id="statuscafe">
             <div id="statuscafe-username"></div>
             <div id="statuscafe-content"></div>
         </section>
+        -->
     </main>
 
     <footer>

@@ -1,33 +1,22 @@
 {% extends "_base.html" %}
 
 {% block what %}landing page{% endblock %}
-{% block description %}A tinkerer, a sourcerer, and a self-hosting enthusiast.{% endblock %}
+{% block description %}a tinkerer, a sourcerer, and a self-hosting enthusiast.{% endblock %}
 {% block url %}/{% endblock %}
 
 {% block content %}
-<section>
-    <h1>nonk is here to help!</h1>
-    <p>{{ self.description() }}</p>
-</section>
-
-<section>
-    <p>check out <a href="/projects">my projects</a> too!</p>
-</section>
-
-<section>
-    <p>my interests in no particular order:</p>
-    <ul>
-        <li>low-level programming</li>
-        <li>amusing web experiences</li>
-        <li>game development. mostly with
-            <a rel="nofollow" href="https://github.com/raysan5/raylib" title="Check it out!!!">raylib</a>
-        </li>
-        <li>free software</li>
-        <li>everything GNU/Linux</li>
-    </ul>
-</section>
-
-<section>
-    <p>found me useful? contact me!</p>
-</section>
+<h1>nonk is here to help!</h1>
+<p>{{ self.description() }}</p>
+<p>check out <a href="/projects">my projects</a> too!</p>
+<p>my interests in no particular order:</p>
+<ul>
+    <li>low-level programming</li>
+    <li>amusing web experiences</li>
+    <li>game development. mostly with
+        <a rel="nofollow" href="https://github.com/raysan5/raylib" title="Check it out!!!">raylib</a>
+    </li>
+    <li>free software</li>
+    <li>everything GNU/Linux</li>
+</ul>
+<p>found me useful? contact me!</p>
 {% endblock %}

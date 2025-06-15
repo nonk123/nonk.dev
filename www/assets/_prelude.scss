@@ -3,13 +3,13 @@ $sidebar-width: 240px;
 $WIDTH: $main-width + $sidebar-width + 64px;
 $chat-width: 300px;
 
-$white: #eef0f2;
-$black: #191919;
+$white: #fef0f2;
+$black: #181818;
 $green: #14ee14;
 $darkgreen: #1f7f1f;
 
 @mixin narrow {
-    @media (max-width: #{$WIDTH + $chat-width * 2}) {
+    @media (max-width: #{$WIDTH + $chat-width * 1.5}) {
         @content;
     }
 }
@@ -37,10 +37,12 @@ body {
 
 body {
     font: 18px Hack, Consolas, monospace;
+    box-sizing: border-box;
 }
 
 * {
-    box-sizing: border-box;
+    font-family: inherit;
+    box-sizing: inherit;
 }
 
 p.center {

@@ -1,18 +1,29 @@
 @use "assets/_prelude" as *;
 
-body {
-    color: $white;
-    background: transparent;
+html {
+    background-image: url("https://q7x.ru/vga9x16.png");
+    background-size: 288px 288px;
+    background-repeat: repeat;
+    image-rendering: pixelated;
+}
 
-    width: max-content;
+body {
+    $shadow: rgba(0, 0, 0, 0.5);
+
+    color: $white;
+    background: $shadow;
+    box-shadow: 0 0 64px 64px $shadow;
+
     min-height: 100vh;
     margin: 0 auto;
 
-    padding: 12px;
+    padding: 12px 16px;
     overflow-y: auto;
 
+    width: max-content;
     display: grid;
-    gap: 0 20px;
+    gap: 0 32px;
+
     grid-template-areas:
         "head head"
         ".    .   "
@@ -20,28 +31,25 @@ body {
         "side .   "
         ".    .   "
         "foot foot";
-    $vgap: minmax(1em, 1fr);
-    grid-template-rows: auto $vgap auto auto $vgap auto;
+    grid-template-rows: auto 96px auto auto minmax(1em, 1fr) auto;
     grid-template-columns: $sidebar-width $main-width;
 }
 
 #sidebar {
+    grid-area: side;
     display: flex;
     flex-flow: column nowrap;
-    gap: 1em;
-    grid-area: side;
+    justify-content: start;
 }
 
 #hamburger {
-    height: 3em;
-
     grid-area: ham;
     cursor: pointer;
 
     display: none;
     flex-flow: column nowrap;
     justify-content: center;
-    gap: 3px;
+    gap: 5px;
 
     & > * {
         width: 100%;
@@ -59,7 +67,7 @@ body {
 
 @include mobile {
     body {
-        width: calc(min($main-width, 100vw));
+        width: calc(min($main-width, 100%));
 
         grid-template-areas:
             "ham  head"
@@ -68,7 +76,8 @@ body {
             "main main"
             ".    .   "
             "foot foot";
-        grid-template-columns: 3ch 1fr;
+        grid-template-columns: 48px 1fr;
+        gap: 0 8px;
     }
 
     #hamburger {
@@ -82,47 +91,17 @@ body {
     #sidebar {
         display: none;
         margin-bottom: 1em;
+        align-items: center;
 
-        flex-flow: row wrap;
-        gap: 1em 1ch;
+        & > div,
+        & p {
+            width: fit-content;
+        }
     }
-}
-
-#bg-backside,
-#bg-ascii {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-}
-
-#bg-backside {
-    background: #000000;
-    z-index: -1001;
-}
-
-#bg-ascii {
-    background-image: url("https://q7x.ru/vga9x16.png");
-    background-size: 288px 288px;
-    background-repeat: repeat;
-    image-rendering: pixelated;
-    opacity: 0.4;
-    z-index: -1000;
 }
 
 main {
     grid-area: main;
-
-    display: flex;
-    flex-flow: row wrap;
-    align-items: flex-end;
-    gap: 1em 1ch;
-}
-
-article,
-main > section {
-    flex-grow: 1;
 }
 
 #badges > div {
@@ -133,21 +112,6 @@ main > section {
     align-items: baseline;
     justify-content: space-around;
     gap: 1em 1ch;
-}
-
-section {
-    align-content: start;
-}
-
-.full-width {
-    width: 100%;
-}
-
-article,
-section,
-header,
-footer {
-    padding: 1ex 1ch;
 }
 
 header {
@@ -162,18 +126,24 @@ footer {
     grid-area: foot;
 }
 
-main > *,
-#sidebar > *,
+main,
+#sidebar,
 header,
 footer,
 #hamburger {
     background: $black;
-    box-shadow: 0 0 2px 2px $darkgreen;
-    border: 1px solid $darkgreen;
+    padding: 1ex 1ch;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 4px 4px transparentize($green, 0.5);
+}
+
+header,
+footer {
+    padding: 1em 1ch;
 }
 
 p {
-    margin: 0;
     text-align: justify;
 }
 
@@ -269,9 +239,8 @@ strong {
     left: 5px;
     bottom: 5px;
 
+    background: $black;
     border: none;
-    box-shadow: 0 0 3px 3px $darkgreen;
-    background: #191919;
 
     @include narrow {
         display: none;
