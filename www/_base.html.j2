@@ -38,43 +38,41 @@
         }
     </script>
 
+    <script src="/assets/status-cafe.js"></script>
     <script src="https://iframe.chat/scripts/main.min.js"></script>
-    <!-- TODO: bring back...
-    <script src="/assets/status-cafe.js"></script> -->
 </head>
 
 <body>
-    <div id="background"></div>
-
-    <button id="hamburger" onclick="toggleHam()">
-        {% for _ in range(0, 4) %}<div></div>{% endfor %}
-    </button>
-
-    <div id="sidebar">
-        <div id="profile">
-            <img id="logo" src="/assets/logo.avif" alt="Photo of a middle-aged plumber"><br>
-            <p class="center">i'm <a href="https://github.com/nonk123" rel="nofollow me" id="me">@nonk123</a></p>
-        </div>
-        <div>
-            {% include "_socials.html" %}
-        </div>
-    </div>
-
     <header>
-        <a href="/" rel="author">about me</a>
-        <a href="/projects">projects</a>
-        <a href="/blog" title="under construction!">blog</a>
+        <button id="hamburger" onclick="toggleHam()">
+            {% for _ in range(0, 4) %}<div></div>{% endfor %}
+        </button>
+        <nav>
+            <a href="/" rel="author">about me</a>
+            <a href="/projects">projects</a>
+            <a href="/blog" title="under construction!">blog</a>
+        </nav>
     </header>
 
-    <main>
-        {% block content %}{% endblock %}
-        <!-- TODO: bring back...
-        <section id="statuscafe">
-            <div id="statuscafe-username"></div>
-            <div id="statuscafe-content"></div>
-        </section>
-        -->
-    </main>
+    <section id="grail">
+        <aside id="sidebar">
+            <div id="profile">
+                <img id="logo" src="/assets/logo.avif" alt="Photo of a middle-aged plumber"><br>
+                <p class="center">i'm <a href="https://github.com/nonk123" rel="nofollow me" id="me">@nonk123</a></p>
+            </div>
+            <nav>
+                {% include "_socials.html" %}
+            </nav>
+        </aside>
+        <main id="content">
+            {% block content %}{% endblock %}
+        </main>
+    </section>
+
+    <section id="statuscafe">
+        <div id="statuscafe-username"></div>
+        <div id="statuscafe-content"></div>
+    </section>
 
     <footer>
         <span>last updated: <strong>{{ last_updated }}</strong></span>
