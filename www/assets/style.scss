@@ -135,7 +135,7 @@ footer,
     background: $black;
     padding: 1ex 1ch;
     border-radius: 4px;
-    border: none;
+    border: 1px solid transparentize($green, 0.2);
     box-shadow: 0 0 4px 4px transparentize($green, 0.5);
 }
 
