@@ -50,6 +50,7 @@ body {
 
 #hamburger {
     cursor: pointer;
+    aspect-ratio: 1;
     width: 64px;
 
     display: none;
@@ -109,6 +110,7 @@ body {
 header {
     display: flex;
     flex-flow: row nowrap;
+    align-items: start;
     gap: 0 1em;
 }
 
