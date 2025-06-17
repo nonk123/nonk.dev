@@ -8,12 +8,6 @@ $black: #181818;
 $green: #14ee14;
 $darkgreen: #1f7f1f;
 
-@mixin narrow {
-    @media (max-width: #{$WIDTH + $chat-width * 1.5}) {
-        @content;
-    }
-}
-
 @mixin mobile {
     @media (max-width: $WIDTH) {
         @content;

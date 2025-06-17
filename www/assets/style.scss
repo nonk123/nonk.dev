@@ -247,7 +247,19 @@ strong {
     background: $black;
     border: none;
 
-    @include narrow {
+    @include mobile {
+        display: none;
+    }
+}
+
+#toggle-chat {
+    cursor: pointer;
+
+    position: fixed;
+    left: 16px;
+    top: 8px;
+
+    @include mobile {
         display: none;
     }
 }
