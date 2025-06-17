@@ -1,5 +1,8 @@
 @use "assets/_prelude" as *;
 
+$font-size: 14px;
+$sticker-scale: 3;
+
 :root {
     --advanced-layout: true;
 }
@@ -18,13 +21,19 @@ body {
     display: none;
 }
 
-body {
-    font-size: 14px;
+body,
+#emojiTray {
+    font-size: $font-size;
 
     color: $white;
     background: $black;
 
     padding: 8px;
+}
+
+.emoji {
+    width: $font-size;
+    height: $font-size;
 }
 
 #settings,
@@ -48,12 +57,12 @@ body {
 }
 
 #input {
-    color: #191919;
-    background: #fafafa;
+    color: $black;
+    background: $white;
 }
 
 .msgWrapper {
-    border-top: 1px dashed #fafafa;
+    border-top: 1px dashed $white;
     margin-bottom: 1em;
 }
 
@@ -61,6 +70,17 @@ body {
     padding: 0;
     padding-top: 3px;
     width: 100%;
+}
+
+.sent {
+    padding-left: 4px;
+    border-left: 8px solid transparentize($green, 0.3);
+}
+
+.allMessages.containsOnlyEmojis .emoji {
+    aspect-ratio: 1;
+    width: calc($font-size * $sticker-scale);
+    height: calc($font-size * $sticker-scale);
 }
 
 .owner.badge {
