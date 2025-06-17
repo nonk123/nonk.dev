@@ -42,39 +42,40 @@
     <script src="https://iframe.chat/scripts/main.min.js"></script>
 </head>
 
-<body>
-    <header>
-        <button id="hamburger" onclick="toggleHam()">
+<body class="col sp-between">
+    <header class="w100 row">
+        <button id="hamburger" class="panel" onclick="toggleHam()">
             {% for _ in range(0, 4) %}<div></div>{% endfor %}
         </button>
-        <nav>
+        <nav class="panel pad0 w100 row wrap al-start">
             <a href="/" rel="author">about me</a>
             <a href="/projects">projects</a>
             <a href="/blog" title="under construction!">blog</a>
+            <a href="/guestbook" title="please sign!">guestbook</a>
         </nav>
     </header>
 
-    <section id="grail">
-        <aside id="sidebar">
-            <div id="profile">
+    <section id="grail" class="w100 row sp-between al-start">
+        <aside id="sidebar" class="panel col al-start">
+            <div id="profile" class="w100">
                 <img id="logo" src="/assets/logo.avif" alt="Photo of a middle-aged plumber"><br>
                 <p class="center">i'm <a href="https://github.com/nonk123" rel="nofollow me" id="me">@nonk123</a></p>
             </div>
-            <nav>
+            <nav class="w100">
                 {% include "_socials.html" %}
             </nav>
         </aside>
-        <main id="content">
+        <main id="content" class="panel">
             {% block content %}{% endblock %}
         </main>
     </section>
 
-    <section id="statuscafe">
+    <section id="statuscafe" class="panel w100">
         <div id="statuscafe-username"></div>
         <div id="statuscafe-content"></div>
     </section>
 
-    <footer>
+    <footer class="panel pad0 w100 row sp-between">
         <span>last updated: <strong>{{ last_updated }}</strong></span>
         <a href="https://github.com/nonk123/nonk.dev">source code</a>
     </footer>
