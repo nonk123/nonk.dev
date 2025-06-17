@@ -1,0 +1,49 @@
+{% extends "_base.html" %}
+
+{% block what %}shitposts{% endblock %}
+{% block description %}sharing my hand-picked shitposts with the world.{% endblock %}
+{% block url %}/shitposts{% endblock %}
+
+{% block head %}
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const player = document.createElement("video");
+        player.id = "shitpost";
+        player.setAttribute("loop", true);
+        player.style.display = "none";
+        document.body.appendChild(player);
+
+        function staph() {
+            player.pause();
+            player.currentTime = 0.0;
+        }
+
+        player.addEventListener("click", function () {
+            player.style.display = "none";
+            staph();
+        });
+
+        for (const post of document.getElementsByClassName("shitpost")) {
+            post.addEventListener("click", function (ev) {
+                ev.preventDefault();
+                staph();
+
+                player.setAttribute("src", post.attributes.shitpostUrl.nodeValue);
+                player.setAttribute("type", "video/mp4");
+
+                player.style.display = "block";
+                player.play();
+            });
+        }
+    });
+</script>
+{% endblock %}
+
+{% block content %}
+<h1>assorted shitposts</h1>
+{% for post in posts %}
+<ul>
+    <li><a shitpostUrl="{{ post.href }}" class="shitpost">{{ post.file }} -- {{ post.title }}</a></li>
+</ul>
+{% endfor %}
+{% endblock %}

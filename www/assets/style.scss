@@ -275,3 +275,23 @@ strong {
         margin: 0 1em 0.5em 1em;
     }
 }
+
+#shitpost {
+    cursor: pointer;
+
+    z-index: 1000;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    padding: 5% 0;
+    background: transparentize($black, 0.1);
+}
+
+.shitpost {
+    cursor: pointer;
+}
