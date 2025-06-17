@@ -43,7 +43,7 @@
 <h1>assorted shitposts</h1>
 {% for post in posts %}
 <ul>
-    <li><a shitpostUrl="{{ post.href }}" class="shitpost">{{ post.file }} -- {{ post.title }}</a></li>
+    <li><a shitpostUrl="/shitposts/raw/{{ post.file }}" class="shitpost">{{ post.file }} -- {{ post.title }}</a></li>
 </ul>
 {% endfor %}
 {% endblock %}
