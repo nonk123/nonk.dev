@@ -78,12 +78,15 @@
 </head>
 
 <body class="col sp-between">
+    <div id="shadow"></div>
+
     <header class="w100 row">
         <button id="hamburger" class="panel" onclick="toggleHam()">
             {% for _ in range(0, 4) %}<div></div>{% endfor %}
         </button>
         <nav class="panel pad0 w100 row wrap al-start">
-            <a href="/" rel="author">about me</a>
+            <a href="/" rel="author">home</a>
+            <a href="/about" rel="author">about me</a>
             <a href="/projects">projects</a>
             <a href="/blog" title="under construction!">blog</a>
             <a href="/guestbook" title="please sign!">guestbook</a>
@@ -91,7 +94,7 @@
         </nav>
     </header>
 
-    <section id="grail" class="w100 row sp-between al-start">
+    <section id="grail" class="row">
         <aside id="sidebar" class="panel col al-start">
             <div id="profile" class="w100">
                 <img id="logo" src="/assets/logo.avif" alt="Photo of a middle-aged plumber"><br>

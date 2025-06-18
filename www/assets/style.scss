@@ -1,6 +1,8 @@
 @use "assets/_prelude" as *;
 @use "assets/_anim";
 
+$body-pad: 12px;
+
 html {
     background-image: url("https://q7x.ru/vga9x16.png");
     background-size: 288px 288px;
@@ -9,20 +11,23 @@ html {
 }
 
 body {
-    $shadow: rgba(12, 12, 12, 0.6);
-
     color: $white;
-    background: $shadow;
-    box-shadow: 0 0 64px 64px $shadow;
 
+    align-items: end;
     min-height: 100vh;
     margin: 0 auto;
 
-    padding: 12px 16px;
+    padding: $body-pad 0;
     overflow-y: auto;
 
-    width: calc(min($WIDTH, 100%));
+    width: calc(min($content-width, 100%));
     gap: 1em 0;
+}
+header {
+    margin-top: $body-pad;
+}
+footer {
+    margin-bottom: $body-pad;
 }
 
 .w100 {
@@ -59,10 +64,16 @@ body {
 
 #sidebar {
     width: $sidebar-width;
+    align-self: start;
 }
 
 #content {
     width: $content-width;
+    align-self: stretch;
+}
+
+#grail {
+    gap: 24px;
 }
 
 #hamburger {
@@ -183,7 +194,8 @@ ul {
 }
 
 ul > li {
-    margin: 0 2ch;
+    margin: 0 4ch;
+    text-indent: -2ch;
 }
 
 ul > li::before {
