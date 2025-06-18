@@ -1,0 +1,15 @@
+@use "assets/_prelude" as *;
+
+a {
+    border-bottom: 2px solid transparent;
+}
+
+a:hover {
+    border-bottom-color: $green;
+    &:visited {
+        border-bottom-color: $darkgreen;
+    }
+}
+#me:hover {
+    border-bottom-color: $white;
+}
