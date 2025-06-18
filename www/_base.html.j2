@@ -43,7 +43,37 @@
         }
     </script>
 
-    <script src="/assets/status-cafe.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const usernameLink = document.createElement("a");
+            usernameLink.href = "https://status.cafe/users/nonk";
+            usernameLink.target = "_blank";
+            usernameLink.textContent = "nonk";
+
+            const username = document.getElementById("statuscafe-username");
+            username.appendChild(usernameLink);
+
+            const content = document.getElementById("statuscafe-content");
+            content.textContent = "Loading status...";
+
+            fetch("https://status.cafe/users/nonk/status.json")
+                .then(r => r.json())
+                .then(inner);
+            function inner(response) {
+                usernameLink.textContent = response.author;
+                if (!response.content.length) {
+                    content.textContent = "No status yet.";
+                    return;
+                }
+
+                username.appendChild(document.createTextNode(
+                    " " + response.face + " " + response.timeAgo
+                ));
+                content.innerHTML = response.content;
+            }
+        });
+    </script>
+
     <script src="https://iframe.chat/scripts/main.min.js"></script>
 </head>
 
