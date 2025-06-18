@@ -1,5 +1,6 @@
 @use "assets/_prelude" as *;
 @use "assets/_anim";
+@use "assets/_md";
 
 $body-pad: 12px;
 
@@ -13,21 +14,17 @@ html {
 body {
     color: $white;
 
-    align-items: end;
     min-height: 100vh;
     margin: 0 auto;
-
     padding: $body-pad 0;
-    overflow-y: auto;
 
     width: calc(min($content-width, 100%));
     gap: 1em 0;
+    align-items: end;
+    overflow-y: auto;
 }
-header {
-    margin-top: $body-pad;
-}
-footer {
-    margin-bottom: $body-pad;
+#content {
+    width: $content-width;
 }
 
 .w100 {
@@ -68,7 +65,6 @@ footer {
 }
 
 #content {
-    width: $content-width;
     align-self: stretch;
 }
 
@@ -101,16 +97,21 @@ footer {
 }
 
 @include mobile {
-    body {
-        width: calc(min($content-width, 100%));
-    }
-
     #hamburger {
         display: flex;
     }
 
+    body {
+        padding: $body-pad;
+    }
+
     #logo {
         max-height: 128px;
+    }
+
+    #grail,
+    #content {
+        width: 100%;
     }
 
     #sidebar {
@@ -160,81 +161,6 @@ footer {
     padding: 1em 1ch;
 }
 
-p {
-    text-align: justify;
-}
-
-h1 {
-    font-size: 1.4em;
-    font-weight: bold;
-}
-
-h1::before {
-    content: "§ ";
-}
-
-code {
-    font-family: inherit;
-    color: $green;
-
-    &::before,
-    &::after {
-        content: "`";
-    }
-}
-
-i::before,
-i::after {
-    content: "_";
-}
-
-ul {
-    padding: 0;
-    list-style-type: none;
-}
-
-ul > li {
-    margin: 0 4ch;
-    text-indent: -2ch;
-}
-
-ul > li::before {
-    content: "- ";
-}
-
-h1,
-h2 {
-    margin-top: 0;
-    margin-bottom: 1rem;
-}
-
-h1.blog {
-    margin-bottom: 0;
-}
-
-ul {
-    margin-top: 1em;
-    margin-bottom: 0;
-}
-
-a:not(:has(> img)) {
-    color: $green;
-    text-decoration: none;
-    font-weight: bold;
-
-    &::before {
-        content: "[";
-    }
-
-    &::after {
-        content: "]";
-    }
-
-    &:visited {
-        color: $darkgreen;
-    }
-}
-
 #me {
     text-decoration: none;
     font-weight: bold;
@@ -243,10 +169,6 @@ a:not(:has(> img)) {
     &:visited {
         color: $white;
     }
-}
-
-strong {
-    color: #ffffff;
 }
 
 #chattable {

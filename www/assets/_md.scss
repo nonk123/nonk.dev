@@ -1,0 +1,93 @@
+@use "assets/_prelude" as *;
+
+img {
+    max-width: 100%;
+}
+
+img.center {
+    display: block;
+    margin: 0 auto;
+}
+
+p {
+    text-align: justify;
+}
+
+p.center {
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+h1::before {
+    content: "§ ";
+}
+
+code {
+    font-family: inherit;
+    color: $green;
+
+    &::before,
+    &::after {
+        content: "`";
+    }
+}
+
+i::before,
+i::after {
+    content: "_";
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+ul > li {
+    margin: 0 4ch;
+    text-indent: -2ch;
+}
+
+ul > li::before {
+    content: "- ";
+}
+
+h1,
+h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+h1.blog {
+    margin-bottom: 0;
+}
+
+ul {
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+
+a:not(:has(> img)) {
+    color: $green;
+    text-decoration: none;
+    font-weight: bold;
+
+    &::before {
+        content: "[";
+    }
+
+    &::after {
+        content: "]";
+    }
+
+    &:visited {
+        color: $darkgreen;
+    }
+}
+
+strong {
+    color: $white;
+}
