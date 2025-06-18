@@ -75,7 +75,7 @@ body,
 
 .sent {
     padding-left: 4px;
-    border-left: 8px solid transparentize($green, 0.3);
+    border-left: 8px solid $white;
 }
 
 .allMessages.containsOnlyEmojis .emoji {
