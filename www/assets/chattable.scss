@@ -68,6 +68,7 @@ body,
 
 .allMessages {
     padding: 0;
+    padding-left: 12px;
     padding-top: 3px;
     width: 100%;
 }
@@ -103,6 +104,6 @@ body,
 }
 
 .msgBody {
-    display: inline;
+    width: fit-content;
     margin-left: 2ch;
 }
