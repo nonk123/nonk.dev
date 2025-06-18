@@ -28,7 +28,7 @@
                 ev.preventDefault();
                 staph();
 
-                player.setAttribute("src", post.attributes.shitpostUrl.nodeValue);
+                player.setAttribute("src", post.attributes.href.nodeValue);
                 player.setAttribute("type", "video/mp4");
 
                 player.style.display = "block";
@@ -44,7 +44,11 @@
 <p>handpicked from the depths of telegram...</p>
 <ul>
     {% for post in posts %}
-    <li><a shitpostUrl="/shitposts/raw/{{ post.file }}" class="shitpost">{{ post.file }} -- {{ post.title }}</a></li>
+    <li>
+        <a rel="noindex nofollow" href="/shitposts/raw/{{ post.file }}" class="shitpost">
+            {{ post.file }} -- {{ post.title }}
+        </a>
+    </li>
     {% endfor %}
 </ul>
 <p>more to come...</p>
