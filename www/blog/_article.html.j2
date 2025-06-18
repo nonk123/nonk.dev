@@ -20,7 +20,7 @@
 {% endblock %}
 
 {% block content %}
-<div style="width: 100%; display: flex; flex-flow: row nowrap; justify-content: space-between;">
+<div class="w100 row sp-between">
     <h1 class="blog">{{ title }}</h1>
     <p style="margin: 0; text-align: right; font-size: 0.8em;">Posted: <strong>{{ date_pub }}</strong></p>
 </div>
@@ -29,7 +29,6 @@
 <p>{{ paragraph|safe }}</p>
 {% endfor %}
 
-<p>Articles:</p>
 <ul class="links">
     {% for id, article in all_articles|items %}
     <li><a href="/blog/{{ id }}">{{ article.title }}</a></li>
