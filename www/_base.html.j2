@@ -40,10 +40,6 @@
         function toggleChat() {
             const elt = document.getElementById("chattable");
             elt.style.visibility = (elt.style.visibility === "hidden" ? "visible" : "hidden");
-            if (!chattable.loaded)
-                chattable.initialize({
-                    stylesheet: "/assets/chattable.css",
-                });
         }
     </script>
 
@@ -95,6 +91,11 @@
     <button id="toggle-chat" class="panel" onclick="toggleChat()">
         <img src="/assets/chatto.png">
     </button>
+    <script>
+        chattable.initialize({
+            stylesheet: "/assets/chattable.css",
+        });
+    </script>
 </body>
 
 </html>
