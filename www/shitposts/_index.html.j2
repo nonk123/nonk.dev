@@ -41,9 +41,10 @@
 
 {% block content %}
 <h1>assorted shitposts</h1>
-{% for post in posts %}
 <ul>
+    {% for post in posts %}
     <li><a shitpostUrl="/shitposts/raw/{{ post.file }}" class="shitpost">{{ post.file }} -- {{ post.title }}</a></li>
+    {% endfor %}
 </ul>
-{% endfor %}
+<p>more to come...</p>
 {% endblock %}
