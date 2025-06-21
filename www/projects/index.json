@@ -3,38 +3,44 @@
         "title": "vga9x16",
         "description": "the API behind this site's randomized background",
         "url": "https://vga9x16.ru",
-        "icon": "vga9x16.png"
+        "icon": {
+            "path": "vga9x16.png",
+            "alt": "Pseudo-random, full-bright VGA characters in a grid on a black background"
+        }
     },
     {
         "title": "sanity",
         "description": "the only sane static site generator in existence",
-        "url": "https://github.com/nonk123/sanity",
-        "icon": null
+        "url": "https://github.com/nonk123/sanity"
     },
     {
         "title": "schwungus",
         "description": "me and my homies form the schwungus collective",
         "url": "https://schwung.us",
-        "icon": "schwungus.png",
-        "smooth": true
+        "icon": {
+            "path": "schwungus.png",
+            "alt": "A white-on-gray slithering mushroom",
+            "smooth": true
+        }
     },
     {
         "title": "nonklib",
         "description": "custom implementations of data structures I made for recreation",
-        "url": "https://github.com/nonk123/nonklib",
-        "icon": null
+        "url": "https://github.com/nonk123/nonklib"
     },
     {
         "title": "uptime-thing",
         "description": "a toy uptime monitoring app I was challenged to code",
-        "url": "https://github.com/nonk123/uptime-thing",
-        "icon": null
+        "url": "https://github.com/nonk123/uptime-thing"
     },
     {
         "title": "a local community website",
         "description": "my first (and only) commercially backed project. but $50 is $50",
         "url": "https://подработка-павлово.рф",
-        "icon": "fiftybucks.webp",
-        "smooth": true
+        "icon": {
+            "path": "fiftybucks.webp",
+            "alt": "The text 'Podrabotka v Pavlovo' with a photo of Pavlovo in the background",
+            "smooth": true
+        }
     }
 ]
