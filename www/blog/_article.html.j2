@@ -10,11 +10,31 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
+    "@id": "https://nonk.dev/{{ self.url() }}",
+    "mainEntityOfPage": "https://nonk.dev/{{ self.url() }}",
     "headline": "{{ title }}",
     "name": "{{ title }}",
-    "description": "an article from my blog",
+    "description": "{{ self.description() }}",
     "datePublished": "{{ date_pub }}",
-    "dateModified": "{{ date_mod }}"
+    "dateModified": "{{ date_mod }}",
+    "isPartOf": {
+        "@type" : "Blog",
+        "@id": "https://nonk.dev/blog",
+        "name": "nonk's blog"
+    },
+    "author": {
+        "@type": "Person",
+        "@id": "https://nonk.dev/about",
+        "name": "nonk",
+        "url": "https://nonk.dev/about",
+        "image": {
+            "@type": "ImageObject",
+            "@id": "https://nonk.dev/assets/logo.avif",
+            "url": "https://nonk.dev/assets/logo.avif",
+            "height": "200",
+            "width": "200"
+        }
+    }
 }
 </script>
 {% endblock %}
