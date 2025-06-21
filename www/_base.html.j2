@@ -96,17 +96,17 @@
 
     <section id="grail" class="row">
         <aside id="sidebar" class="panel col al-start">
-            <div id="profile" class="w100">
+            <div class="w100">
                 <img id="logo" src="/assets/logo.avif" alt="Photo of a middle-aged plumber"><br>
-                <p class="center">i'm
-                    <a rel="me" target="_blank" id="me" href="https://github.com/nonk123">@nonk123</a>
+                <p class="center">
+                    i'm <a rel="me" target="_blank" id="me" href="https://github.com/nonk123">@nonk123</a>
                 </p>
             </div>
             <nav class="w100">
                 {% include "_socials.html" %}
             </nav>
         </aside>
-        <main id="content" class="panel">
+        <main class="panel">
             {% block content %}{% endblock %}
         </main>
     </section>

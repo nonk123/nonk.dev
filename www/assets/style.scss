@@ -23,9 +23,6 @@ body {
     align-items: end;
     overflow-y: auto;
 }
-#content {
-    width: $content-width;
-}
 
 .w100 {
     width: 100%;
@@ -64,7 +61,8 @@ body {
     align-self: start;
 }
 
-#content {
+main {
+    width: $content-width;
     align-self: stretch;
 }
 
@@ -116,7 +114,7 @@ body {
         width: 100%;
     }
 
-    #content {
+    main {
         width: 100%;
     }
 
