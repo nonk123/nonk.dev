@@ -1,0 +1,49 @@
+{% extends "_base.html" %}
+
+{% block what %}projects{% endblock %}
+{% block description %}the list of projects i created and have maintained.{% endblock %}
+{% block url %}/projects{% endblock %}
+
+{% block head %}
+<style>
+    .project {
+        margin-bottom: 12px;
+    }
+
+    .project div.icon {
+        aspect-ratio: 1;
+        height: 128px;
+        margin-right: 12px;
+    }
+
+    .project img.icon {
+        display: block;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    img.icon.smooth {
+        image-rendering: auto;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1>my projects</h1>
+<p>click the icons/headers for more info!</p>
+
+{% for project in projects %}
+<section class="project w100 row">
+    <div class="icon">
+        <a href="{{ project.url }}">
+            <img class="icon {% if project.smooth %}smooth{% endif %}"
+                src="{% if project.icon %}{{ project.icon }}{% else %}null.png{% endif %}">
+        </a>
+    </div>
+    <div>
+        <h2><a target="_blank" href="{{ project.url }}">{{ project.title }}</a></h2>
+        <p>{{ project.description }}</p>
+    </div>
+</section>
+{% endfor %}
+{% endblock %}
