@@ -9,7 +9,7 @@
     document.addEventListener("DOMContentLoaded", function () {
         const player = document.createElement("video");
         player.id = "shitpost";
-        player.setAttribute("loop", true);
+        player.loop = true;
         player.style.display = "none";
         document.body.appendChild(player);
 
@@ -26,11 +26,10 @@
         for (const post of document.getElementsByClassName("shitpost")) {
             post.addEventListener("click", function (ev) {
                 ev.preventDefault();
+
                 staph();
-
-                player.setAttribute("src", post.attributes.href.nodeValue);
-                player.setAttribute("type", "video/mp4");
-
+                player.src = post.attributes.href.nodeValue;
+                player.type = "video/mp4";
                 player.style.display = "block";
                 player.play();
             });
