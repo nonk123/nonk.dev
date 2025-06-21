@@ -92,6 +92,7 @@ body {
 }
 
 #logo {
+    display: block;
     aspect-ratio: 1;
     max-width: 100%;
     margin: 0 auto;
@@ -110,7 +111,11 @@ body {
         max-height: 128px;
     }
 
-    #grail,
+    #grail {
+        flex-flow: column nowrap;
+        width: 100%;
+    }
+
     #content {
         width: 100%;
     }
@@ -118,12 +123,7 @@ body {
     #sidebar {
         display: none;
         margin-bottom: 1em;
-        align-items: center;
-
-        & > div,
-        & p {
-            width: fit-content;
-        }
+        align-self: center;
     }
 }
 
