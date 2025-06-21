@@ -1,4 +1,5 @@
 @use "assets/_prelude" as *;
+@use "sass:list";
 
 a {
     border-bottom: 2px solid transparent;
@@ -12,4 +13,38 @@ a:hover {
 }
 #me:hover {
     border-bottom-color: $white;
+}
+
+.shake {
+    $speed: 200ms;
+    $amount: 1px;
+
+    --shake-x: 0;
+    --shake-y: 0;
+
+    animation: $speed shake-1 infinite linear, $speed shake-2 infinite linear;
+    transform: translate(var(--shake-x), var(--shake-y));
+
+    @keyframes shake-1 {
+        from {
+            --shake-x: -#{$amount};
+        }
+        50% {
+            --shake-x: 0;
+        }
+        to {
+            --shake-x: #{$amount};
+        }
+    }
+    @keyframes shake-2 {
+        from {
+            --shake-y: #{$amount};
+        }
+        50% {
+            --shake-y: -#{$amount};
+        }
+        to {
+            --shake-y: #{$amount};
+        }
+    }
 }
