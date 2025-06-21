@@ -46,7 +46,7 @@
     {% for post in posts %}
     <li>
         <a rel="noindex nofollow" href="/shitposts/raw/{{ post.file }}" class="shitpost">
-            {{ post.file }} -- {{ post.title }}
+            {{- post.file }} -- {{ post.title -}}
         </a>
     </li>
     {% endfor %}
