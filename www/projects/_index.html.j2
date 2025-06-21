@@ -35,7 +35,7 @@
 {% for project in projects %}
 <section class="project w100 row">
     <div class="icon">
-        <a href="{{ project.url }}">
+        <a target="_blank" href="{{ project.url }}">
             <img class="icon {% if project.icon and project.icon.smooth %}smooth{% endif %}"
                 src="/projects/{% if project.icon %}{{ project.icon.path }}{% else %}null.png{% endif %}"
                 alt="{% if project.icon %}{{ project.icon.alt }}{% else %}'No icon' in poor handwriting{% endif %}">
