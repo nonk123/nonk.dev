@@ -1,5 +1,5 @@
 $content-width: 680px;
-$sidebar-width: 260px;
+$sidebar-width: 240px;
 $chat-width: 300px;
 
 $white: #fef0f2;
@@ -9,7 +9,7 @@ $darkgreen: #1f7f1f;
 $shadow: rgba(12, 12, 12, 0.4);
 
 @mixin mobile {
-    @media (max-width: #{$content-width + $sidebar-width + 32px}) {
+    @media (max-width: #{$content-width + $sidebar-width * 2 + 32px}) {
         @content;
     }
 }

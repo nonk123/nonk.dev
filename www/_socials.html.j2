@@ -1,19 +1,42 @@
+{% import "_lib.html" as lib %}
+
+{% macro link(icon, title, href, blank) %}
+<li>
+    {{ icon }}
+    <a rel="me" href="{{ href }}" {% if blank -%} target="_blank" {%- endif %}>
+        {{- title -}}
+    </a>
+</li>
+{% endmacro %}
+
+{% macro si_link(icon, title, href, blank = True, invert = True) %}
+{{ link(lib.si_icon(icon if icon else "html5", invert), title, href, blank) }}
+{% endmacro %}
+
+{% macro ass_link(path, title, href, blank = True, invert = True) %}
+{% if path %}
+{{ link(lib.ass_icon(path, invert), title, href, blank) }}
+{% else %}
+{{ si_link(None, title, href, blank, invert) }}
+{% endif %}
+{% endmacro %}
+
 <p>socials:</p>
-<ul class="links">
-    <li><a rel="me" href="mailto:me@nonk.dev">email</a></li>
-    <li><a rel="me" target="_blank" href="https://github.com/nonk123">github</a></li>
-    <li><a rel="me" target="_blank" href="https://bsky.app/profile/nonk.dev">bluesky</a></li>
-    <li><a rel="me" target="_blank" href="https://status.cafe/users/nonk">status.cafe</a></li>
-    <li><a rel="me" target="_blank" href="https://nonk123.itch.io">itch.io</a></li>
+<ul class="nodash">
+    {{ si_link("gmail", "email", "mailto:me@nonk.dev", blank=False) }}
+    {{ si_link("github", "github", "https://github.com/nonk123") }}
+    {{ si_link("bluesky", "bluesky", "https://bsky.app/profile/nonk.dev") }}
+    {{ si_link(None, "status.cafe", "https://status.cafe/users/nonk") }}
+    {{ si_link("itchdotio", "itch.io", "https://nonk123.itch.io") }}
 </ul>
 <p>friends:</p>
-<ul class="links">
-    <li><a target="_blank" href="https://cantsleep.cc">can't sleep</a></li>
-    <li><a target="_blank" href="https://vilebeggar.github.io">vile beggar</a></li>
+<ul class="nodash">
+    {{ ass_link("cantsleep.cc.ico", "can't sleep", "https://cantsleep.cc")}}
+    {{ ass_link(None, "vile beggar", "https://vilebeggar.github.io")}}
 </ul>
 <p>collectives:</p>
-<ul class="links">
-    <li><a target="_blank" href="https://schwung.us">schwungus</a></li>
+<ul class="nodash">
+    {{ ass_link("schwung.us.png", "schwungus", "https://schwung.us", invert=False)}}
 </ul>
 <p>badges:</p>
 <p class="row wrap sp-evenly">

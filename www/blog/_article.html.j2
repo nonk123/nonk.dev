@@ -29,7 +29,7 @@
 <p>{{ paragraph|safe }}</p>
 {% endfor %}
 
-<ul class="links">
+<ul>
     {% for id, article in all_articles|items %}
     <li><a href="/blog/{{ id }}">{{ article.title }}</a></li>
     {% endfor %}

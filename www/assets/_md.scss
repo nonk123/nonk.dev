@@ -41,18 +41,21 @@ i::after {
     content: "_";
 }
 
+$li-indent: 2ch;
 ul {
     padding: 0;
     list-style-type: none;
 }
-
-ul > li {
-    margin: 0 4ch;
-    text-indent: -2ch;
+ul.nodash > li {
+    margin-left: $li-indent;
 }
+ul:not(.nodash) > li {
+    margin-left: calc(2 * $li-indent);
+    text-indent: calc(-1 * $li-indent);
 
-ul > li::before {
-    content: "- ";
+    &::before {
+        content: "- ";
+    }
 }
 
 h1,
@@ -90,4 +93,8 @@ a:not(:has(> img)) {
 
 strong {
     color: $white;
+}
+
+.icon.invert {
+    filter: invert(1);
 }
