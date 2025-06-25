@@ -79,11 +79,19 @@ a:not(:has(> img)) {
     font-weight: bold;
 
     &::before {
-        content: "[";
+        content: "❬";
+    }
+    &::after {
+        content: "❭";
     }
 
-    &::after {
-        content: "]";
+    &[href^="/"] {
+        &::before {
+            content: "/";
+        }
+        &::after {
+            content: "";
+        }
     }
 
     &:visited {
