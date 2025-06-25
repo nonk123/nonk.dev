@@ -1,23 +1,20 @@
-const pt = require("puppeteer");
+const browsers = require("playwright");
 const paths = ["/", "/projects", "/about"];
 
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+(async () => {
+    const browser = await browsers.chromium.launch();
+    const context = await browser.newContext();
+    const page = await context.newPage();
+    await page.setViewportSize({ width: 1366, height: 768 });
 
-pt.launch({ headless: "new" }).then(async (browser) => {
-    const p = await browser.newPage();
-    await p.setViewport({ width: 1366, height: 768 });
-
+    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
     for (const idx in paths) {
-        const path = paths[idx];
+        await page.goto(`https://nonk.dev${paths[idx]}`);
+        await page.waitForEvent("requestfinished");
 
-        await p.goto(new URL(`https://nonk.dev${path}`), {
-            waitUntil: "domcontentloaded",
-        });
         await delay(1000);
-
-        let filename = `.github/assets/screenie-${idx}.png`;
-        await p.screenshot({ path: filename });
+        await page.screenshot({ path: `.github/assets/screenie-${idx}.png` });
     }
 
     await browser.close();
-});
+})();
