@@ -3,3 +3,7 @@ Whenever I push the <code>screenies</code> tag of <a href="https://github.com/no
 All it does is download and install <a rel="nofollow" href="https://playwright.dev">Playwright</a> used for captures, run <a href="https://github.com/nonk123/nonk.dev/tree/master/trash/capture.js">the capture script</a>, and commit the resulting PNGs to <code>.github/assets</code>.
 
 I then reference them from <a href="https://github.com/nonk123/nonk.dev/tree/master/README.md">my README</a> using the standard Markdown <code>![alt text](image URL)</code> syntax.
+
+In the end, to recreate the screenies, I run:
+
+<code class="block">git tag -f screenies && git push -f --tags</code>

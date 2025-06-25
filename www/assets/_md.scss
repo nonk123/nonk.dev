@@ -35,6 +35,14 @@ code {
         content: "`";
     }
 }
+code.block {
+    margin-left: 2ch;
+
+    &::before,
+    &::after {
+        content: "";
+    }
+}
 
 i::before,
 i::after {
