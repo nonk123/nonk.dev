@@ -9,14 +9,14 @@ pt.launch().then(async (browser) => {
 
     for (const idx in paths) {
         const path = paths[idx];
+
         await p.goto(new URL(`https://nonk.dev${path}`), {
             waitUntil: "domcontentloaded",
         });
+        await delay(1000);
 
-        delay(1000).then(async () => {
-            let filename = `.github/assets/screenie-${idx}.png`;
-            await p.screenshot({ path: filename });
-        });
+        let filename = `.github/assets/screenie-${idx}.png`;
+        await p.screenshot({ path: filename });
     }
 
     await browser.close();
