@@ -18,7 +18,7 @@ jobs:
           node-version: 22
           cache: npm
       - name: Install deps
-        run: npx playwright install chromium
+        run: npm install && npx playwright install chromium
       - name: Capture screenies
         run: node trash/capture.js
       - name: Commit fresh screenies
