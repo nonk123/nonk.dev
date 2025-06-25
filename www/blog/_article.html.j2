@@ -46,7 +46,11 @@
 </div>
 
 {% for paragraph in paragraphs %}
+{% if paragraph[0] == "<" %}
+{{ paragraph|safe }}
+{% else %}
 <p>{{ paragraph|safe }}</p>
+{% endif %}
 {% endfor %}
 
 <ul>

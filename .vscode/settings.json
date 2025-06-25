@@ -6,13 +6,16 @@
         "dist": true
     },
     "files.associations": {
-        "**/blog/md/*.txt": "html"
+        "**/blog/md/*.txt": "html",
+        "**/*.html.j2": "jinja"
     },
     "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features"
+        "editor.formatOnSave": false
     },
-    "[jinja-html]": {
-        "editor.defaultFormatter": "vscode.html-language-features"
+    "[jinja]": {
+        "editor.formatOnSave": false,
+        "djlint.enableLinting": true,
+        "djlint.profile": "jinja"
     },
     "[scss]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"

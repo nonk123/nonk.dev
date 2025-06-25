@@ -2,6 +2,7 @@
 enough to unalive a stallion - often a necessity in the harsh reality of serving a sentence.
 
 For one cup you'll need:
+
 <ul>
     <li>A matchbox full of finely ground black tea.</li>
     <li>Two teaspoons of water-soluble coffee.</li>
@@ -10,7 +11,7 @@ For one cup you'll need:
 </ul>
 
 First, you'll brew the black tea in a separate cup using half your water. Put in the whole matchbox. Ignore brewing
-suggestions on the packaging; the water has to be 100°C sharp.
+suggestions on the packaging; the water has to be 100&deg;C sharp.
 
 Once you've set your tea base to ripen, brew your coffee right in the drinking cup.
 
