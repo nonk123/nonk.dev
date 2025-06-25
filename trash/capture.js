@@ -9,7 +9,7 @@ pt.launch().then(async (browser) => {
 
     for (const idx in paths) {
         const path = paths[idx];
-        await p.goto(new URL(`localhost:8000${path}`), {
+        await p.goto(new URL(`https://nonk.dev${path}`), {
             waitUntil: "domcontentloaded",
         });
 
