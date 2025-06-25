@@ -1,0 +1,22 @@
+{
+    "name": "nonkdotdev",
+    "version": "0.1.0",
+    "description": "nonk's personal website.",
+    "main": "trash/capture.js",
+    "scripts": {
+        "test": "echo \"shut up bitch\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nonk123/nonk.dev.git"
+    },
+    "author": "nonk123",
+    "license": "Unlicense",
+    "bugs": {
+        "url": "https://github.com/nonk123/nonk.dev/issues"
+    },
+    "homepage": "https://nonk.dev",
+    "devDependencies": {
+        "@playwright/test": "^1.53.1"
+    }
+}

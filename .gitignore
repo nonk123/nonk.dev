@@ -3,6 +3,7 @@
 
 /_sanity.lua
 
+/node_modules
 /*venv
 /out
 /dist

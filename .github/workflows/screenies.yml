@@ -15,12 +15,10 @@ jobs:
       - name: Install NodeJS
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
       - name: Install deps
-        run: |
-          npm i -D @playwright/test
-          npx playwright install chromium
+        run: npx playwright install chromium
       - name: Capture screenies
         run: node trash/capture.js
       - name: Commit fresh screenies
