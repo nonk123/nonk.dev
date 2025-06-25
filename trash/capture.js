@@ -32,6 +32,7 @@ const viewports = [
             await delay(1000);
             await page.screenshot({
                 path: `.github/assets/screenie-${viewport.name}-${idx}.png`,
+                scale: "css",
             });
         }
     }
