@@ -3,7 +3,7 @@ const paths = ["/", "/projects", "/about"];
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-pt.launch().then(async (browser) => {
+pt.launch({ headless: "new" }).then(async (browser) => {
     const p = await browser.newPage();
     await p.setViewport({ width: 1366, height: 768 });
 

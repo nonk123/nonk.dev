@@ -10,9 +10,18 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: tj-actions/puppeteer@v5
-        id: puppeteer
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install NodeJS
+        uses: actions/setup-node@v4
         with:
-          files: "trash/capture.js"
-      - uses: stefanzweifel/git-auto-commit-action@v6
+          node-version: 20
+          cache: npm
+      - name: Install deps
+        run: |
+          npm i -D @playwright/test
+          npx playwright install chromium
+      - name: Capture screenies
+        run: node trash/capture.js
+      - name: Commit fresh screenies
+        uses: stefanzweifel/git-auto-commit-action@v6
