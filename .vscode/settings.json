@@ -7,12 +7,12 @@
     },
     "files.associations": {
         "**/blog/md/*.txt": "html",
-        "**/*.html.j2": "jinja"
+        "**/*.html.j2": "jinja-html"
     },
     "[html]": {
         "editor.formatOnSave": false
     },
-    "[jinja]": {
+    "[jinja-html]": {
         "editor.formatOnSave": false,
         "djlint.enableLinting": true,
         "djlint.profile": "jinja"
