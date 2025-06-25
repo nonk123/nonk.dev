@@ -114,3 +114,8 @@ strong {
 .icon.invert {
     filter: invert(1);
 }
+
+.dotdotdot {
+    border-top: 1px dashed $white;
+    padding-top: 1em;
+}

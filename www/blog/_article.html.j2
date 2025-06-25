@@ -53,6 +53,9 @@
 {% endif %}
 {% endfor %}
 
+{% if id != default %}
+<p class="dotdotdot">Other articles:</p>
+{% endif %}
 <ul>
     {% for id, article in articles|items %}
     {% if id != default %}
