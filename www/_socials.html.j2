@@ -20,8 +20,8 @@
 {{ si_link(None, title, href, blank, invert) }}
 {% endif %}
 {% endmacro %}
-
-<p class="dotdotdot">socials:</p>
+<hr>
+<p>socials:</p>
 <ul class="nodash">
     {{ si_link("gmail", "email", "mailto:me@nonk.dev", blank=False) }}
     {{ si_link("github", "github", "https://github.com/nonk123") }}
@@ -29,16 +29,19 @@
     {{ si_link(None, "status.cafe", "https://status.cafe/users/nonk") }}
     {{ si_link("itchdotio", "itch.io", "https://nonk123.itch.io") }}
 </ul>
-<p class="dotdotdot">friends:</p>
+<hr>
+<p>friends:</p>
 <ul class="nodash">
     {{ ass_link("cantsleep.cc.ico", "can't sleep", "https://cantsleep.cc")}}
     {{ ass_link(None, "vile beggar", "https://vilebeggar.github.io")}}
 </ul>
-<p class="dotdotdot">collectives:</p>
+<hr>
+<p>collectives:</p>
 <ul class="nodash">
     {{ ass_link("schwung.us.png", "schwungus", "https://schwung.us", invert=False)}}
 </ul>
-<p class="dotdotdot">badges:</p>
+<hr>
+<p>badges:</p>
 <p id="badges" class="row wrap sp-evenly">
     <a rel="nofollow" target="_blank" href="https://notbyai.fyi">
         <img src="/assets/human.svg">

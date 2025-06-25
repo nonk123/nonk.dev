@@ -54,7 +54,8 @@
 {% endfor %}
 
 {% if id != default %}
-<p class="dotdotdot">Other articles:</p>
+<hr>
+<p>Other articles:</p>
 {% endif %}
 <ul>
     {% for id, article in articles|items %}
