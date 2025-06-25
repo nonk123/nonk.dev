@@ -1,0 +1,5 @@
+Whenever I push the <code>screenies</code> tag of my GitHub repo, <a href="https://github.com/nonk123/nonk.dev/tree/master/.github/workflows/screenies.yml">the corresponding workflow</a> runs.
+
+All it does is download and install <a rel="nofollow" href="https://playwright.dev">Playwright</a>, run <a href="https://github.com/nonk123/nonk.dev/tree/master/trash/capture.js">the capture script</a>, and commit the resulting PNGs to <code>.github/assets</code>.
+
+I then reference them from the <a href="https://github.com/nonk123/nonk.dev/tree/master/README.md">README</a> using the Markdown <code>![alt text](image URL)</code> syntax.
