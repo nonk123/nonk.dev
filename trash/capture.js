@@ -9,8 +9,8 @@ const viewports = [
     },
     {
         name: "portrait",
-        width: 828,
-        height: 1792,
+        width: 720,
+        height: 1280,
     },
 ];
 
