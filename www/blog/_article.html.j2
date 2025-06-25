@@ -54,8 +54,10 @@
 {% endfor %}
 
 <ul>
-    {% for id, article in all_articles|items %}
+    {% for id, article in articles|items %}
+    {% if id != default %}
     <li><a href="/blog/{{ id }}">{{ article.title }}</a></li>
+    {% endif %}
     {% endfor %}
 </ul>
 {% endblock %}
