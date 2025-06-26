@@ -4,10 +4,10 @@
 <img class="icon{{ ' invert' if invert else '' }}" height="{{ ICON_SIZE }}" width="{{ ICON_SIZE }}" src="{{ src }}" />
 {% endmacro %}
 
-{% macro si_icon(slug, invert = True) %}
-{{ base_icon("https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/" + slug + ".svg", invert) }}
-{% endmacro %}
-
 {% macro ass_icon(path, invert = True) %}
 {{ base_icon("/assets/" + path, invert) }}
+{% endmacro %}
+
+{% macro fa_icon(name, group, invert = True) %}
+<i class="fa-{{ group if group else 'solid' }} fa-{{name}}{{ ' invert' if invert else '' }}"></i>
 {% endmacro %}

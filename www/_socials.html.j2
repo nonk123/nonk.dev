@@ -1,44 +1,37 @@
 {% import "_lib.html" as lib %}
 
-{% macro link(icon, title, href, blank) %}
+{% macro link(icon, title, href, blank = True) %}
 <li>
-    {{ icon }}
+    {% if icon %}
+        {{ icon }}
+    {% else %}
+        {{ lib.fa_icon("globe") }}
+    {% endif %}
     <a rel="me" href="{{ href }}" {% if blank -%} target="_blank" {%- endif %}>
         {{- title -}}
     </a>
 </li>
 {% endmacro %}
 
-{% macro si_link(icon, title, href, blank = True, invert = True) %}
-{{ link(lib.si_icon(icon if icon else "html5", invert), title, href, blank) }}
-{% endmacro %}
-
-{% macro ass_link(path, title, href, blank = True, invert = True) %}
-{% if path %}
-{{ link(lib.ass_icon(path, invert), title, href, blank) }}
-{% else %}
-{{ si_link(None, title, href, blank, invert) }}
-{% endif %}
-{% endmacro %}
 <hr>
 <p>socials:</p>
 <ul class="nodash">
-    {{ si_link("gmail", "email", "mailto:me@nonk.dev", blank=False) }}
-    {{ si_link("github", "github", "https://github.com/nonk123") }}
-    {{ si_link("bluesky", "bluesky", "https://bsky.app/profile/nonk.dev") }}
-    {{ si_link(None, "status.cafe", "https://status.cafe/users/nonk") }}
-    {{ si_link("itchdotio", "itch.io", "https://nonk123.itch.io") }}
+    {{ link(lib.fa_icon("envelope"), "email", "mailto:me@nonk.dev", blank=False) }}
+    {{ link(lib.fa_icon("github", "brands"), "github", "https://github.com/nonk123") }}
+    {{ link(lib.fa_icon("bluesky", "brands"), "bluesky", "https://bsky.app/profile/nonk.dev") }}
+    {{ link(None, "status.cafe", "https://status.cafe/users/nonk") }}
+    {{ link(lib.fa_icon("itch-io", "brands"), "itch.io", "https://nonk123.itch.io") }}
 </ul>
 <hr>
 <p>friends:</p>
 <ul class="nodash">
-    {{ ass_link("cantsleep.cc.ico", "can't sleep", "https://cantsleep.cc")}}
-    {{ ass_link(None, "vile beggar", "https://vilebeggar.github.io")}}
+    {{ link(lib.ass_icon("cantsleep.cc.ico"), "can't sleep", "https://cantsleep.cc")}}
+    {{ link(None, "vile beggar", "https://vilebeggar.github.io")}}
 </ul>
 <hr>
 <p>collectives:</p>
 <ul class="nodash">
-    {{ ass_link("schwung.us.png", "schwungus", "https://schwung.us", invert=False)}}
+    {{ link(lib.ass_icon("schwung.us.png", invert=False), "schwungus", "https://schwung.us")}}
 </ul>
 <hr>
 <p>badges:</p>
