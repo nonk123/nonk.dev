@@ -1,13 +1,9 @@
 {% set ICON_SIZE = 18 %}
 
-{% macro base_icon(src, invert) %}
-<img class="icon{{ ' invert' if invert else '' }}" height="{{ ICON_SIZE }}" width="{{ ICON_SIZE }}" src="{{ src }}" />
-{% endmacro %}
-
 {% macro ass_icon(path, invert = True) %}
-{{ base_icon("/assets/" + path, invert) }}
+<img class="icon{{ ' invert' if invert else '' }}" height="{{ ICON_SIZE }}" width="{{ ICON_SIZE }}" src="{{ '/assets/' ~ path }}" />
 {% endmacro %}
 
 {% macro fa_icon(name, group, invert = True) %}
-<i class="fa-{{ group if group else 'solid' }} fa-{{name}}{{ ' invert' if invert else '' }}"></i>
+<i class="fa-{{ group if group else 'solid' }} fa-{{name}}{{ ' invert' if invert else '' }}" height="{{ ICON_SIZE }}" width="{{ ICON_SIZE }}"></i>
 {% endmacro %}
