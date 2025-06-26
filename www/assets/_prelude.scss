@@ -38,14 +38,3 @@ body {
     font-family: inherit;
     box-sizing: inherit;
 }
-
-#shadow {
-    z-index: -1000;
-    background: $shadow;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-}
