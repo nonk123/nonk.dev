@@ -5,8 +5,10 @@ img {
 }
 
 img.center {
+    max-width: 80%;
     display: block;
     margin: 0 auto;
+    image-rendering: auto;
 }
 
 p {
