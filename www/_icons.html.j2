@@ -1,9 +1,9 @@
 {% set ICON_SIZE = 18 %}
 
-{% macro ass_icon(path, invert = True) %}
+{% macro ass(path, invert = True) %}
 <img class="icon{{ ' invert' if invert else '' }}" height="{{ ICON_SIZE }}" width="{{ ICON_SIZE }}" src="{{ '/assets/' ~ path }}" />
 {% endmacro %}
 
-{% macro fa_icon(name, group, invert = True) %}
+{% macro fa(name, group, invert = True) %}
 <i class="fa-{{ group if group else 'solid' }} fa-{{name}}{{ ' invert' if invert else '' }}" height="{{ ICON_SIZE }}" width="{{ ICON_SIZE }}"></i>
 {% endmacro %}
