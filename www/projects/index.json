@@ -2,7 +2,11 @@
     {
         "title": "caulk",
         "description": "<strong>the</strong> SteamAPI wrapper for plain C.",
-        "url": "https://github.com/Schwungus/caulk"
+        "url": "https://github.com/Schwungus/caulk",
+        "icon": {
+            "path": "caulk.png",
+            "alt": "A splattering of caulk"
+        }
     },
     {
         "title": "vga9x16",
