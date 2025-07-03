@@ -14,7 +14,7 @@
     },
     "[jinja-html]": {
         "editor.formatOnSave": false,
-        "djlint.enableLinting": true,
+        "djlint.enableLinting": false,
         "djlint.profile": "jinja"
     },
     "[scss]": {
