@@ -1,6 +1,7 @@
 @use "assets/_prelude" as *;
 @use "assets/_anim";
 @use "assets/_md";
+@use "assets/_misc";
 
 $body-pad: 12px;
 
@@ -98,9 +99,11 @@ main {
     }
 
     #sidebar {
-        display: none;
         margin-bottom: 1em;
         align-self: center;
+    }
+    #sidebar:not(.toggle) {
+        display: none;
     }
 }
 
