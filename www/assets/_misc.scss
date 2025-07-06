@@ -1,0 +1,31 @@
+.w100 {
+    width: 100%;
+}
+
+.row,
+.col {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.row {
+    flex-direction: row;
+}
+.col {
+    flex-direction: column;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.sp-between {
+    justify-content: space-between;
+}
+.sp-evenly {
+    justify-content: space-evenly;
+}
+
+.al-start {
+    align-items: start;
+}
