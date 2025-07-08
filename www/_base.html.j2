@@ -94,7 +94,7 @@
         </nav>
     </header>
 
-    <section id="grail" class="row">
+    <div id="grail" class="row al-start">
         <aside id="sidebar" class="panel col al-start">
             <div class="w100">
                 <img id="logo" src="/assets/logo.avif" alt="Mugshot of a middle-aged plumber">
@@ -106,20 +106,20 @@
                 {% include "_socials.html" %}
             </nav>
         </aside>
-        <main class="panel">
-            {% block content %}{% endblock %}
-        </main>
-    </section>
-
-    <section id="statuscafe" class="panel w100">
-        <div id="statuscafe-username"></div>
-        <div id="statuscafe-content"></div>
-    </section>
-
-    <footer class="panel pad0 w100 row sp-between">
-        <span>last updated: <strong>{{ last_updated }}</strong></span>
-        <a target="_blank" href="https://github.com/nonk123/nonk.dev">source code</a>
-    </footer>
+        <div id="terry-davis" class="col">
+            <main class="panel w100">
+                {% block content %}{% endblock %}
+            </main>
+            <section id="statuscafe" class="panel w100">
+                <div id="statuscafe-username"></div>
+                <div id="statuscafe-content"></div>
+            </section>
+            <footer class="panel pad0 w100 row sp-between">
+                <span>last updated: <strong>{{ last_updated }}</strong></span>
+                <a target="_blank" href="https://github.com/nonk123/nonk.dev">source code</a>
+            </footer>
+        </div>
+    </div>
 
     <iframe src="https://iframe.chat/embed?chat=nonkdotdev" id="chattable" class="panel" frameborder="none"
         style="visibility: hidden;"></iframe>

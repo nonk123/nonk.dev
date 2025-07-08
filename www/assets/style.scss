@@ -36,19 +36,18 @@ body {
     z-index: -1000;
 }
 
-#sidebar {
-    width: $sidebar-width;
-    align-self: start;
-}
-
-main {
-    width: $content-width;
-    align-self: stretch;
-}
-
 #grail {
     gap: 16px;
     overflow: visible;
+}
+
+#sidebar {
+    width: $sidebar-width;
+}
+
+#terry-davis {
+    width: $content-width;
+    gap: 16px;
 }
 
 #hamburger {
@@ -94,16 +93,16 @@ main {
         width: 100%;
     }
 
-    main {
-        width: 100%;
-    }
-
     #sidebar {
         margin-bottom: 1em;
         align-self: center;
     }
     #sidebar:not(.toggle) {
         display: none;
+    }
+
+    #terry-davis {
+        width: 100%;
     }
 }
 
