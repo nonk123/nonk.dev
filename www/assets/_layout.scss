@@ -18,7 +18,7 @@ body {
 }
 
 #background {
-    filter: brightness(0.6) blur(0.9px);
+    filter: brightness(0.54) blur(0.7px);
     background-image: url("https://q7x.ru/vga9x16.png");
     background-size: 288px 288px;
     background-repeat: repeat;
@@ -50,6 +50,7 @@ body {
 }
 
 #hamburger {
+    align-self: center;
     cursor: pointer;
     aspect-ratio: 1;
     width: 64px;
@@ -107,15 +108,10 @@ body {
 
 header {
     gap: 0 1em;
-
-    & > nav {
-        display: flex;
-        flex-flow: row wrap;
-        align-content: baseline;
-        justify-content: center;
-        flex-grow: 1;
-        gap: 1ex 1ch;
-    }
+}
+header > nav {
+    flex-grow: 1;
+    gap: 1ex 1ch;
 }
 
 #guestbook {
