@@ -44,27 +44,18 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const usernameLink = document.createElement("a");
-            usernameLink.href = "https://status.cafe/users/nonk";
-            usernameLink.target = "_blank";
-            usernameLink.textContent = "nonk";
-
-            const username = document.getElementById("statuscafe-username");
-            username.appendChild(usernameLink);
-
-            const content = document.getElementById("statuscafe-content");
-            content.textContent = "Loading status...";
-
             fetch("https://status.cafe/users/nonk/status.json")
                 .then(r => r.json())
                 .then(inner);
             function inner(response) {
-                usernameLink.textContent = response.author;
+                const content = document.getElementById("statuscafe-content");
+
                 if (!response.content.length) {
                     content.textContent = "No status yet.";
                     return;
                 }
 
+                const username = document.getElementById("statuscafe-username");
                 username.appendChild(document.createTextNode(
                     " " + response.face + " " + response.timeAgo
                 ));
@@ -111,8 +102,10 @@
                 {% block content %}{% endblock %}
             </main>
             <section id="statuscafe" class="panel w100">
-                <div id="statuscafe-username"></div>
-                <div id="statuscafe-content"></div>
+                <div id="statuscafe-username">
+                    <a rel="me" target="_blank" href="https://status.cafe/users/nonk">nonk</a>
+                </div>
+                <div id="statuscafe-content">Loading status...</div>
             </section>
             <footer class="panel pad0 w100 row sp-between">
                 <span>last updated: <strong>{{ last_updated }}</strong></span>
