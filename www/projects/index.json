@@ -1,7 +1,7 @@
 [
     {
         "title": "caulk",
-        "description": "<strong>the</strong> SteamAPI wrapper for plain C.",
+        "description": "<strong>the</strong> SteamAPI wrapper for plain C",
         "url": "https://github.com/Schwungus/caulk",
         "icon": {
             "path": "caulk.png",
