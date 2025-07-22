@@ -17,11 +17,18 @@ body {
     overflow-y: auto;
 }
 
+$ascii-size: 288px;
 #background {
-    filter: brightness(0.54) blur(0.7px);
     background-image: url("https://q7x.ru/vga9x16.png");
-    background-size: 288px 288px;
+    background-size: $ascii-size $ascii-size;
     background-repeat: repeat;
+    animation: 60s linear infinite bg-scroll;
+
+    & > * {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.55);
+    }
 
     position: fixed;
     left: 0;
@@ -30,6 +37,16 @@ body {
     height: 100vh;
     overflow: hidden;
     z-index: -1000;
+}
+@keyframes bg-scroll {
+    $k: 3;
+
+    from {
+        background-position: $ascii-size * $k $ascii-size;
+    }
+    to {
+        background-position: 0 0;
+    }
 }
 
 #grail {
