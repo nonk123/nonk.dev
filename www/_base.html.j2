@@ -68,14 +68,11 @@
 </head>
 
 <body class="col">
-    {# Can't use a CSS filter for dimming since it ruins animated background performance.... #}
-    <div id="background"><div></div></div>
-
-    <header class="w100 row al-start">
+    <header id="header" class="w100 row al-start">
         <button id="hamburger" class="panel" onclick="toggleHam()">
             {% for _ in range(0, 4) %}<div></div>{% endfor %}
         </button>
-        <nav class="panel pad0 w100 row wrap al-start">
+        <nav id="nav" class="panel pad0 w100 row wrap al-start">
             <a href="/" rel="me">home</a>
             <a href="/about" rel="me">about me</a>
             <a href="/now" rel="me">now</a>
@@ -108,12 +105,13 @@
                 </div>
                 <div id="statuscafe-content">Loading status...</div>
             </section>
-            <footer class="panel pad0 w100 row sp-between">
-                <span>last updated: <strong>{{ last_updated }}</strong></span>
-                <a target="_blank" href="https://github.com/nonk123/nonk.dev">source code</a>
-            </footer>
         </div>
     </div>
+
+    <footer id="footer" class="panel pad0 w100 row sp-between">
+        <span>last updated: <strong>{{ last_updated }}</strong></span>
+        <a target="_blank" href="https://github.com/nonk123/nonk.dev">source code</a>
+    </footer>
 
     <iframe src="https://iframe.chat/embed?chat=nonkdotdev" id="chattable" class="panel" frameborder="none"
         style="visibility: hidden;"></iframe>
