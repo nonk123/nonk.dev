@@ -113,10 +113,9 @@
         <a target="_blank" href="https://github.com/nonk123/nonk.dev">source code</a>
     </footer>
 
-    <iframe src="https://iframe.chat/embed?chat=nonkdotdev" id="chattable" class="panel" frameborder="none"
-        style="visibility: hidden;"></iframe>
-    <button id="toggle-chat" class="panel shake" onclick="toggleChat()">
+    <button id="toggle-chat" class="panel" onclick="toggleChat()">
         <img src="/assets/chatto.png">
+        <iframe src="https://iframe.chat/embed?chat=nonkdotdev" id="chattable" class="panel" frameborder="none" style="visibility: hidden;"></iframe>
     </button>
     <script>
         chattable.initialize({

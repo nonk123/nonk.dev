@@ -17,37 +17,3 @@ a:hover {
 #badges a:hover {
     border-bottom-color: #ffffff;
 }
-
-.shake {
-    $speed: 200ms;
-    $amount: 1px;
-
-    --shake-x: 0;
-    --shake-y: 0;
-
-    animation: $speed shake-1 infinite linear, $speed shake-2 infinite linear;
-    transform: translate(var(--shake-x), var(--shake-y));
-
-    @keyframes shake-1 {
-        from {
-            --shake-x: -#{$amount};
-        }
-        50% {
-            --shake-x: 0;
-        }
-        to {
-            --shake-x: #{$amount};
-        }
-    }
-    @keyframes shake-2 {
-        from {
-            --shake-y: #{$amount};
-        }
-        50% {
-            --shake-y: -#{$amount};
-        }
-        to {
-            --shake-y: #{$amount};
-        }
-    }
-}

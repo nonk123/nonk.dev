@@ -154,25 +154,20 @@ body {
     height: 600px;
     padding: 0;
 
-    position: fixed;
-    left: 5px;
-    bottom: 5px;
+    position: absolute;
+    right: 0;
+    top: 80px;
 
     background: $black;
     border: none;
-
-    @include mobile {
-        display: none;
-    }
 }
 
 #toggle-chat {
     cursor: pointer;
-    display: none; // TODO: display....
 
     position: fixed;
     right: 16px;
-    bottom: 8px;
+    top: 8px;
 
     @include mobile {
         display: none;
