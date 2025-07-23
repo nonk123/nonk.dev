@@ -65,10 +65,16 @@ body {
         display: flex;
     }
 
-    #grail,
+    body {
+        gap: 0;
+    }
+
     header,
     footer {
         padding: $gaps;
+    }
+    #grail {
+        padding: 0 $gaps;
     }
 
     #logo {
