@@ -32,18 +32,15 @@ code {
     font-family: inherit;
     color: $green;
 
-    &::before,
-    &::after {
-        content: "`";
+    &:not(.block) {
+        &::before,
+        &::after {
+            content: "`";
+        }
     }
 }
 code.block {
     margin-left: 2ch;
-
-    &::before,
-    &::after {
-        content: "";
-    }
 }
 
 i::before,

@@ -1,7 +1,5 @@
 @use "assets/_prelude" as *;
 
-$gaps: 16px;
-
 body {
     color: $white;
     image-rendering: pixelated;
@@ -11,24 +9,29 @@ body {
     min-height: 100vh;
     gap: $gaps;
 
-    justify-content: center;
+    justify-content: space-between;
     overflow-y: auto;
 }
 
 #grail {
+    margin: 0 auto;
+    justify-content: flex-end;
+    overflow-x: visible;
     gap: $gaps;
-    margin-right: $gaps;
+}
+#grail,
+#content {
+    width: $content-width;
 }
 
 #sidebar {
-    width: max-content;
+    width: $sidebar-width;
     flex-shrink: 0;
 }
 
 #content {
-    max-width: 640px;
-    flex-grow: 1;
     gap: $gaps;
+    flex-shrink: 0;
 }
 
 #hamburger {
@@ -58,12 +61,14 @@ body {
 }
 
 @include mobile {
-    body {
-        padding: 12px;
-    }
-
     #hamburger {
         display: flex;
+    }
+
+    #grail,
+    header,
+    footer {
+        padding: $gaps;
     }
 
     #logo {
@@ -72,29 +77,28 @@ body {
 
     #grail {
         flex-flow: column nowrap;
-        width: 100%;
+        width: calc(min($content-width, 100vw));
     }
 
     #sidebar {
         margin-bottom: 1em;
         position: absolute;
-        margin: -8px 8px;
+        left: $gaps;
+        bottom: 0;
     }
     #sidebar:not(.toggle) {
         display: none;
     }
 
     #content {
-        margin: 0 auto;
-        max-width: unset;
         width: 100%;
     }
 }
 
-#header {
+header {
     gap: 0 1em;
 }
-#nav {
+#header {
     align-self: stretch;
     justify-content: center;
     flex-grow: 1;
@@ -118,18 +122,13 @@ body {
 }
 
 @include desktop {
-    #sidebar {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-        border-left: none;
-    }
-    #nav,
+    #header,
     #footer {
         border-left: none;
         border-right: none;
         border-radius: 0;
     }
-    #nav {
+    #header {
         border-top: none;
     }
     #footer {
@@ -137,7 +136,7 @@ body {
     }
 }
 
-#nav,
+#header,
 #footer {
     padding: 1em 1ch;
 }
@@ -154,7 +153,7 @@ body {
 
 #chattable {
     width: $chat-width;
-    height: 600px;
+    height: $chat-height;
     padding: 0;
 
     position: absolute;

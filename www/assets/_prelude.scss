@@ -1,5 +1,11 @@
+$gaps: 16px;
+$content-width: 600px;
+$sidebar-width: 220px;
+
 $chat-width: 300px;
-$mobile-width: 700px;
+$chat-height: 700px;
+
+$desktop-width: $content-width + 2 * $sidebar-width + 4 * $gaps;
 
 $white: #fef0f2;
 $black: #202020;
@@ -10,19 +16,20 @@ $darkgreen: #1f7f1f;
 $shadow: rgba(12, 12, 12, 0.4);
 
 @mixin mobile {
-    @media (max-width: $mobile-width) {
+    @media (max-width: $desktop-width) {
         @content;
     }
 }
 @mixin desktop {
-    @media (min-width: $mobile-width) {
+    @media (min-width: $desktop-width) {
         @content;
     }
 }
 
 @font-face {
-    font-family: Hack;
-    src: url("https://nonk.dev/assets/Hack-Regular.ttf") format("truetype");
+    font-family: "Hack";
+    src: url("https://nonk.dev/assets/Hack.ttf") format("truetype");
+    //          ^ absolute so it can be reused cross-origin in `chattable.css`
 }
 
 :root {
@@ -36,11 +43,12 @@ body {
 }
 
 body {
-    font: 16px Hack, Consolas, monospace;
-    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Hack, Consolas, monospace;
+    font-optical-sizing: auto;
 }
 
 * {
     font-family: inherit;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
