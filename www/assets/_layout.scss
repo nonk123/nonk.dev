@@ -1,5 +1,7 @@
 @use "assets/_prelude" as *;
 
+$gaps: 16px;
+
 body {
     color: $white;
     image-rendering: pixelated;
@@ -7,14 +9,15 @@ body {
 
     width: 100%;
     min-height: 100vh;
-    gap: 1em;
+    gap: $gaps;
 
     justify-content: center;
     overflow-y: auto;
 }
 
 #grail {
-    gap: 16px;
+    gap: $gaps;
+    margin-right: $gaps;
 }
 
 #sidebar {
@@ -25,7 +28,7 @@ body {
 #content {
     max-width: 640px;
     flex-grow: 1;
-    gap: 16px;
+    gap: $gaps;
 }
 
 #hamburger {
@@ -157,9 +160,6 @@ body {
     position: absolute;
     right: 0;
     top: 80px;
-
-    background: $black;
-    border: none;
 }
 
 #toggle-chat {
