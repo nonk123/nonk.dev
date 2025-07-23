@@ -9,15 +9,6 @@
         }
     },
     {
-        "title": "vga9x16",
-        "description": "the API behind this site's randomized background",
-        "url": "https://vga9x16.ru",
-        "icon": {
-            "path": "vga9x16.png",
-            "alt": "Pseudo-random, full-bright VGA characters in a grid on a black background"
-        }
-    },
-    {
         "title": "sanity",
         "description": "the only sane static site generator in existence",
         "url": "https://github.com/nonk123/sanity"
@@ -30,6 +21,15 @@
             "path": "schwungus.png",
             "alt": "A white-on-gray slithering mushroom",
             "smooth": true
+        }
+    },
+    {
+        "title": "vga9x16",
+        "description": "the API for when you need a randomized blob of ASCII art",
+        "url": "https://vga9x16.ru",
+        "icon": {
+            "path": "vga9x16.png",
+            "alt": "Pseudo-random, full-bright VGA characters in a grid on a black background"
         }
     },
     {
