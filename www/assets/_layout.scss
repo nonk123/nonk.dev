@@ -107,7 +107,7 @@ body {
 .panel {
     background: $black;
     border-radius: 8px;
-    border: none;
+    border: 1px solid $grey;
 }
 
 .panel:not(.pad0) {
@@ -118,10 +118,19 @@ body {
     #sidebar {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
+        border-left: none;
     }
     #nav,
     #footer {
+        border-left: none;
+        border-right: none;
         border-radius: 0;
+    }
+    #nav {
+        border-top: none;
+    }
+    #footer {
+        border-bottom: none;
     }
 }
 
