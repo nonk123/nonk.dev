@@ -30,7 +30,7 @@ h1::before {
 
 code {
     font-family: inherit;
-    color: $green;
+    background: $blacker;
 
     &:not(.block) {
         &::before,
