@@ -2,11 +2,11 @@
 
 {% macro link(icon, title, href, blank = True) %}
 <li>
-    {% if icon %}
+    {% if icon -%}
         {{ icon }}
-    {% else %}
+    {%- else -%}
         {{ icons.fa("globe") }}
-    {% endif %}
+    {%- endif %}
     <a rel="me" href="{{ href }}" {% if blank -%}target="_blank"{%- endif %}>
         {{- title -}}
     </a>

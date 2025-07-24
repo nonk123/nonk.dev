@@ -46,22 +46,23 @@
 </div>
 
 {% for paragraph in paragraphs %}
-{% if paragraph[0] == "<" %}
-{{ paragraph|safe }}
-{% else %}
-<p>{{ paragraph|safe }}</p>
-{% endif %}
+    {% if paragraph[0] == "<" -%}
+        {{ paragraph|safe }}
+    {%- else -%}
+        <p>{{ paragraph|safe }}</p>
+    {%- endif %}
 {% endfor %}
 
 {% if id != default %}
 <hr>
 <p>Other articles:</p>
 {% endif %}
+
 <ul>
     {% for id, article in articles|items %}
-    {% if id != default %}
-    <li><a href="/blog/{{ id }}">{{ article.title }}</a></li>
-    {% endif %}
+        {% if id != default %}
+            <li><a href="/blog/{{ id }}">{{ article.title }}</a></li>
+        {% endif %}
     {% endfor %}
 </ul>
 {% endblock %}
