@@ -41,14 +41,12 @@
 {% block content %}
 <h1>assorted shitposts</h1>
 <p>handpicked from the depths of telegram...</p>
-<ul>
-    {% for post in posts %}
+<ul>{% for post in posts %}
     <li>
         <a rel="noindex nofollow" href="/shitposts/raw/{{ post.file }}" class="shitpost">
             {{- post.file }} -- {{ post.title -}}
         </a>
     </li>
-    {% endfor %}
-</ul>
+{% endfor %}</ul>
 <p>more to come...</p>
 {% endblock %}

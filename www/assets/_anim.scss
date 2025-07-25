@@ -2,18 +2,17 @@
 @use "sass:list";
 
 a {
-    border-bottom: 2px solid transparent;
+    text-decoration: none;
 }
 
 a:hover {
-    border-bottom-color: $green;
+    text-decoration: underline;
+    text-decoration-color: $green;
     &:visited {
-        border-bottom-color: $darkgreen;
+        text-decoration-color: $darkgreen;
     }
 }
+
 #me:hover {
-    border-bottom-color: $white;
-}
-#badges a:hover {
-    border-bottom-color: #ffffff;
+    text-decoration-color: $white;
 }
