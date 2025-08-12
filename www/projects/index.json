@@ -14,6 +14,11 @@
         "url": "https://github.com/nonk123/sanity"
     },
     {
+        "title": "sanity liveserver",
+        "description": "a live-server for sanity inside Visual Studio Code",
+        "url": "https://marketplace.visualstudio.com/items?itemName=nonk123.vscode-sanity-liveserver"
+    },
+    {
         "title": "schwungus",
         "description": "me and my homies form the schwungus collective",
         "url": "https://schwung.us",
