@@ -1,5 +1,5 @@
 $gaps: 16px;
-$content-width: 600px;
+$content-width: 700px;
 $sidebar-width: 220px;
 
 $chat-width: 300px;
@@ -17,11 +17,6 @@ $shadow: rgba(12, 12, 12, 0.4);
 
 @mixin mobile {
     @media (max-width: $desktop-width) {
-        @content;
-    }
-}
-@mixin desktop {
-    @media (min-width: $desktop-width) {
         @content;
     }
 }

@@ -70,11 +70,11 @@
 </head>
 
 <body class="col">
-    <header class="w100 row al-start">
-        <button id="hamburger" class="panel" onclick="toggleHam()">
+    <header id="header" class="panel pad0 w100 row al-start">
+        <button id="hamburger" onclick="toggleHam()">
             {% for _ in range(0, 4) %}<div></div>{% endfor %}
         </button>
-        <nav id="header" class="panel pad0 w100 row wrap al-start">
+        <nav id="header-links" class="w100 row wrap al-start">
             <a href="/" rel="me">home</a>
             <a href="/about" rel="me">about me</a>
             <a href="/now" rel="me">now</a>
@@ -109,11 +109,9 @@
         </div>
     </div>
 
-    <footer>
-        <div id="footer" class="panel pad0 w100 row sp-between">
-            <span>last updated: <strong>{{ last_updated }}</strong></span>
-            <a target="_blank" href="https://github.com/nonk123/nonk.dev">source code</a>
-        </div>
+    <footer id="footer" class="panel pad0 w100 row sp-between">
+        <span>last updated: <strong>{{ last_updated }}</strong></span>
+        <a target="_blank" href="https://github.com/nonk123/nonk.dev">source code</a>
     </footer>
 
     <button id="toggle-chat" class="panel" onclick="toggleChat()">

@@ -40,6 +40,9 @@ body {
     aspect-ratio: 1;
     width: 64px;
 
+    background: transparent;
+    border: none;
+
     display: none;
     flex-flow: column nowrap;
     justify-content: center;
@@ -65,32 +68,22 @@ body {
         display: flex;
     }
 
-    body {
-        gap: 0;
-    }
-
-    header,
-    footer {
-        padding: $gaps;
-    }
-    #grail {
-        padding: 0 $gaps;
-    }
-
     #logo {
         max-height: 128px;
     }
 
     #grail {
         flex-flow: column nowrap;
-        width: calc(min($content-width, 100vw));
+        width: calc(min($content-width, 100%));
+        padding: 0 $gaps;
     }
 
     #sidebar {
         margin-bottom: 1em;
-        position: absolute;
-        left: $gaps;
-        bottom: 0;
+        position: fixed;
+        left: 50vw;
+        top: 50vh;
+        transform: translate(-50%, -50%);
     }
     #sidebar:not(.toggle) {
         display: none;
@@ -101,10 +94,10 @@ body {
     }
 }
 
-header {
-    gap: 0 1em;
-}
 #header {
+    gap: 0 1ch;
+}
+#header-links {
     align-self: stretch;
     justify-content: center;
     flex-grow: 1;
@@ -127,24 +120,19 @@ header {
     padding: 1ex 1ch;
 }
 
-@include desktop {
-    #header,
-    #footer {
-        border-left: none;
-        border-right: none;
-        border-radius: 0;
-    }
-    #header {
-        border-top: none;
-    }
-    #footer {
-        border-bottom: none;
-    }
-}
-
 #header,
 #footer {
     padding: 1em 1ch;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+}
+
+#header {
+    border-top: none;
+}
+#footer {
+    border-bottom: none;
 }
 
 #me {
