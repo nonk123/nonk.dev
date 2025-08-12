@@ -1,8 +1,9 @@
-name: Deploy to GitHub Pages
+name: Publish to GitHub Pages
 
 on:
-  push: { tags: ["deploy"] }
   workflow_dispatch:
+  push:
+    branches: ["publish"]
 
 permissions:
   contents: read
@@ -17,7 +18,7 @@ env:
   SANITY_URL: https://github.com/nonk123/sanity/releases/download/gh-actions/sanity-release-linux
 
 jobs:
-  deploy:
+  publish:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -29,11 +30,11 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Download sanity
         run: wget -O sanity $SANITY_URL && chmod +x sanity
-      - name: Build
+      - name: Render
         run: env RUST_LOG=debug ./sanity
-      - name: Upload artifact
+      - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with: { path: "dist" }
-      - name: Deploy to GitHub Pages
+      - name: Publish to GitHub Pages
         uses: actions/deploy-pages@v4
         id: deployment
