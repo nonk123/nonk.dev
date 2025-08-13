@@ -79,18 +79,20 @@ body {
         padding: 0 $gaps;
     }
 
+    $out-of-sight: -130%;
     #sidebar {
-        margin-bottom: 1em;
         position: fixed;
         left: $gaps;
         top: 50vh;
-        transform: translateY(-50%);
+        transform: translate($out-of-sight, -50%);
+        transition: transform 500ms ease-in;
     }
-    body.toggle-sidebar #content {
-        visibility: hidden;
+
+    body.enable-sidebar #sidebar {
+        transform: translate(0, -50%);
     }
-    body:not(.toggle-sidebar) #sidebar {
-        display: none;
+    body:not(.enable-sidebar) #sidebar {
+        transform: translate($out-of-sight, -50%);
     }
 
     #content {
