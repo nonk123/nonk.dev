@@ -9,6 +9,11 @@
         }
     },
     {
+        "title": "nutpunch",
+        "description": "UDP hole-punching & P2P networking for <strong>REAL</strong> men",
+        "url": "https://github.com/Schwungus/nutpunch"
+    },
+    {
         "title": "sanity",
         "description": "the only sane static site generator in existence",
         "url": "https://github.com/nonk123/sanity"
