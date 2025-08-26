@@ -3,7 +3,7 @@ name: Publish to GitHub Pages
 on:
   workflow_dispatch:
   push:
-    tags: ["deploy"]
+    tags: ["publish"]
 
 permissions:
   contents: read
