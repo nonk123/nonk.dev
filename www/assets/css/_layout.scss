@@ -14,14 +14,11 @@ body {
 }
 
 #grail {
+    width: calc(min($content-width, 100%));
     margin: 0 auto;
     justify-content: flex-end;
     overflow-x: visible;
     gap: $gaps;
-}
-#grail,
-#content {
-    width: $content-width;
 }
 
 #sidebar {
@@ -32,6 +29,7 @@ body {
 #content {
     gap: $gaps;
     flex-shrink: 0;
+    width: 100%;
 }
 
 #hamburger {
@@ -74,8 +72,6 @@ body {
     }
 
     #grail {
-        flex-flow: column nowrap;
-        width: calc(min($content-width, 100%));
         padding: 0 $gaps;
     }
 
@@ -93,10 +89,6 @@ body {
     }
     body:not(.enable-sidebar) #sidebar {
         transform: translate($out-of-sight, -50%);
-    }
-
-    #content {
-        width: 100%;
     }
 }
 
