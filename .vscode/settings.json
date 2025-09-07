@@ -13,9 +13,7 @@
         "editor.formatOnSave": false
     },
     "[jinja-html]": {
-        "editor.formatOnSave": false,
-        "djlint.enableLinting": false,
-        "djlint.profile": "jinja"
+        "editor.formatOnSave": false
     },
     "[scss]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
