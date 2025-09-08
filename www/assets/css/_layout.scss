@@ -170,6 +170,11 @@ main:has(#guestbook) {
     }
 }
 
+#chattable,
+#toggle-chat {
+    border: 1px solid rgb(64, 64, 64);
+}
+
 #statuscafe {
     padding: 0.5em;
 
