@@ -85,6 +85,7 @@ body {
         top: 50vh;
         transform: translate($out-of-sight, -50%);
         transition: transform 500ms ease-in;
+        border: 1px solid rgb(64, 64, 64);
     }
 
     body.enable-sidebar #sidebar {
