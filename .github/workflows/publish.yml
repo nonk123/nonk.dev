@@ -3,15 +3,10 @@ name: Publish to GitHub Pages
 on:
   workflow_dispatch:
   push:
-    tags: ["publish"]
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+    tags: [publish]
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
 
 env:
@@ -19,10 +14,15 @@ env:
 
 jobs:
   publish:
-    runs-on: ubuntu-latest
+    name: Render & publish
+    runs-on: ubuntu-24.04
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -34,7 +34,7 @@ jobs:
         run: env RUST_LOG=debug ./sanity
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
-        with: { path: "dist" }
+        with: { path: dist }
       - name: Publish to GitHub Pages
         uses: actions/deploy-pages@v4
         id: deployment
