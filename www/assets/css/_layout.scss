@@ -21,6 +21,7 @@ body {
 
 #sidebar {
     width: $sidebar-width;
+    align-self: start;
 }
 
 #content {
@@ -111,8 +112,7 @@ body {
 
 .panel {
     background: $black;
-    border-radius: 8px;
-    border: 1px solid $grey;
+    border-radius: 5px;
 }
 
 .panel:not(.pad0) {
@@ -201,4 +201,8 @@ body {
 #webrings > * {
     display: block;
     margin: 0 auto;
+}
+
+button {
+    border: 1px solid $blacker;
 }
