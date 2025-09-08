@@ -104,9 +104,13 @@ body {
     gap: 1ex 1ch;
 }
 
+main:has(#guestbook) {
+    flex-grow: 1;
+}
 #guestbook {
     width: 100%;
     min-height: 60vh;
+    height: 100%;
     border: none;
 }
 
