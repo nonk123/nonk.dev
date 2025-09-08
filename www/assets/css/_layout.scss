@@ -16,6 +16,7 @@ body {
 #grail {
     margin: 0 auto;
     justify-content: flex-end;
+    flex-grow: 1;
     gap: $gaps;
 }
 
