@@ -21,39 +21,20 @@ $shadow: rgba(12, 12, 12, 0.4);
     }
 }
 
-@function hack($suffix, $host) {
-    // Absolute host can be specified to reuse the font cross-origin in `chattable.css`:
-    @return url("#{$host}/assets/Hack-#{$suffix}.ttf") format("truetype");
+@mixin hack-part($weight, $style, $suffix, $host) {
+    @font-face {
+        font-family: "Hack";
+        font-weight: $weight;
+        font-style: $style;
+        src: url("#{$host}/assets/Hack-#{$suffix}.ttf") format("truetype");
+    }
 }
 
 @mixin hack($host) {
-    @font-face {
-        font-family: "Hack";
-        font-weight: normal;
-        font-style: normal;
-        src: hack(Regular, $host);
-    }
-
-    @font-face {
-        font-family: "Hack";
-        font-weight: bold;
-        font-style: normal;
-        src: hack(Bold, $host);
-    }
-
-    @font-face {
-        font-family: "Hack";
-        font-weight: normal;
-        font-style: italic;
-        src: hack(Italic, $host);
-    }
-
-    @font-face {
-        font-family: "Hack";
-        font-weight: bold;
-        font-style: italic;
-        src: hack(BoldItalic, $host);
-    }
+    @include hack-part(normal, normal, Regular, $host);
+    @include hack-part(bold, normal, Bold, $host);
+    @include hack-part(normal, italic, Italic, $host);
+    @include hack-part(bold, italic, BoldItalic, $host);
 }
 
 :root {
@@ -67,7 +48,7 @@ body {
 }
 
 body {
-    font-size: 16px;
+    font-size: 15px;
     font-family: Hack, Consolas, monospace;
     font-optical-sizing: auto;
 }
