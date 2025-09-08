@@ -14,22 +14,18 @@ body {
 }
 
 #grail {
-    width: calc(min($content-width, 100%));
     margin: 0 auto;
     justify-content: flex-end;
-    overflow-x: visible;
     gap: $gaps;
 }
 
 #sidebar {
     width: $sidebar-width;
-    flex-shrink: 0;
 }
 
 #content {
+    width: $content-width;
     gap: $gaps;
-    flex-shrink: 0;
-    width: 100%;
 }
 
 #hamburger {
@@ -75,10 +71,15 @@ body {
         padding: 0 $gaps;
     }
 
-    $out-of-sight: -130%;
+    #content,
+    #grail {
+        width: calc(min($content-width, 100%));
+    }
+
+    $out-of-sight: 130%;
     #sidebar {
         position: fixed;
-        left: $gaps;
+        right: $gaps;
         top: 50vh;
         transform: translate($out-of-sight, -50%);
         transition: transform 500ms ease-in;

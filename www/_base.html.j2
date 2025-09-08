@@ -70,9 +70,6 @@
 
 <body class="col">
     <header id="header" class="panel pad0 w100 row al-start">
-        <button id="hamburger" onclick="toggleHam()">
-            {% for _ in range(0, 4) %}<div></div>{% endfor %}
-        </button>
         <nav id="header-links" class="w100 row wrap al-start">
             <a href="/" rel="me">home</a>
             <a href="/about" rel="me">about me</a>
@@ -82,9 +79,23 @@
             <a href="/guestbook" title="please sign!">guestbook</a>
             <a href="/shitposts" title="very shitty...">shitposts</a>
         </nav>
+        <button id="hamburger" onclick="toggleHam()">
+            {% for _ in range(0, 4) %}<div></div>{% endfor %}
+        </button>
     </header>
 
     <div id="grail" class="row al-start">
+        <div id="content" class="col">
+            <main class="panel w100">
+                {% block content %}{% endblock %}
+            </main>
+            <section id="statuscafe" class="panel w100">
+                <div id="statuscafe-username">
+                    <a rel="me" target="_blank" href="https://status.cafe/users/nonk">nonk</a>
+                </div>
+                <div id="statuscafe-content">Loading status...</div>
+            </section>
+        </div>
         <aside id="sidebar" class="panel">
             <div class="w100">
                 <a rel="nofollow" target="_blank" title="click to see the LORE"
@@ -98,17 +109,6 @@
             <hr>
             {% include "_socials.html" %}
         </aside>
-        <div id="content" class="col">
-            <main class="panel w100">
-                {% block content %}{% endblock %}
-            </main>
-            <section id="statuscafe" class="panel w100">
-                <div id="statuscafe-username">
-                    <a rel="me" target="_blank" href="https://status.cafe/users/nonk">nonk</a>
-                </div>
-                <div id="statuscafe-content">Loading status...</div>
-            </section>
-        </div>
     </div>
 
     <footer id="footer" class="panel pad0 w100 row sp-between">

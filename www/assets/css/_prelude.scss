@@ -5,9 +5,9 @@ $sidebar-width: 220px;
 $chat-width: 300px;
 $chat-height: 700px;
 
-$desktop-width: $content-width + 2 * $sidebar-width + 4 * $gaps;
+$desktop-width: $content-width + $sidebar-width + 3 * $gaps;
 
-$white: #fef0f2;
+$white: #eeeeee;
 $black: #202020;
 $blacker: #141414;
 $grey: #323232;
