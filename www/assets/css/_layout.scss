@@ -31,7 +31,7 @@ body {
 }
 
 #hamburger {
-    $size: calc(max(3rem, 48px));
+    $size: 3rem;
 
     cursor: pointer;
     width: $size;
@@ -65,12 +65,21 @@ body {
         display: flex;
     }
 
+    #header {
+        padding-top: 0; // #hamburger gives enough padding already
+        padding-bottom: 0;
+    }
+
     #logo {
         max-height: 128px;
     }
 
     #grail {
         padding: 0 $gaps;
+    }
+
+    #content {
+        justify-content: center;
     }
 
     #content,
@@ -125,19 +134,14 @@ main:has(#guestbook) {
     padding: 1ex 1ch;
 }
 
-#header,
-#footer {
+header,
+footer {
     padding: 1em 1ch;
-    border-left: none;
-    border-right: none;
-    border-radius: 0;
 }
 
-#header {
-    border-top: none;
-}
+#header,
 #footer {
-    border-bottom: none;
+    border-radius: 0;
 }
 
 #me {

@@ -29,7 +29,6 @@ h1::before {
 }
 
 code {
-    font-family: inherit;
     background: $blacker;
 
     &:not(.block) {
@@ -41,11 +40,6 @@ code {
 }
 code.block {
     margin-left: 2ch;
-}
-
-i::before,
-i::after {
-    content: "_";
 }
 
 $li-indent: 2ch;
@@ -86,10 +80,10 @@ a:not(:has(> img)) {
     font-weight: bold;
 
     &::before {
-        content: "❬";
+        content: "‹";
     }
     &::after {
-        content: "❭";
+        content: "›";
     }
 
     &[href^="/"] {

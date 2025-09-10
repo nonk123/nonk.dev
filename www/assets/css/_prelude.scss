@@ -20,22 +20,6 @@ $shadow: rgba(12, 12, 12, 0.4);
     }
 }
 
-@mixin hack-part($weight, $style, $suffix, $host) {
-    @font-face {
-        font-family: "Hack";
-        font-weight: $weight;
-        font-style: $style;
-        src: url("#{$host}/assets/Hack-#{$suffix}.ttf") format("truetype");
-    }
-}
-
-@mixin hack($host) {
-    @include hack-part(normal, normal, Regular, $host);
-    @include hack-part(bold, normal, Bold, $host);
-    @include hack-part(normal, italic, Italic, $host);
-    @include hack-part(bold, italic, BoldItalic, $host);
-}
-
 :root {
     color-scheme: only dark;
 }
@@ -47,12 +31,11 @@ body {
 }
 
 body {
-    font-size: 15px;
-    font-family: Hack, Consolas, monospace;
-    font-optical-sizing: auto;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 * {
-    font-family: inherit;
+    font-family: Consolas, monospace;
     box-sizing: border-box;
 }
