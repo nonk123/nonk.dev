@@ -4,7 +4,7 @@ img {
     max-width: 100%;
 }
 
-p img {
+p > img:only-child {
     max-width: 80%;
     display: block;
     margin: 0 auto;
@@ -39,7 +39,10 @@ code {
     }
 }
 code.block {
-    margin-left: 2ch;
+    display: block;
+    margin: 0 2ch;
+    padding: 1ex 1ch;
+    border-radius: 4px;
 }
 
 $li-indent: 2ch;

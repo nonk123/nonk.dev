@@ -6,4 +6,4 @@ I then reference them from <a href="https://github.com/nonk123/nonk.dev/tree/mas
 
 In the end, to recreate the screenies, I run:
 
-<code class="block">git tag -f screenies && git push -f --tags</code>
+<p><code class="block">git tag -f screenies && git push -f --tags</code></p>
