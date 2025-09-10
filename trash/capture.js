@@ -21,7 +21,8 @@ const viewports = [
 
     const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
     for (const idx in paths) {
-        await page.goto(`https://nonk.dev${paths[idx]}`);
+        const path = paths[idx];
+        await page.goto(`https://nonk.dev${path}`);
         await page.waitForEvent("requestfinished");
 
         for (const viewport of viewports) {
@@ -34,6 +35,8 @@ const viewports = [
                 path: `.github/assets/screenie-${viewport.name}-${idx}.png`,
                 scale: "css",
             });
+
+            console.info(`Screenied '${path}' in ${viewport.name} mode`);
         }
     }
 
