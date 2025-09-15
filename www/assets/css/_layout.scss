@@ -92,16 +92,12 @@ body {
         position: fixed;
         right: $gaps;
         top: 50vh;
-        transform: translate($out-of-sight, -50%);
         transition: transform 500ms ease-in;
+        transform: translate($out-of-sight, -50%);
         border: 1px solid rgb(64, 64, 64);
     }
-
-    body.enable-sidebar #sidebar {
+    body.show-sidebar #sidebar {
         transform: translate(0, -50%);
-    }
-    body:not(.enable-sidebar) #sidebar {
-        transform: translate($out-of-sight, -50%);
     }
 }
 
@@ -162,6 +158,11 @@ footer {
     position: absolute;
     right: 0;
     top: 80px;
+
+    visibility: hidden;
+}
+body.show-chattable #chattable {
+    visibility: visible;
 }
 
 #toggle-chat {
