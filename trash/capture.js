@@ -1,5 +1,3 @@
-const browsers = require("playwright");
-
 const paths = ["/", "/projects", "/about"];
 const viewports = [
     {
@@ -14,6 +12,7 @@ const viewports = [
     },
 ];
 
+const browsers = require("playwright");
 (async () => {
     const browser = await browsers.chromium.launch();
     const context = await browser.newContext();
@@ -26,16 +25,12 @@ const viewports = [
         await page.waitForEvent("requestfinished");
 
         for (const viewport of viewports) {
-            await page.setViewportSize({
-                width: viewport.width,
-                height: viewport.height,
-            });
+            await page.setViewportSize(viewport);
             await delay(1000);
             await page.screenshot({
                 path: `.github/assets/screenie-${viewport.name}-${idx}.png`,
                 scale: "css",
             });
-
             console.info(`Screenied '${path}' in ${viewport.name} mode`);
         }
     }
