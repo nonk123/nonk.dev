@@ -3,7 +3,6 @@
 body {
     color: $white;
     image-rendering: pixelated;
-    background: $blacker;
 
     width: 100%;
     min-height: 100vh;
@@ -11,6 +10,24 @@ body {
 
     justify-content: space-between;
     overflow-y: auto;
+}
+
+#background-ascii {
+    background-image: url("https://vga9x16.ru/png?transparent=true");
+    background-size: 288px 288px;
+    background-repeat: repeat;
+    z-index: -1000;
+    opacity: 0.2;
+}
+#background {
+    background-color: $blacker;
+    z-index: -1001;
+}
+#background-ascii,
+#background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
 }
 
 #grail {
