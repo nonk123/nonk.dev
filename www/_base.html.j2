@@ -47,10 +47,10 @@
                 .then(r => r.json())
                 .then(inner);
             function inner(response) {
-                const content = document.getElementById("statuscafe-content");
+                const status = document.getElementById("statuscafe-content");
 
                 if (!response.content.length) {
-                    content.textContent = "No status yet.";
+                    status.textContent = "No status yet.";
                     return;
                 }
 
@@ -58,7 +58,7 @@
                 username.appendChild(document.createTextNode(
                     " " + response.face + " " + response.timeAgo
                 ));
-                content.innerHTML = response.content;
+                status.innerHTML = response.content;
             }
         });
     </script>
