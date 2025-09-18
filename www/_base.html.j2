@@ -40,6 +40,17 @@
             document.body.classList.toggle("show-chattable");
         }
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function updateLocalTime() {
+                const date = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Moscow" }));
+                const fmt = date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+                document.getElementById("localtime-value").textContent = fmt;
+            }
+            updateLocalTime();
+            setInterval(updateLocalTime, 1000);
+        });
+    </script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -84,16 +95,19 @@
         </button>
     </header>
 
-    <div id="grail" class="row">
-        <div id="content" class="col">
+    <div id="grail" class="row al-start">
+        <div id="content" class="row wrap">
             <main class="panel w100">
                 {% block content %}{% endblock %}
             </main>
-            <section id="statuscafe" class="panel w100">
+            <section id="statuscafe" class="panel">
                 <div id="statuscafe-username">
                     <a rel="me" target="_blank" href="https://status.cafe/users/nonk">nonk</a>
                 </div>
                 <div id="statuscafe-content">Loading status...</div>
+            </section>
+            <section id="localtime" class="panel">
+                <p class="center">my local time: <code id="localtime-value"></code> (GMT+3)</p>
             </section>
         </div>
         <aside id="sidebar" class="panel">

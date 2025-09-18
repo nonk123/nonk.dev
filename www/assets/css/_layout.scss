@@ -39,12 +39,14 @@ body {
 
 #sidebar {
     width: $sidebar-width;
-    align-self: start;
 }
 
 #content {
     width: $content-width;
     gap: $gaps;
+    & > * {
+        flex-grow: 1;
+    }
 }
 
 #hamburger {
