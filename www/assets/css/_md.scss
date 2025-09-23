@@ -14,8 +14,12 @@ p > img:only-child {
 p {
     text-align: justify;
 }
-
 p.center {
+    text-align: center;
+}
+
+div.center {
+    margin: auto;
     text-align: center;
 }
 
