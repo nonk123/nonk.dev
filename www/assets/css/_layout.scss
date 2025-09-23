@@ -41,7 +41,7 @@ body {
     width: $sidebar-width;
 }
 
-#content {
+#main {
     width: $content-width;
     gap: $gaps;
     & > * {
@@ -97,11 +97,11 @@ body {
         padding: 0 $gaps;
     }
 
-    #content {
+    #main {
+        width: 100%;
         justify-content: center;
     }
 
-    #content,
     #grail {
         width: calc(min($content-width, 100%));
     }
@@ -128,17 +128,6 @@ body {
     justify-content: center;
     flex-grow: 1;
     gap: 1ex 1ch;
-}
-
-main:has(#guestbook) {
-    flex-grow: 1;
-    padding: 0;
-}
-#guestbook {
-    width: 100%;
-    min-height: 60vh;
-    height: 100%;
-    border: none;
 }
 
 .panel {

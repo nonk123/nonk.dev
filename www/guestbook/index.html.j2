@@ -4,6 +4,20 @@
 {% block description %}please sign my guestbook! i'd really appreciate it.{% endblock %}
 {% block url %}/guestbook{% endblock %}
 
+{% block head %}
+<style>
+    #main, #content {
+        padding: 0;
+    }
+
+    #guestbook {
+        width: 100%;
+        min-height: 70vh;
+        border: none;
+    }
+</style>
+{% endblock %}
+
 {% block content %}
 <iframe id="guestbook" src="https://nonk.atabook.org" frameborder="none"></iframe>
 {% endblock %}
