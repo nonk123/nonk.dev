@@ -38,6 +38,11 @@
         }
     },
     {
+        "title": "S_tructures",
+        "description": "dynamic datastructures for us plain-C rawdoggers",
+        "url": "https://github.com/Schwungus/S_tructures"
+    },
+    {
         "title": "vga9x16",
         "description": "the API for when you need a randomized blob of ASCII art",
         "url": "https://vga9x16.ru",
@@ -45,11 +50,6 @@
             "path": "vga9x16.png",
             "alt": "Pseudo-random, full-bright VGA characters in a grid on a black background"
         }
-    },
-    {
-        "title": "nonklib",
-        "description": "custom implementations of data structures I made for recreation",
-        "url": "https://github.com/nonk123/nonklib"
     },
     {
         "title": "uptime-thing",
