@@ -1,20 +1,20 @@
 [
     {
-        "title": "caulk",
-        "description": "<strong>the</strong> SteamAPI wrapper for plain C",
-        "url": "https://github.com/Schwungus/caulk",
-        "icon": {
-            "path": "caulk.png",
-            "alt": "A splattering of caulk"
-        }
-    },
-    {
         "title": "nutpunch",
         "description": "UDP hole-punching & P2P networking for <strong>REAL</strong> men (and women)",
         "url": "https://github.com/Schwungus/nutpunch",
         "icon": {
             "path": "nutpunch.png",
             "alt": "A warning sign with a picture of a cracked peanut shell"
+        }
+    },
+    {
+        "title": "caulk",
+        "description": "<strong>the</strong> SteamAPI wrapper for plain C",
+        "url": "https://github.com/Schwungus/caulk",
+        "icon": {
+            "path": "caulk.png",
+            "alt": "A splattering of caulk"
         }
     },
     {
@@ -50,11 +50,6 @@
             "path": "vga9x16.png",
             "alt": "Pseudo-random, full-bright VGA characters in a grid on a black background"
         }
-    },
-    {
-        "title": "uptime-thing",
-        "description": "a toy uptime monitoring app I was challenged to code",
-        "url": "https://github.com/nonk123/uptime-thing"
     },
     {
         "title": "a local community website",
