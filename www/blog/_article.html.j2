@@ -59,9 +59,9 @@
 {% endif %}
 
 <ul>
-    {% for id, article in articles|items %}
-        {% if id != default and not article.hidden %}
-            <li><a href="/blog/{{ id }}">{{ article.title }}</a></li>
+    {% for other_id, article in articles|items %}
+        {% if id != other_id and other_id != default and not article.hidden %}
+            <li><a href="/blog/{{ other_id }}">{{ article.title }}</a></li>
         {% endif %}
     {% endfor %}
 </ul>
