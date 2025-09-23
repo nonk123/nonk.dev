@@ -60,7 +60,7 @@
 
 <ul>
     {% for id, article in articles|items %}
-        {% if id != default %}
+        {% if id != default and not article.hidden %}
             <li><a href="/blog/{{ id }}">{{ article.title }}</a></li>
         {% endif %}
     {% endfor %}
