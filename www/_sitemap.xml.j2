@@ -8,12 +8,14 @@
         <priority>1.0</priority>
     </url>
     {% endfor %}
+
     {% for id, article in blog.articles|items %}
+    {% if id != blog.default and not article.hidden %}
     <url>
         <loc>https://nonk.dev/blog/{{ id }}</loc>
         <lastmod>{{ article.date_mod if article.date_mod else article.date_pub }}</lastmod>
-        <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
+    {% endif %}
     {% endfor %}
 </urlset>
