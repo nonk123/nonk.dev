@@ -12,7 +12,6 @@ $black: #1f1f1f;
 $blacker: #080808;
 $green: #14ee14;
 $darkgreen: #1f7f1f;
-$shadow: rgba(12, 12, 12, 0.4);
 
 @mixin mobile {
     @media (max-width: $desktop-width) {
