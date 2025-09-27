@@ -1,5 +1,15 @@
 [
     {
+        "id": "klawiatura",
+        "title": "Klawiatura",
+        "description": "Mario Forever online, powered by <a href=\"/projects#nutpunch\">nutpunch</a>",
+        "url": "https://github.com/toggins/Klawiatura",
+        "icon": {
+            "path": "klawiatura.png",
+            "alt": "A pixel-art picture of a keyboard"
+        }
+    },
+    {
         "id": "nutpunch",
         "title": "nutpunch",
         "description": "UDP hole-punching & P2P networking for <strong>REAL</strong> men (and women)",
@@ -16,7 +26,7 @@
         "url": "https://github.com/Schwungus/caulk",
         "icon": {
             "path": "caulk.png",
-            "alt": "A splattering of caulk"
+            "alt": "A splattering of caulk in pixel art"
         }
     },
     {
