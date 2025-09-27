@@ -1,5 +1,6 @@
 [
     {
+        "id": "nutpunch",
         "title": "nutpunch",
         "description": "UDP hole-punching & P2P networking for <strong>REAL</strong> men (and women)",
         "url": "https://github.com/Schwungus/nutpunch",
@@ -9,6 +10,7 @@
         }
     },
     {
+        "id": "caulk",
         "title": "caulk",
         "description": "<strong>the</strong> SteamAPI wrapper for plain C",
         "url": "https://github.com/Schwungus/caulk",
@@ -18,16 +20,19 @@
         }
     },
     {
+        "id": "sanity",
         "title": "sanity",
         "description": "the only sane static site generator in existence",
         "url": "https://github.com/nonk123/sanity"
     },
     {
+        "id": "vscode-sanity",
         "title": "sanity liveserver",
         "description": "a live-server for sanity inside Visual Studio Code",
         "url": "https://marketplace.visualstudio.com/items?itemName=nonk123.vscode-sanity-liveserver"
     },
     {
+        "id": "schwungus",
         "title": "schwungus",
         "description": "me and my homies form the schwungus collective",
         "url": "https://schwung.us",
@@ -38,11 +43,13 @@
         }
     },
     {
+        "id": "structures",
         "title": "S_tructures",
         "description": "dynamic datastructures for us plain-C rawdoggers",
         "url": "https://github.com/Schwungus/S_tructures"
     },
     {
+        "id": "vga9x16",
         "title": "vga9x16",
         "description": "the API for when you need a randomized blob of ASCII art",
         "url": "https://vga9x16.ru",
