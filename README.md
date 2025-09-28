@@ -1,6 +1,6 @@
 # nonk.dev
 
-<!-- <img align="right" src=".github/assets/gradient.png" alt="An ASCII-art gradient"> -->
+<!-- <img align="right" src=".github/assets/gradient.png" alt=""> -->
 
 My gorgeous website. [See it live](https://nonk.dev).
 
