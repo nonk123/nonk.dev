@@ -16,7 +16,8 @@
         "url": "https://github.com/Schwungus/nutpunch",
         "icon": {
             "path": "nutpunch.png",
-            "alt": "A warning sign with a picture of a cracked peanut shell"
+            "alt": "A warning sign with a picture of a cracked peanut shell",
+            "smooth": true
         }
     },
     {
