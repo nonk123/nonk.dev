@@ -33,14 +33,6 @@
     <script src="https://kit.fontawesome.com/6ad2356fdb.js" crossorigin="anonymous"></script>
 
     <script>
-        function toggleHam() {
-            document.body.classList.toggle("show-sidebar");
-        }
-        function toggleChat() {
-            document.body.classList.toggle("show-chattable");
-        }
-    </script>
-    <script>
         document.addEventListener("DOMContentLoaded", function () {
             function updateLocalTime() {
                 const date = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Moscow" }));
@@ -56,21 +48,19 @@
         document.addEventListener("DOMContentLoaded", function () {
             fetch("https://status.cafe/users/nonk/status.json")
                 .then(r => r.json())
-                .then(inner);
-            function inner(response) {
-                const status = document.getElementById("statuscafe-content");
+                .then(response => {
+                    const status = document.getElementById("statuscafe-content");
+                    if (!response.content.length) {
+                        status.textContent = "No status yet.";
+                        return;
+                    }
 
-                if (!response.content.length) {
-                    status.textContent = "No status yet.";
-                    return;
-                }
-
-                const username = document.getElementById("statuscafe-username");
-                username.appendChild(document.createTextNode(
-                    " " + response.face + " " + response.timeAgo
-                ));
-                status.innerHTML = response.content;
-            }
+                    const username = document.getElementById("statuscafe-username");
+                    username.appendChild(document.createTextNode(
+                        " " + response.face + " " + response.timeAgo
+                    ));
+                    status.innerHTML = response.content;
+                });
         });
     </script>
 
@@ -90,7 +80,7 @@
             <a href="/guestbook" title="please sign!">guestbook</a>
             <a href="/shitposts" title="very shitty...">shitposts</a>
         </nav>
-        <button id="hamburger" onclick="toggleHam()">
+        <button id="hamburger" onclick="document.body.classList.toggle('show-sidebar')">
             {% for _ in range(0, 4) %}<div></div>{% endfor %}
         </button>
     </header>
@@ -102,7 +92,7 @@
             </main>
             <section id="statuscafe" class="panel">
                 <div id="statuscafe-username">
-                    <a rel="me" target="_blank" href="https://status.cafe/users/nonk">nonk</a>
+                    <a target="_blank" rel="me" href="https://status.cafe/users/nonk">nonk</a>
                 </div>
                 <div id="statuscafe-content">Loading status...</div>
             </section>
@@ -134,7 +124,7 @@
               | <a target="_blank" href="https://github.com/nonk123/nonk.dev">source code</a></span>
     </footer>
 
-    <button id="toggle-chat" class="panel" onclick="toggleChat()">
+    <button id="toggle-chat" class="panel" onclick="document.body.classList.toggle('show-chattable')">
         <img src="/assets/chatto.png">
         <iframe src="https://iframe.chat/embed?chat=nonkdotdev" id="chattable" class="panel" frameborder="none"></iframe>
     </button>
