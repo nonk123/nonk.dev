@@ -4,22 +4,20 @@
 {% block description %}the list of projects i have created and maintained.{% endblock %}
 {% block url %}/projects{% endblock %}
 
+{% set gap = "12px" %}
 {% block head %}
 <style>
     .project {
-        margin-bottom: 12px;
+        margin-bottom: {{ gap }};
     }
 
-    .project div.icon {
-        aspect-ratio: 1;
-        height: 128px;
-        margin-right: 12px;
+    .project a.icon {
+        flex: 0 0 128px;
+        margin-right: {{ gap }};
     }
 
     .project img.icon {
-        display: block;
-        height: 100%;
-        margin: 0 auto;
+        width: 100%;
     }
 
     img.icon.smooth {
@@ -34,14 +32,12 @@
 
 {% for project in projects %}
 <section class="project w100 row al-center">
-    <div class="icon">
-        <a target="_blank" rel="nofollow" href="{{ project.url }}">
-            <img class="icon{% if project.icon and project.icon.smooth %} smooth{% endif %}"
-                src="/projects/icons/{% if project.icon %}{{ project.icon.path }}{% else %}null.png{% endif %}"
-                alt="{% if project.icon %}{{ project.icon.alt }}{% else %}'No icon' in poor handwriting{% endif %}">
-        </a>
-    </div>
-    <div>
+    <a target="_blank" rel="nofollow" class="icon" href="{{ project.url }}">
+        <img class="icon{% if project.icon and project.icon.smooth %} smooth{% endif %}"
+             src="/projects/icons/{% if project.icon %}{{ project.icon.path }}{% else %}null.png{% endif %}"
+             alt="{% if project.icon %}{{ project.icon.alt }}{% else %}'No icon' in poor handwriting{% endif %}">
+    </a>
+    <div class="description">
         <h2 {% if project.id %}id="{{ project.id }}"{% endif %}>
             <a target="_blank" rel="nofollow" href="{{ project.url }}">{{ project.title }}</a>
         </h2>
