@@ -10,18 +10,18 @@
     <meta name="robots" content="{% block robots %}index, follow{% endblock %}">
 
     <title>{% block what %}{% endblock %} | nonk's website</title>
-    <meta name="description" content="{% block description %}{% endblock %}" />
-    <link rel="canonical" href="https://nonk.dev{% block url %}{% endblock %}" />
+    <meta name="description" content="{% block description %}{% endblock %}">
+    <link rel="canonical" href="https://nonk.dev{% block url %}{% endblock %}">
 
-    <meta property="og:title" content="{{ self.what() }}" />
-    <meta property="og:description" content="{{ self.description() }}" />
-    <meta property="og:image" content="https://nonk.dev/assets/logo.webp" />
-    <meta property="og:url" content="https://nonk.dev{{ self.url() }}" />
-    <meta property="og:site_name" content="nonk's website" />
-    <meta property="og:type" content="{% block og_type %}profile{% endblock %}" />
+    <meta property="og:title" content="{{ self.what() }}">
+    <meta property="og:description" content="{{ self.description() }}">
+    <meta property="og:image" content="https://nonk.dev/assets/logo.webp">
+    <meta property="og:url" content="https://nonk.dev{{ self.url() }}">
+    <meta property="og:site_name" content="nonk's website">
+    <meta property="og:type" content="{% block og_type %}profile{% endblock %}">
 
-    <link rel="icon" type="image/png" href="/assets/favicon.png" />
-    <link rel="stylesheet" href="/assets/style.css" />
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <link rel="stylesheet" href="/assets/style.css">
 
     {% block head %}{% endblock %}
 
