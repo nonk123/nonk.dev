@@ -1,6 +1,3 @@
-/.vscode/**/*
-!/.vscode/settings.json
-
 /_sanity.lua
 
 /node_modules

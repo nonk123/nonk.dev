@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "nonk123.vscode-sanity-liveserver",
+        "esbenp.prettier-vscode",
+        "EditorConfig.EditorConfig",
+        "WakaTime.vscode-wakatime",
+        "wayou.vscode-todo-highlight",
+        "samuelcolvin.jinjahtml",
+        "sumneko.lua"
+    ]
+}
