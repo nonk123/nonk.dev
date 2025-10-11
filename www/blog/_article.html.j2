@@ -2,9 +2,9 @@
 
 {% block what %}{{ title }}{% endblock %}
 {% block description %}
-{% if not hidden and id != default %}
+{%- if not hidden and id != default -%}
     {{ description | required("All articles need a short description") }}
-{% endif %}
+{%- endif -%}
 {% endblock %}
 {% block url %}/blog/{{ id }}{% endblock %}
 {% block og_type %}article{% endblock %}
