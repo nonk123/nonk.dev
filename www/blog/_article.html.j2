@@ -2,11 +2,15 @@
 
 {% block what %}{{ title }}{% endblock %}
 {% block description %}
-{%- if not hidden and id != default -%}
+{%- if hidden -%}
+    Nada.
+{%- else -%}
     {{ description | required("All articles need a short description") }}
 {%- endif -%}
 {% endblock %}
-{% block url %}/blog/{{ id }}{% endblock %}
+{% block url -%}
+/blog{% if id != default %}/{{ id }}{% endif %}
+{%- endblock %}
 {% block og_type %}article{% endblock %}
 
 {% block head %}
@@ -51,9 +55,9 @@
 
 {% for paragraph in paragraphs %}
     {% if paragraph[0] == "<" -%}
-        {{ paragraph|safe }}
+        {{ paragraph | safe }}
     {%- else -%}
-        <p>{{ paragraph|safe }}</p>
+        <p>{{ paragraph | safe }}</p>
     {%- endif %}
 {% endfor %}
 
@@ -63,7 +67,7 @@
 {% endif %}
 
 <ul>
-    {% for other_id, article in articles|items %}
+    {% for other_id, article in articles | items %}
         {% if id != other_id and other_id != default and not article.hidden %}
             <li><a href="/blog/{{ other_id }}">{{ article.title }}</a></li>
         {% endif %}

@@ -41,7 +41,7 @@
         <h2 {% if project.id %}id="{{ project.id }}"{% endif %}>
             <a target="_blank" rel="nofollow" href="{{ project.url }}">{{ project.title }}</a>
         </h2>
-        <p>{{ project.description|safe }}</p>
+        <p>{{ project.description | safe }}</p>
     </div>
 </section>
 {% endfor %}

@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {% for section in sections %}
     <url>
-        <loc>https://nonk.dev{{ section.path|safe }}</loc>
-        <lastmod>{{ section.lastmod|safe }}</lastmod>
+        <loc>https://nonk.dev{{ section.path | safe }}</loc>
+        <lastmod>{{ section.lastmod | safe }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     {% endfor %}
 
-    {% for id, article in blog.articles|items %}
-    {% if id != blog.default and not article.hidden %}
+    {% for id, article in blog.articles | items %}
+    {% if not article.hidden %}
     <url>
-        <loc>https://nonk.dev/blog/{{ id }}</loc>
+        <loc>https://nonk.dev/blog{% if id != blog.default %}/{{ id }}{% endif %}</loc>
         <lastmod>{{ article.date_mod if article.date_mod else article.date_pub }}</lastmod>
         <priority>0.7</priority>
     </url>

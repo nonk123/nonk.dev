@@ -3,12 +3,13 @@
     "articles": {
         "hello": {
             "title": "hello there!",
-            "date_pub": "2025-01-11"
+            "date_pub": "2025-01-11",
+            "description": "I rant here sometimes."
         },
         "maryo": {
             "title": "mario forever!!!",
             "date_pub": "2025-08-26",
-            "description": "check out the linked site!"
+            "description": "Check out the linked site!"
         },
         "on-vim": {
             "title": "on Vim and Co.",
