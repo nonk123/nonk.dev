@@ -7,26 +7,31 @@
         },
         "maryo": {
             "title": "mario forever!!!",
-            "date_pub": "2025-08-26"
+            "date_pub": "2025-08-26",
+            "description": "check out the linked site!"
         },
         "on-vim": {
             "title": "on Vim and Co.",
-            "date_pub": "2025-01-11"
+            "date_pub": "2025-01-11",
+            "description": "nonk's early attempts at blogging"
         },
         "overhead": {
             "title": "C call overhead is a lie",
             "date_pub": "2025-04-30",
-            "date_mod": "2025-05-01"
+            "date_mod": "2025-05-01",
+            "description": "A based, hot take on interpreted languages interfacing with native code."
         },
         "stallion": {
             "title": "the Stallion (drink)",
             "date_pub": "2025-06-13",
-            "date_mod": "2025-06-13"
+            "date_mod": "2025-06-13",
+            "description": "Often made by Russian inmates."
         },
         "screenies": {
             "title": "automated screenies (rev. 1)",
             "date_pub": "2025-06-25",
-            "date_mod": "2025-06-25"
+            "date_mod": "2025-06-25",
+            "description": "Using GitHub actions to save 2 minutes of work."
         },
         "battlecry": {
             "title": "battlecry.ogg",

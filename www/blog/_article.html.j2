@@ -1,7 +1,11 @@
 {% extends "_base.html" %}
 
 {% block what %}{{ title }}{% endblock %}
-{% block description %}An article from nonk's blog. Click to read more.{% endblock %}
+{% block description %}
+{% if not hidden and id != default %}
+    {{ description | required("All articles need a short description") }}
+{% endif %}
+{% endblock %}
 {% block url %}/blog/{{ id }}{% endblock %}
 {% block og_type %}article{% endblock %}
 

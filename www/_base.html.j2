@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="sanity">
     <meta http-equiv="Content-Language" content="en">
-    <meta name="robots" content="{% block robots %}index, follow{% endblock %}">
+    <meta name="robots" content="{% block robots -%}index, follow{%- endblock %}">
 
-    <title>{% block what %}{% endblock %} | nonk's website</title>
-    <meta name="description" content="{% block description %}{% endblock %}">
-    <link rel="canonical" href="https://nonk.dev{% block url %}{% endblock %}">
+    <title>{% block what -%}{%- endblock %} | nonk's website</title>
+    <meta name="description" content="{% block description -%}{%- endblock %}">
+    <link rel="canonical" href="https://nonk.dev{% block url -%}{%- endblock %}">
 
     <meta property="og:title" content="{{ self.what() }}">
     <meta property="og:description" content="{{ self.description() }}">
