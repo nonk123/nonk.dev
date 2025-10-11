@@ -15,4 +15,4 @@ local posts = {
     { "danceskillz.mp4",     "cousin's bestie breaking it" },
     { "truegaming.mp4",      "cousin gaming" },
 }
-render("shitposts/_index.html", "shitposts/index.html", { posts = posts });
+render("shitposts/_index.html", "shitposts/index.html", { posts = posts })
