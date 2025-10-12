@@ -112,7 +112,6 @@ body {
         top: 50vh;
         transition: transform 500ms ease-in;
         transform: translate($out-of-sight, -50%);
-        border: 1px solid rgb(64, 64, 64);
     }
     body.show-sidebar #sidebar {
         transform: translate(0, -50%);
@@ -131,6 +130,7 @@ body {
 
 .panel {
     background: $black;
+    border: 1px solid $grayish;
 }
 .panel,
 .panel iframe {
@@ -188,11 +188,6 @@ body.show-chattable #chattable {
     }
 }
 
-#chattable,
-#toggle-chat {
-    border: 1px solid rgb(64, 64, 64);
-}
-
 #statuscafe {
     padding: 0.5em;
 
@@ -228,8 +223,4 @@ body.show-chattable #chattable {
 #webrings > * {
     display: block;
     margin: 0 auto;
-}
-
-button {
-    border: 1px solid $blacker;
 }
