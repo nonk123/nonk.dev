@@ -4,26 +4,8 @@
 {% block description %}the list of projects i have created and maintained.{% endblock %}
 {% block url %}/projects{% endblock %}
 
-{% set gap = "12px" %}
 {% block head %}
-<style>
-    .project {
-        margin-bottom: {{ gap }};
-    }
-
-    .project a.icon {
-        flex: 0 0 128px;
-        margin-right: {{ gap }};
-    }
-
-    .project img.icon {
-        width: 100%;
-    }
-
-    img.icon.smooth {
-        image-rendering: auto;
-    }
-</style>
+<link rel="stylesheet" href="/projects/style.css">
 {% endblock %}
 
 {% block content %}

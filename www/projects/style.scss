@@ -1,0 +1,20 @@
+@use "prelude" as *;
+
+$gap: 12px;
+
+.project {
+    margin-bottom: $gap;
+}
+
+.project a.icon {
+    flex: 0 0 128px;
+    margin-right: $gap;
+}
+
+.project img.icon {
+    width: 100%;
+}
+
+img.icon.smooth {
+    image-rendering: auto;
+}

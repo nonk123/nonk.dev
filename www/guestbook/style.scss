@@ -1,0 +1,13 @@
+@use "prelude" as *;
+
+#main,
+#content {
+    padding: 0;
+}
+
+#guestbook {
+    width: 100%;
+    min-height: 70vh;
+    border-radius: $panel-border-radius;
+    border: none;
+}
