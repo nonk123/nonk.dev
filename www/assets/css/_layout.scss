@@ -6,7 +6,7 @@ body {
 
     width: 100%;
     min-height: 100vh;
-    gap: $gaps;
+    gap: $vgap $hgap;
 
     justify-content: space-between;
     overflow-y: auto;
@@ -35,7 +35,7 @@ body {
     align-items: start;
     justify-content: flex-end;
     flex-grow: 1;
-    gap: $gaps;
+    gap: $vgap $hgap;
 }
 
 #sidebar {
@@ -44,7 +44,7 @@ body {
 
 #main {
     width: $content-width;
-    gap: $gaps;
+    gap: $vgap $hgap;
     & > * {
         flex-grow: 1;
     }
@@ -97,7 +97,7 @@ body {
     #grail {
         width: calc(min($content-width, 100%));
         align-items: center;
-        padding: 0 $gaps;
+        padding: 0 $hgap;
     }
 
     #main {
@@ -108,7 +108,7 @@ body {
     $out-of-sight: 130%;
     #sidebar {
         position: fixed;
-        right: $gaps;
+        right: $hgap;
         top: 50vh;
         transition: transform 500ms ease-in;
         transform: translate($out-of-sight, -50%);

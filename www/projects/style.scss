@@ -1,20 +1,19 @@
 @use "prelude" as *;
 
-$gap: 12px;
-
 .project {
+    $gap: 12px;
     margin-bottom: $gap;
-}
 
-.project a.icon {
-    flex: 0 0 128px;
-    margin-right: $gap;
-}
+    & a.icon {
+        flex: 0 0 128px;
+        margin-right: $gap;
+    }
 
-.project img.icon {
-    width: 100%;
-}
+    & img.icon {
+        width: 100%;
 
-img.icon.smooth {
-    image-rendering: auto;
+        &.smooth {
+            image-rendering: auto;
+        }
+    }
 }
