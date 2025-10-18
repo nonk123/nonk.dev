@@ -30,7 +30,7 @@ body {
     width: $sidebar-width;
 }
 
-#main {
+main {
     width: $content-width;
     gap: $vgap $hgap;
     & > * {
@@ -88,7 +88,7 @@ body {
         padding: 0 $hgap;
     }
 
-    #main {
+    main {
         width: 100%;
         justify-content: center;
     }
