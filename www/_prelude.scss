@@ -1,18 +1,18 @@
 $vgap: 16px;
 $hgap: 18px;
 
-$content-width: 600px;
+$content-width: 800px;
 $sidebar-width: 220px;
 
 $chat-width: 300px;
 $chat-height: 700px;
 
-$desktop-width: $content-width + $sidebar-width + 3 * $hgap;
+$desktop-width: $content-width + 2 * $sidebar-width + 4 * $hgap;
 
-$white: #eeeeee;
-$black: #1f1f1f;
-$blacker: #080808;
-$green: #14ee14;
+$white: #f7f7f7;
+$hardblack: #080808;
+$softblack: #141414;
+$green: #12b012;
 $darkgreen: #1f7f1f;
 $grayish: #393939;
 
@@ -25,7 +25,7 @@ $panel-border-radius: 5px;
 }
 
 :root {
-    color-scheme: only dark;
+    color-scheme: only light;
 }
 
 html,
@@ -35,11 +35,16 @@ body {
 }
 
 body {
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 13pt;
+    line-height: 1.1em;
+}
+
+@font-face {
+    font-family: Inconsolata;
+    src: url("/assets/Inconsolata.ttf") format("truetype");
 }
 
 * {
-    font-family: Consolas, monospace;
+    font-family: Inconsolata, Consolas, monospace;
     box-sizing: border-box;
 }

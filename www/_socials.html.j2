@@ -13,35 +13,45 @@
 </li>
 {% endmacro %}
 
-<p>socials:</p>
-<ul class="nodash">
-    {{ link(icons.fa("envelope"), "email", "mailto:me@nonk.dev", blank=False) }}
-    {{ link(icons.fa("github", "brands"), "github", "https://github.com/nonk123") }}
-    {{ link(icons.fa("bluesky", "brands"), "bluesky", "https://bsky.app/profile/nonk.dev") }}
-    {{ link(None, "status.cafe", "https://status.cafe/users/nonk") }}
-    {{ link(icons.fa("itch-io", "brands"), "itch.io", "https://nonk123.itch.io") }}
-    {{ link(icons.fa("youtube", "brands"), "youtube", "https://www.youtube.com/@nonk123")}}
-</ul>
-<hr>
-<p>friends:</p>
-<ul class="nodash">
-    {{ link(icons.ass("cantsleep.cc.png"), "can't sleep", "https://cantsleep.cc")}}
-    {{ link(None, "vile beggar", "https://vilebeggar.github.io")}}
-</ul>
-<hr>
-<p>collectives:</p>
-<ul class="nodash">
-    {{ link(icons.ass("schwung.us.png", invert=False), "schwungus", "https://schwung.us")}}
-</ul>
-<hr>
-<p>badges:</p>
-<p id="badges" class="row wrap sp-evenly" aria-hidden="true">
-    <a rel="nofollow" target="_blank" href="https://notbyai.fyi">
-        <img src="/assets/human.svg" alt="'Developed by a human, not by AI' written next to a smiley face">
-    </a>
-</p>
-<hr>
-<p>webrings:</p>
-<p id="webrings">
-    {% include "_noai.html" %}
-</p>
+<div>
+    <p>socials:</p>
+    <ul class="nodash">
+        {{ link(icons.fa("envelope"), "email", "mailto:me@nonk.dev", blank=False) }}
+        {{ link(icons.fa("github", "brands"), "github", "https://github.com/nonk123") }}
+        {{ link(icons.fa("bluesky", "brands"), "bluesky", "https://bsky.app/profile/nonk.dev") }}
+        {{ link(None, "status.cafe", "https://status.cafe/users/nonk") }}
+        {{ link(icons.fa("itch-io", "brands"), "itch.io", "https://nonk123.itch.io") }}
+        {{ link(icons.fa("youtube", "brands"), "youtube", "https://www.youtube.com/@nonk123")}}
+    </ul>
+    <hr>
+</div>
+<div>
+    <p>friends:</p>
+    <ul class="nodash">
+        {{ link(icons.ass("cantsleep.cc.png"), "can't sleep", "https://cantsleep.cc")}}
+        {{ link(None, "vile beggar", "https://vilebeggar.github.io")}}
+    </ul>
+    <hr>
+</div>
+<div>
+    <p>collectives:</p>
+    <ul class="nodash">
+        {{ link(icons.ass("schwung.us.png", invert=False), "schwungus", "https://schwung.us")}}
+    </ul>
+    <hr>
+</div>
+<div>
+    <p>badges:</p>
+    <p id="badges" class="row wrap sp-evenly" aria-hidden="true">
+        <a rel="nofollow" target="_blank" href="https://notbyai.fyi">
+            <img src="/assets/human.svg" alt="'Developed by a human, not by AI' written next to a smiley face">
+        </a>
+    </p>
+    <hr>
+</div>
+<div>
+    <p>webrings:</p>
+    <p id="webrings">
+        {% include "_noai.html" %}
+    </p>
+</div>
