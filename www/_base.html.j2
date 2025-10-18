@@ -1,3 +1,8 @@
+{% macro stylesheet(path) %}
+<link rel="preload" href="{{ path }}" as="style">
+<link rel="stylesheet" href="{{ path }}">
+{% endmacro %}
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -21,7 +26,9 @@
     <meta property="og:type" content="{% block og_type %}profile{% endblock %}">
 
     <link rel="icon" type="image/png" href="/assets/favicon.png">
-    <link rel="stylesheet" href="/assets/style.css">
+
+    <link rel="preload" href="/assets/chattable.css" as="style"> {# used way below #}
+    {{ stylesheet("/assets/style.css") }}
 
     {% block head %}{% endblock %}
 

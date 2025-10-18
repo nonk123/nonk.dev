@@ -5,7 +5,7 @@
 {% block url %}/shitposts{% endblock %}
 
 {% block head %}
-<link rel="stylesheet" href="/shitposts/style.css">
+{{ stylesheet("/shitposts/style.css") }}
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const player = document.createElement("video");
