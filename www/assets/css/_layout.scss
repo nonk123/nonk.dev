@@ -73,7 +73,7 @@ body {
         display: flex;
     }
 
-    #header {
+    header {
         padding-top: 0; // #hamburger gives enough padding already
         padding-bottom: 0;
     }
@@ -106,34 +106,37 @@ body {
     }
 }
 
-#header {
-    gap: 0 1ch;
-}
-#header-links {
-    align-self: center;
-    justify-content: center;
-    flex-grow: 1;
-    gap: 1ex 1ch;
-}
-
-.panel {
+:where(.panel) {
     background: $black;
     border: 1px solid $grayish;
     border-radius: $panel-border-radius;
 }
 
-.panel:not(.pad0) {
+:where(.panel):not(.pad0) {
     padding: 1ex 1ch;
 }
 
 header,
 footer {
     padding: 1em 1ch;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
 }
 
-#header,
-#footer {
-    border-radius: 0;
+header {
+    border-top: none;
+}
+
+footer {
+    border-bottom: none;
+}
+
+#header-links {
+    align-self: center;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 1ex 1ch;
 }
 
 #me {
