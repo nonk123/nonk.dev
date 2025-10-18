@@ -18,6 +18,22 @@ body {
     background-repeat: repeat;
 }
 
+header,
+footer {
+    padding: 1em 1ch;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+}
+
+header {
+    border-top: none;
+}
+
+footer {
+    border-bottom: none;
+}
+
 #grail {
     margin: 0 auto;
     align-items: start;
@@ -39,11 +55,9 @@ main {
 }
 
 #hamburger {
-    $size: 3rem;
-
     cursor: pointer;
-    width: $size;
-    height: $size;
+    width: 42px;
+    height: 42px;
     align-self: center;
 
     background: transparent;
@@ -74,8 +88,7 @@ main {
     }
 
     header {
-        padding-top: 0; // #hamburger gives enough padding already
-        padding-bottom: 0;
+        padding: 4px; // #hamburger gives enough padding already
     }
 
     #logo {
@@ -114,22 +127,6 @@ main {
 
 :where(.panel):not(.pad0) {
     padding: 1ex 1ch;
-}
-
-header,
-footer {
-    padding: 1em 1ch;
-    border-radius: 0;
-    border-left: none;
-    border-right: none;
-}
-
-header {
-    border-top: none;
-}
-
-footer {
-    border-bottom: none;
 }
 
 #header-links {
