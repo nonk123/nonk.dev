@@ -1,7 +1,5 @@
 @use "prelude" as *;
 
-$calc-content-width: calc(min($content-width, 100%));
-
 body {
     color: $white;
     image-rendering: pixelated;
@@ -20,6 +18,7 @@ body {
     background-repeat: repeat;
 
     $hgap: minmax($hgap, 1fr);
+
     display: grid;
     grid-template-areas:
         "head head head head head"
@@ -28,7 +27,7 @@ body {
         ".    .    main .    .   "
         ".    .    .    .    .   "
         "foot foot foot foot foot";
-    grid-template-columns: $sidebar-width $hgap $calc-content-width $hgap $sidebar-width;
+    grid-template-columns: $sidebar-width $hgap $content-width $hgap $sidebar-width;
     grid-template-rows: auto $vgap auto 1fr $vgap auto;
 }
 
@@ -44,9 +43,6 @@ main {
 #sidebar {
     grid-area: side;
     width: $sidebar-width;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-left: none;
 }
 
 header,
@@ -75,15 +71,16 @@ footer {
 
 @include mobile {
     body {
-        grid-template-areas: "head" "." "main" "." "side" "." "foot";
-        grid-template-columns: 1fr;
+        grid-template-areas:
+            "head head head"
+            ".    .    .   "
+            ".    main .   "
+            ".    .    .   "
+            ".    side .   "
+            ".    .    .   "
+            "foot foot foot";
+        grid-template-columns: 1fr minmax(auto, $content-width) 1fr;
         grid-template-rows: auto $vgap auto $vgap auto $vgap auto;
-    }
-
-    .vivid {
-        border-radius: 0;
-        border-left: none;
-        border-right: none;
     }
 
     #logo {
