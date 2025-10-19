@@ -8,9 +8,6 @@ body {
 
     width: 100%;
     min-height: 100vh;
-    gap: $vgap $hgap;
-
-    align-items: center;
     overflow-y: auto;
 
     $base: $hardblack;
@@ -21,10 +18,22 @@ body {
         linear-gradient(0deg, $base, $base);
     background-size: 288px 288px;
     background-repeat: repeat;
+
+    $hgap: minmax($hgap, 1fr);
+    display: grid;
+    grid-template-areas:
+        "head head head head head"
+        ".    .    .    .    .   "
+        "side .    main .    .   "
+        ".    .    main .    .   "
+        ".    .    .    .    .   "
+        "foot foot foot foot foot";
+    grid-template-columns: $sidebar-width $hgap $calc-content-width $hgap $sidebar-width;
+    grid-template-rows: auto $vgap auto 1fr $vgap auto;
 }
 
 main {
-    width: $calc-content-width;
+    grid-area: main;
     gap: $vgap $hgap;
     margin: 0 auto auto auto;
     & > * {
@@ -33,11 +42,11 @@ main {
 }
 
 #sidebar {
-    position: fixed;
+    grid-area: side;
     width: $sidebar-width;
-    left: $hgap;
-    top: 50vh;
-    transform: translateY(-50%);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none;
 }
 
 header,
@@ -48,10 +57,12 @@ footer {
 }
 
 header {
+    grid-area: head;
     border-top: none;
 }
 
 footer {
+    grid-area: foot;
     border-bottom: none;
 }
 
@@ -63,30 +74,40 @@ footer {
 }
 
 @include mobile {
+    body {
+        grid-template-areas: "head" "." "main" "." "side" "." "foot";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto $vgap auto $vgap auto $vgap auto;
+    }
+
+    .vivid {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+
     #logo {
         max-height: 128px;
     }
 
     #sidebar {
-        width: $calc-content-width;
-        position: static;
-        transform: none;
+        width: auto;
+        hr {
+            display: none;
+        }
     }
 
     #sidebar,
     #sidebar > nav {
         gap: $vgap $hgap;
-        display: flex;
-        flex-flow: row wrap;
+        column-width: $sidebar-width;
+        column-fill: balance;
     }
 
     #sidebar > nav {
         flex: 1 0;
         & > * {
-            width: $sidebar-width;
-        }
-        & hr {
-            display: none;
+            break-inside: avoid;
         }
     }
 }
@@ -94,17 +115,13 @@ footer {
 :where(.vivid) {
     background: $softblack;
     border-radius: $panel-border-radius;
-    border: none;
+    border: 1px solid $grayish;
 
     &,
     header,
     footer {
         padding: $vgap $hgap;
     }
-}
-
-#toggle-chat {
-    border: 1px solid $hardblack;
 }
 
 #header-links {
@@ -141,6 +158,7 @@ body.show-chattable #chattable {
 
 #toggle-chat {
     cursor: pointer;
+    padding: 8px;
 
     position: fixed;
     right: 8px;

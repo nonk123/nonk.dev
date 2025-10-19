@@ -7,7 +7,7 @@ $sidebar-width: 220px;
 $chat-width: 300px;
 $chat-height: 700px;
 
-$desktop-width: $content-width + 2 * $sidebar-width + 4 * $hgap;
+$desktop-width: $content-width + 2 * $sidebar-width + 2 * $hgap;
 
 $white: #f7f7f7;
 $hardblack: #080808;
@@ -25,7 +25,7 @@ $panel-border-radius: 5px;
 }
 
 :root {
-    color-scheme: only light;
+    color-scheme: only dark;
 }
 
 html,
