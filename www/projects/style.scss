@@ -5,7 +5,7 @@
     $size: 128px;
 
     background: transparentize($grayish, 0.7);
-    margin-block: $gap;
+    margin-block: $gap 0;
 
     padding: 12px;
     border-radius: $panel-border-radius;
