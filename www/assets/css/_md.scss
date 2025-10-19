@@ -1,13 +1,11 @@
 @use "prelude" as *;
 
-img {
-    max-width: 100%;
-}
-
-p > img:only-child {
-    max-width: 80%;
-    display: block;
+p:has(> img:only-child) {
     margin: 0 auto;
+    max-width: 80%;
+}
+p > img:only-child {
+    width: 100%;
     image-rendering: auto;
 }
 

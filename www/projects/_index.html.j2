@@ -13,7 +13,7 @@
 <p>click the icons/headings for more info!</p>
 
 {% for project in projects %}
-<section class="project w100 row al-center">
+<section class="project w100 row">
     <a target="_blank" rel="nofollow" class="icon" href="{{ project.url }}" aria-hidden="true">
         <img class="icon{% if project.icon and project.icon.smooth %} smooth{% endif %}"
              src="/projects/icons/{% if project.icon %}{{ project.icon.path }}{% else %}null.png{% endif %}"

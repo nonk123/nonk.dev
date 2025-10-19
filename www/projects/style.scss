@@ -2,16 +2,17 @@
 
 .project {
     $gap: 12px;
-    margin-bottom: $gap;
+    $size: 128px;
 
-    & a.icon {
-        flex: 0 0 128px;
-        margin-right: $gap;
-    }
+    background: transparentize($grayish, 0.7);
+    margin-block: $gap;
 
-    & img.icon {
-        width: 100%;
+    padding: 12px;
+    border-radius: $panel-border-radius;
+    gap: 0 2ch;
 
+    img.icon {
+        width: $size;
         &.smooth {
             image-rendering: auto;
         }
