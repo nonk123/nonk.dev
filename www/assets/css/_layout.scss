@@ -94,15 +94,10 @@ footer {
         }
     }
 
-    #sidebar,
-    #sidebar > nav {
+    #sidebar {
         gap: $vgap $hgap;
         column-width: $sidebar-width;
         column-fill: balance;
-    }
-
-    #sidebar > nav {
-        flex: 1 0;
         & > * {
             break-inside: avoid;
         }
