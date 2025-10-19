@@ -1,4 +1,4 @@
-const paths = ["/", "/projects", "/about"];
+const paths = ["/", "/projects", "/shitposts"];
 const viewports = [
     {
         name: "landscape",
