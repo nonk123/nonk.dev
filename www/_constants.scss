@@ -23,28 +23,3 @@ $panel-border-radius: 5px;
         @content;
     }
 }
-
-:root {
-    color-scheme: only dark;
-}
-
-html,
-body {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-size: 13pt;
-    line-height: 1.1em;
-}
-
-@font-face {
-    font-family: Inconsolata;
-    src: url("https://nonk.dev/assets/Inconsolata.ttf") format("truetype");
-}
-
-* {
-    font-family: Inconsolata, Consolas, monospace;
-    box-sizing: border-box;
-}
