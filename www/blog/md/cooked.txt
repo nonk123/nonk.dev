@@ -1,0 +1,7 @@
+ok, we're cooked.
+
+first of all, cellular networking is barely functional. at least regular phone calls still get through; telegram, whatsapp, and even government-sponsored """MAX""" fail. plain-text messaging in the aforementioned times out.
+
+second, the data lanes directed outside of or into Russia have gone beyond deep packet inspection. according to my observations and the consesus of other internet dwellers, TCP connections are now being limited to 16-20 KBs of data transferred before being reset. this screws up all "VPN"s big time. most importantly, the VLESS+REALITY solutions that rely solely on TLS/HTTPS hacks to work--they are all TCP based.
+
+i don't have much else to say. gotta have a nice one, i'm out 🧻
