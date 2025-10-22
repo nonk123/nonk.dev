@@ -64,11 +64,6 @@ p {
     margin-block: 0 1rem;
 }
 
-// i've no idea why this is required...
-h1.blog {
-    margin-bottom: 0;
-}
-
 a:not(:has(> img)) {
     color: $green;
     text-decoration: none;
