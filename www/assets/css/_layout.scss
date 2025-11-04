@@ -140,10 +140,6 @@ body.show-chattable #chattable {
     position: fixed;
     right: 8px;
     top: 8px;
-
-    @include mobile {
-        display: none;
-    }
 }
 
 #statuscafe {
