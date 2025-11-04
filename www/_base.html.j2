@@ -83,13 +83,13 @@
 
     <header>
         <nav id="header-links" class="w100 row wrap al-start">
-            <a href="/" rel="me">home</a>
-            <a href="/about" rel="me">about</a>
-            <a href="/now" rel="me">now</a>
-            <a href="/projects">projects</a>
-            <a href="/blog" title="under construction!">blog</a>
-            <a href="/guestbook" title="please sign!">guestbook</a>
-            <a href="/shitposts" title="very shitty...">shitposts</a>
+            {% for link in nav %}
+            <a href="{{ link.href }}"
+               {% if link.rel %}rel="{{ link.rel }}"{% endif %}
+               {% if link.hover %}title="{{ link.hover }}"{% endif %}
+               {% if link.href == self.url() %}class="strong"{% endif %}
+            >{{ link.title }}</a>
+            {% endfor %}
         </nav>
     </header>
 

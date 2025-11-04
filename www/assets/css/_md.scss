@@ -71,12 +71,17 @@ a:not(:has(> img)) {
         text-decoration: none;
     }
 
-    &:hover {
+    &:hover,
+    &:hover:visited {
         color: $white;
-        text-decoration: none;
+        text-decoration: $white underline;
     }
 
-    font-weight: bold;
+    &.strong {
+        font-size: 1.2em;
+        font-weight: bolder;
+    }
+
     line-height: 24px;
 
     &[href^="/"] {
