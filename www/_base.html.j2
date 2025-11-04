@@ -81,7 +81,7 @@
 <body>
     <script>const toggle = document.body.classList.toggle.bind(document.body.classList);</script>
 
-    <header class="vivid w100">
+    <header>
         <nav id="header-links" class="w100 row wrap al-start">
             <a href="/" rel="me">home</a>
             <a href="/about" rel="me">about</a>
@@ -93,7 +93,7 @@
         </nav>
     </header>
 
-    <main class="vivid row wrap">
+    <main class="row wrap">
         <section id="content" class="w100">
             {% block content %}{% endblock %}
         </section>
@@ -111,17 +111,17 @@
         </section>
     </main>
 
-    <nav id="sidebar" class="vivid">
+    <nav id="sidebar">
         {% include "_socials.html" %}
     </nav>
 
-    <footer class="vivid w100 pad0 row sp-between">
+    <footer class="row sp-between">
         <span>last updated: <strong>{{ last_updated }}</strong></span>
         <span>powered by <a target="_blank" href="https://github.com/nonk123/sanity">sanity</a>
               | <a target="_blank" href="https://github.com/nonk123/nonk.dev">source code</a></span>
     </footer>
 
-    <button id="toggle-chat" class="vivid" aria-hidden="true" onclick="toggle('show-chattable')">
+    <button id="toggle-chat" aria-hidden="true" onclick="toggle('show-chattable')">
         <img src="/assets/chatto.png" alt="">
         {# <iframe src="https://iframe.chat/embed?chat=nonkdotdev" id="chattable" frameborder="none"></iframe> #}
     </button>

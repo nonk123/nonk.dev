@@ -1,29 +1,33 @@
 @use "constants" as *;
 
+$content-width: calc(min($content-width, 100%));
+
+:root {
+    background: $softblack;
+    overflow-y: auto;
+}
+
 body {
     color: $white;
-    background: $softblack;
     image-rendering: pixelated;
 
-    width: 100%;
     min-height: 100vh;
-    overflow-y: auto;
-    padding: 1em 0;
+    padding: $vgap $sidebar-width;
+    gap: $vgap 0;
 
-    $hgap: minmax($hgap, 1fr);
+    display: flex;
+    flex-flow: column nowrap;
+}
 
-    display: grid;
-    grid-template-areas:
-        "side .    head .    .   "
-        "side .    main .    .   "
-        "side .    main .    .   "
-        "side .    foot .    .   ";
-    grid-template-columns: $sidebar-width $hgap $content-width $hgap $sidebar-width;
-    grid-template-rows: auto auto 1fr auto;
+header,
+main,
+footer {
+    width: $content-width;
+    margin: 0 auto;
 }
 
 main {
-    grid-area: main;
+    flex-grow: 1;
     align-content: start;
     gap: $vgap $hgap;
 
@@ -33,17 +37,12 @@ main {
 }
 
 #sidebar {
-    grid-area: side;
+    position: absolute;
+    left: 0;
+    top: 0;
+
     width: $sidebar-width;
-    margin: 0 auto auto auto;
-}
-
-header {
-    grid-area: head;
-}
-
-footer {
-    grid-area: foot;
+    padding: $vgap $hgap;
 }
 
 #logo {
@@ -54,16 +53,8 @@ footer {
 
 @include mobile {
     body {
-        grid-template-areas:
-            ".    head .   "
-            ".    .    .   "
-            ".    main .   "
-            ".    .    .   "
-            ".    side .   "
-            ".    .    .   "
-            ".    foot .   ";
-        grid-template-columns: 1fr minmax(auto, $content-width) 1fr;
-        grid-template-rows: auto $vgap auto $vgap auto $vgap auto;
+        padding: $vgap $hgap;
+        gap: $vgap $hgap;
     }
 
     #logo {
@@ -71,7 +62,10 @@ footer {
     }
 
     #sidebar {
-        width: 100%;
+        position: static;
+        width: $content-width;
+        padding: 0;
+        margin: 0 auto;
 
         hr {
             display: none;
@@ -82,24 +76,18 @@ footer {
         gap: $vgap $hgap;
         column-width: $sidebar-width;
         column-fill: balance;
+
         & > * {
             break-inside: avoid;
         }
     }
 }
 
-:where(.vivid) {
-    background: $softblack;
-
-    &,
-    header,
-    footer {
-        padding: $vgap $hgap;
-    }
+:where(header, footer) {
+    padding: $vgap 0;
 }
 
 #header-links {
-    flex-grow: 1;
     gap: 1ex 1ch;
 }
 
@@ -116,6 +104,7 @@ footer {
 #chattable,
 #toggle-chat {
     border: 1px solid $grayish;
+    background: $softblack;
 }
 
 #chattable {
