@@ -75,7 +75,7 @@
         });
     </script>
 
-    <script src="https://iframe.chat/scripts/main.min.js"></script>
+    {# <script src="https://iframe.chat/scripts/main.min.js"></script> #}
 </head>
 
 <body>
@@ -123,13 +123,13 @@
 
     <button id="toggle-chat" class="vivid" aria-hidden="true" onclick="toggle('show-chattable')">
         <img src="/assets/chatto.png" alt="">
-        <iframe src="https://iframe.chat/embed?chat=nonkdotdev" id="chattable" class="vivid" frameborder="none"></iframe>
+        {# <iframe src="https://iframe.chat/embed?chat=nonkdotdev" id="chattable" frameborder="none"></iframe> #}
     </button>
 
     <script>
-        chattable.initialize({
+        {# chattable.initialize({
             stylesheet: "/assets/chattable.css",
-        });
+        }); #}
     </script>
 </body>
 
