@@ -77,12 +77,13 @@ a:not(:has(> img)) {
         text-decoration: $white underline;
     }
 
+    line-height: 24px;
+
     &.strong {
         font-size: 1.2em;
         font-weight: bolder;
+        line-height: 28px;
     }
-
-    line-height: 24px;
 
     &[href^="/"] {
         &::before {

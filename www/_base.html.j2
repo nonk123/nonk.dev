@@ -82,7 +82,7 @@
     <script>const toggle = document.body.classList.toggle.bind(document.body.classList);</script>
 
     <header>
-        <nav id="header-links" class="w100 row wrap al-start">
+        <nav id="header-links" class="w100 row wrap al-end">
             {% for link in nav %}
             <a href="{{ link.href }}"
                {% if link.rel %}rel="{{ link.rel }}"{% endif %}
