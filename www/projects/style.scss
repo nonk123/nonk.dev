@@ -7,9 +7,16 @@
     background: transparentize($grayish, 0.7);
     margin-block: $gap 0;
 
-    padding: 12px;
+    $pad: 12px;
+    padding: 0 $pad $pad $pad;
+
     border-radius: $panel-border-radius;
     gap: 0 2ch;
+
+    h2,
+    img.icon {
+        padding-top: $pad;
+    }
 
     img.icon {
         width: $size;
