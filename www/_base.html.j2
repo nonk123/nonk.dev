@@ -48,7 +48,7 @@
             function updateLocalTime() {
                 const date = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Moscow" }));
                 const fmt = date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
-                document.getElementById("localtime-value").textContent = fmt;
+                localtime.textContent = fmt;
             }
             updateLocalTime();
             setInterval(updateLocalTime, 1000);
@@ -60,17 +60,13 @@
             fetch("https://status.cafe/users/nonk/status.json")
                 .then(r => r.json())
                 .then(response => {
-                    const status = document.getElementById("statuscafe-content");
-                    if (!response.content.length) {
-                        status.textContent = "No status yet.";
-                        return;
+                    if (response.content.length) {
+                        const username = document.createTextNode(" " + response.face + " " + response.timeAgo);
+                        status_username.appendChild(username);
+                        status_content.innerHTML = response.content;
+                    } else {
+                        status_content.textContent = "No status yet.";
                     }
-
-                    const username = document.getElementById("statuscafe-username");
-                    username.appendChild(document.createTextNode(
-                        " " + response.face + " " + response.timeAgo
-                    ));
-                    status.innerHTML = response.content;
                 });
         });
     </script>
@@ -98,14 +94,14 @@
             {% block content %}{% endblock %}
         </section>
         <section id="statuscafe">
-            <div id="statuscafe-username">
+            <div id="status_username">
                 <a target="_blank" rel="me" href="https://status.cafe/users/nonk">nonk</a>
             </div>
-            <div id="statuscafe-content">Loading status...</div>
+            <div id="status_content">Loading status...</div>
         </section>
-        <section id="localtime" class="row al-center">
+        <section class="row al-center">
             <div class="center">
-                local time: <b id="localtime-value"></b><br>
+                local time: <b id="localtime"></b><br>
                 timezone: <b>Europe/Moscow</b> (GMT+3)
             </div>
         </section>
