@@ -33,7 +33,7 @@ jobs:
       - name: Render
         run: env RUST_LOG=debug ./sanity
       - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with: { path: dist }
       - name: Publish to GitHub Pages
         uses: actions/deploy-pages@v4
