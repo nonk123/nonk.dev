@@ -22,7 +22,7 @@ jobs:
       - name: Capture screenies
         run: node trash/capture.js
       - name: Commit fresh screenies
-        uses: stefanzweifel/git-auto-commit-action@v6
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: Upload live screenies
           branch: master
