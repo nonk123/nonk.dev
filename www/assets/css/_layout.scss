@@ -20,10 +20,14 @@ body {
 }
 
 header,
-main,
-footer {
+main {
     width: $content-width;
     margin: 0 auto;
+}
+
+footer {
+    margin: 0 #{-$sidebar-width};
+    padding: 0 $hgap;
 }
 
 main {
@@ -55,6 +59,11 @@ main {
     body {
         padding: $vgap $hgap;
         gap: $vgap $hgap;
+    }
+
+    footer {
+        margin: 0;
+        padding: 0;
     }
 
     #logo {
