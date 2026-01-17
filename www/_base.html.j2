@@ -42,7 +42,7 @@
     <script src="https://kit.fontawesome.com/6ad2356fdb.js" crossorigin="anonymous"></script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", () => {
             function updateLocalTime() {
                 const date = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Moscow" }));
                 const fmt = date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
@@ -54,16 +54,16 @@
     </script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", () => {
             fetch("https://status.cafe/users/nonk/status.json")
                 .then(r => r.json())
                 .then(response => {
                     if (response.content.length) {
                         const username = document.createTextNode(" " + response.face + " " + response.timeAgo);
-                        status_username.appendChild(username);
-                        status_content.innerHTML = response.content;
+                        document.getElementById("status-username").appendChild(username);
+                        document.getElementById("status-content").innerHTML = response.content;
                     } else {
-                        status_content.textContent = "No status yet.";
+                        document.getElementById("status-content").textContent = "No status yet.";
                     }
                 });
         });
@@ -73,7 +73,9 @@
 </head>
 
 <body>
-    <script>const toggle = document.body.classList.toggle.bind(document.body.classList);</script>
+    <script>
+        const toggle = DOMTokenList.prototype.toggle.bind(document.body.classList);
+    </script>
 
     <header>
         <nav id="header-links" class="w100 row wrap al-end">
@@ -92,10 +94,10 @@
             {% block content %}{% endblock %}
         </section>
         <section id="statuscafe">
-            <div id="status_username">
+            <div id="status-username">
                 <a target="_blank" rel="me" href="https://status.cafe/users/nonk">nonk</a>
             </div>
-            <div id="status_content">Loading status...</div>
+            <div id="status-content">Loading status...</div>
         </section>
         <section class="row al-center">
             <div class="center">
