@@ -21,6 +21,24 @@ local projects = {
         }
     },
     {
+        id = "sanity",
+        title = "sanity",
+        description = "the only sane static site generator in existence. see also: the <a href=\"/projects#vscode-sanity\">VSCode extension</a>",
+        url = "https://github.com/nonk123/sanity"
+    },
+    {
+	id = "lyrix",
+	title = "Lyrix",
+	description = "a based Firefox addon providing a context-menu button to find the lyrics for the played YouTube video",
+	url = "https://github.com/nonk123/Lyrix"
+    },
+    {
+	id = "poormans",
+	title = "poormans",
+	description = "realtime Win32 console graphics",
+	url = "https://github.com/nonk123/poormans"
+    },
+    {
         id = "caulk",
         title = "caulk",
         description = "<strong>the</strong> SteamAPI wrapper for plain C",
@@ -29,18 +47,6 @@ local projects = {
             path = "caulk.png",
             alt = "A splattering of caulk in pixel art"
         }
-    },
-    {
-        id = "sanity",
-        title = "sanity",
-        description = "the only sane static site generator in existence",
-        url = "https://github.com/nonk123/sanity"
-    },
-    {
-        id = "vscode-sanity",
-        title = "sanity liveserver",
-        description = "a live-server for sanity inside Visual Studio Code",
-        url = "https://marketplace.visualstudio.com/items?itemName=nonk123.vscode-sanity-liveserver"
     },
     {
         id = "schwungus",
@@ -52,6 +58,12 @@ local projects = {
             alt = "A white-on-gray slithering mushroom",
             smooth = true
         }
+    },
+    {
+        id = "vscode-sanity",
+        title = "sanity liveserver",
+        description = "a live-server for sanity inside Visual Studio Code",
+        url = "https://marketplace.visualstudio.com/items?itemName=nonk123.vscode-sanity-liveserver"
     },
     {
         id = "structures",
