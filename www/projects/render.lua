@@ -23,20 +23,22 @@ local projects = {
     {
         id = "sanity",
         title = "sanity",
-        description = "the only sane static site generator in existence. see also: the <a href=\"/projects#vscode-sanity\">VSCode extension</a>",
+        description =
+        "the only sane static site generator in existence. see also: the <a href=\"/projects#vscode-sanity\">VSCode extension</a>",
         url = "https://github.com/nonk123/sanity"
     },
     {
-	id = "lyrix",
-	title = "Lyrix",
-	description = "a based Firefox addon providing a context-menu button to find the lyrics for the played YouTube video",
-	url = "https://github.com/nonk123/Lyrix"
+        id = "lyrix",
+        title = "Lyrix",
+        description =
+        "a based Firefox addon providing a context-menu button to find the lyrics for the played YouTube video",
+        url = "https://github.com/nonk123/Lyrix"
     },
     {
-	id = "poormans",
-	title = "poormans",
-	description = "realtime Win32 console graphics",
-	url = "https://github.com/nonk123/poormans"
+        id = "poormans",
+        title = "poormans",
+        description = "realtime Win32 console graphics library",
+        url = "https://github.com/nonk123/poormans"
     },
     {
         id = "caulk",
