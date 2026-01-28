@@ -114,36 +114,6 @@ main {
     }
 }
 
-#chattable,
-#toggle-chat {
-    border: 1px solid $grayish;
-    background: $softblack;
-}
-
-#chattable {
-    width: $chat-width;
-    height: $chat-height;
-    padding: 0;
-
-    position: absolute;
-    right: 0;
-    top: 80px;
-
-    visibility: hidden;
-}
-body.show-chattable #chattable {
-    visibility: visible;
-}
-
-#toggle-chat {
-    cursor: pointer;
-    padding: 8px;
-
-    position: fixed;
-    right: 8px;
-    top: 8px;
-}
-
 #statuscafe {
     padding: 0.5em;
 
