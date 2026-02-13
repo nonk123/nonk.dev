@@ -51,6 +51,13 @@ local projects = {
         }
     },
     {
+        id = "promt-everything",
+        title = "ProMT Everything",
+        description =
+        "a silly Firefox/Chrome extension that lets you translate a webpage through ProMT (the program that made the \"wasted\" GTA:SA translation) with the press of a button",
+        url = "https://github.com/nonk123/promt-everything"
+    },
+    {
         id = "schwungus",
         title = "schwungus",
         description = "me and my homies form the schwungus collective",
