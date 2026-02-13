@@ -84,6 +84,7 @@ local projects = {
         }
     },
     {
+        id = "kalym",
         title = "a local community website",
         description = "my first (and only) commercially backed project. but $50 is $50",
         url = "https://подработка-павлово.рф",
