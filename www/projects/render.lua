@@ -24,14 +24,16 @@ local projects = {
         id = "sanity",
         title = "sanity",
         description =
-        "the only sane static site generator in existence. see also: the <a href=\"/projects#vscode-sanity\">VSCode extension</a>",
+            "the only sane static site generator in existence. see also: "
+            .. "the <a href=\"/projects#vscode-sanity\">VSCode extension</a>",
         url = "https://github.com/nonk123/sanity"
     },
     {
         id = "lyrix",
         title = "Lyrix",
         description =
-        "a based Firefox addon providing a context-menu button to find the lyrics for the played YouTube video",
+            "a based Firefox addon providing a context-menu button "
+            .. "to find the lyrics for the played YouTube video",
         url = "https://github.com/nonk123/Lyrix"
     },
     {
@@ -54,7 +56,8 @@ local projects = {
         id = "promt-everything",
         title = "ProMT Everything",
         description =
-        "a silly Firefox/Chrome extension that lets you translate a webpage through ProMT (the program that made the \"wasted\" GTA:SA translation) with the press of a button",
+            "a silly Firefox/Chrome extension that lets you translate a webpage through ProMT "
+            .. "(the program that made the \"wasted\" GTA:SA translation) with the press of a button",
         url = "https://github.com/nonk123/promt-everything"
     },
     {
