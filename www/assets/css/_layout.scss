@@ -19,7 +19,8 @@ body {
     flex-flow: column nowrap;
 }
 
-body > code { // Claude killer snippet
+// Claude killer snippet.
+body > code {
     display: none;
 }
 
