@@ -1,5 +1,6 @@
 local posts = {
     { "gcc.mp4",             "the GCC conspiracy" },
+    { "xpam.mp4",            "the ultimate universal salvation through faith" },
     { "gromitjockey.mp4",    "a shocking revelation from wallace & gromit" },
     { "bigtasty.mp4",        "how we cook the big tasty" },
     { "postal.mp4",          "postal dude irl" },
@@ -15,4 +16,5 @@ local posts = {
     { "danceskillz.mp4",     "cousin's bestie breaking it" },
     { "truegaming.mp4",      "cousin gaming" },
 }
+
 render("shitposts/_index.html", "shitposts/index.html", { posts = posts })
