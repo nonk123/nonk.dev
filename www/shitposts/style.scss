@@ -1,6 +1,15 @@
 @use "constants" as *;
 
-#shitpost {
+#shitpost-container {
+    > * {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 5vh 0;
+    }
+
+    user-select: none;
     cursor: pointer;
 
     z-index: 1000;
@@ -12,8 +21,27 @@
     height: 100vh;
     overflow: hidden;
 
-    padding: 5% 0;
     background: transparentize($hardblack, 0.1);
+}
+
+#shitpost-loading {
+    cursor: pointer;
+    font-size: 2em;
+}
+
+#shitpost {
+    cursor: pointer;
+
+    max-width: 100vw;
+    max-height: 100vh;
+
+    height: 100%;
+    width: auto;
+
+    @include mobile {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .shitpost {

@@ -7,25 +7,26 @@
 {% block head %}
 {{ stylesheet("/shitposts/style.css") }}
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        function staph() {
-            shitpost.pause();
-            shitpost.currentTime = 0.0;
-        }
+    function staph() {
+        shitpost.pause();
+        shitpost.currentTime = 0.0;
 
-        shitpost.addEventListener("click", () => {
-            shitpost.style.display = "none";
-            staph();
-        });
+        const container = document.getElementById("shitpost-container");
+        container.style.display = "none";
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const container = document.getElementById("shitpost-container");
 
         for (const link of document.getElementsByClassName("shitpost")) {
             link.addEventListener("click", ev => {
                 ev.preventDefault();
 
                 staph();
+                container.style.display = "block";
+
                 shitpost.src = link.attributes.href.nodeValue;
                 shitpost.type = "video/mp4";
-                shitpost.style.display = "block";
                 shitpost.play();
             });
         }
@@ -48,5 +49,8 @@
 {% endblock %}
 
 {% block append %}
-<video id="shitpost" loop="true" style="display: none;"></video>
+<div id="shitpost-container" style="display: none;" onclick="staph()">
+    <div id="shitpost-loading" onclick="staph()">loading...</div>
+    <video id="shitpost" loop="true" onclick="staph()"></video>
+</div>
 {% endblock %}
