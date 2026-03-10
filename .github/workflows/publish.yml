@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  SANITY_URL: https://github.com/nonk123/sanity/releases/download/gh-actions/sanity-release-linux
+  SANITY_URL: https://github.com/nonk123/sanity/releases/latest/download/sanity-linux
 
 jobs:
   publish:
