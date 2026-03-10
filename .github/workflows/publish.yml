@@ -3,7 +3,6 @@ name: Publish to GitHub Pages
 on:
   workflow_dispatch:
   push:
-    tags: [publish]
 
 concurrency:
   group: pages
