@@ -2,8 +2,6 @@ name: Create screenies of the live website
 
 on:
   workflow_dispatch:
-  push:
-    tags: [screenies]
 
 jobs:
   capture:
