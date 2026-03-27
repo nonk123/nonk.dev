@@ -8,16 +8,13 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
-env:
-  SANITY_URL: https://github.com/nonk123/sanity/releases/latest/download/sanity-linux
-
 jobs:
   publish:
     name: Render & publish
     runs-on: ubuntu-24.04
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.publish.outputs.page_url }}
     permissions:
       contents: read
       pages: write
@@ -25,15 +22,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Download sanity
-        run: wget -O sanity $SANITY_URL && chmod +x sanity
-      - name: Render
-        run: env RUST_LOG=debug ./sanity
-      - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v4
-        with: { path: dist }
-      - name: Publish to GitHub Pages
-        uses: actions/deploy-pages@v4
-        id: deployment
+      - name: Publish
+        id: publish
+        uses: nonk123/sanity-action@master
+        with: { push: true }
