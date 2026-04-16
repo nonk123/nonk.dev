@@ -18,17 +18,20 @@ body {
     padding: 0;
 }
 
+body,
+#main,
+#background {
+    color: $white;
+    background: $softblack;
+}
+
 #top_banner {
     display: none;
 }
 
-body,
+#main,
 #emojiTray {
     font-size: $font-size;
-
-    color: $white;
-    background: $softblack;
-
     padding: 8px;
 }
 
