@@ -56,7 +56,7 @@ local projects = {
         id = "promt-everything",
         title = "ProMT Everything",
         description =
-            "a silly Firefox/Chrome extension that lets you translate a webpage through ProMT "
+            "a silly <a href=\"https://addons.mozilla.org/en-US/firefox/addon/promt-everything/\">Firefox</a>/Chrome extension that lets you translate a webpage through ProMT "
             .. "(the program that made the \"wasted\" GTA:SA translation) with the press of a button",
         url = "https://github.com/nonk123/promt-everything"
     },
