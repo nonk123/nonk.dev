@@ -68,7 +68,7 @@ a:not(:has(> img)) {
     &,
     &:visited {
         color: $green;
-        text-decoration: none;
+        text-decoration: $green underline;
     }
 
     &:hover,
@@ -83,12 +83,6 @@ a:not(:has(> img)) {
         font-size: 1.2em;
         font-weight: bolder;
         line-height: 28px;
-    }
-
-    &[href^="/"] {
-        &::before {
-            content: "/";
-        }
     }
 }
 
