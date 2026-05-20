@@ -29,4 +29,5 @@ jobs:
       - name: Publish
         id: publish
         uses: nonk123/sanity-action@master
-        with: { push: true }
+        with:
+          push_to_github_pages: true
