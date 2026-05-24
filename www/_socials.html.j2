@@ -13,7 +13,7 @@
 </li>
 {% endmacro %}
 
-<div>
+<section>
     <p>socials:</p>
     <ul class="nodash">
         {{ link(icons.fa("envelope"), "email", "mailto:me@nonk.dev", blank=False) }}
@@ -24,25 +24,28 @@
         {{ link(icons.fa("youtube", "brands"), "youtube", "https://www.youtube.com/@nonk123")}}
     </ul>
     <hr>
-</div>
-<div>
+</section>
+
+<section>
     <p>friends:</p>
     <ul class="nodash">
         {{ link(icons.ass("cantsleep.cc.png"), "can't sleep", "https://cantsleep.cc")}}
         {{ link(None, "vile beggar", "https://vilebeggar.github.io")}}
     </ul>
     <hr>
-</div>
-<div>
+</section>
+
+<section>
     <p>collectives:</p>
     <ul class="nodash">
         {{ link(icons.ass("schwung.us.png", invert=False), "schwungus", "https://schwung.us")}}
     </ul>
     <hr>
-</div>
-<div>
+</section>
+
+<section>
     <p>webrings:</p>
     <p id="webrings">
         {% include "_noai.html" %}
     </p>
-</div>
+</section>
