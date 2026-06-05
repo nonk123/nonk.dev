@@ -1,7 +1,3 @@
-Sitemap: https://nonk.dev/sitemap.xml
-Host: https://nonk.dev
-
 User-agent: *
-Allow: /
-Allow: /blog/
-Disallow: /blog
+Disallow:
+Sitemap: https://nonk.dev/sitemap.xml
