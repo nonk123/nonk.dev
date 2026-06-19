@@ -5,6 +5,12 @@
 <link rel="stylesheet" href="{{ path }}">
 {% endmacro %}
 
+{% macro banner(img, href, alt) %}
+<a target="_blank" href="{{ href }}">
+    <img class="banner" src="/assets/{{ img }}" alt="{{ alt }}">
+</a>
+{% endmacro %}
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -112,9 +118,8 @@
             <a rel="nofollow" target="_blank" href="https://notbyai.fyi">
                 <img src="/assets/human.svg" alt="'Developed by a human, not by AI' written next to a smiley face">
             </a>
-            <a {# TODO: link somewhere #}>
-                <img src="/assets/freaky88x31.png" alt="Freaky niche apple">
-            </a>
+            {{ banner("fre4ky.gif", "https://nonk.dev", "Freaky niche apple") }}
+            {{ banner("nekohash88x31.png", "https://nekohash.neocities.org", "nekohash") }}
         </section>
     </main>
 

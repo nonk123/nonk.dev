@@ -35,3 +35,14 @@
 .al-end {
     align-items: end;
 }
+
+img.banner {
+    width: 88px;
+    height: auto;
+
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
