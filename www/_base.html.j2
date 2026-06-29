@@ -22,9 +22,9 @@
     <meta http-equiv="Content-Language" content="en">
     <meta name="robots" content="{% block robots -%}index, follow{%- endblock %}">
 
-    <title>{% block what -%}{%- endblock %} | {{ site_name }}</title>
-    <meta name="description" content="{% block description -%}{%- endblock %}">
-    <link rel="canonical" href="https://nonk.dev{% block url -%}{%- endblock %}">
+    <title>{% block what required -%}{%- endblock %} | {{ site_name }}</title>
+    <meta name="description" content="{% block description required -%}{%- endblock %}">
+    <link rel="canonical" href="https://nonk.dev{% block url required -%}{%- endblock %}">
     <meta name="theme-color" content="#141414">
 
     <meta property="og:title" content="{{ self.what() }}">
@@ -100,7 +100,7 @@
 
     <main class="row wrap">
         <section id="content" class="w100">
-            {% block content %}{% endblock %}
+            {% block content required %}{% endblock %}
         </section>
         <section id="statuscafe">
             <div id="status-username">
@@ -129,6 +129,7 @@
 
     <footer class="row sp-between">
         <span>last updated: <strong>{{ last_updated }}</strong></span>
+        <span><a href="/shitposts/wtf">wtf?</a></span>
         <span>powered by <a target="_blank" href="https://github.com/nonk123/sanity">sanity</a>
               | <a target="_blank" href="https://github.com/nonk123/nonk.dev">source code</a></span>
     </footer>
