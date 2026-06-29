@@ -23,3 +23,7 @@ Powered by [sanity](https://github.com/nonk123/sanity).
 ![Screenshot of the projects page (portrait/mobile orientation)](.github/assets/screenie-portrait-1.png)
 
 ![Screenshot of the about-me page (portrait/mobile orientation)](.github/assets/screenie-portrait-2.png)
+
+## Attribution
+
+- [Ruffle](https://ruffle.rs) sourced from [their self-hosting distribution](https://github.com/ruffle-rs/ruffle/releases/download/v0.3.0/ruffle-0.3.0-web-selfhosted.zip).
