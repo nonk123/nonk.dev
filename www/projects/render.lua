@@ -2,7 +2,7 @@ local projects = {
     {
         id = "klawiatura",
         title = "Klawiatura",
-        description = "Mario Forever online, powered by <a href=\"/projects#nutpunch\">nutpunch</a>",
+        description = "Mario Forever online, powered by <a href=\"/projects#nutblast\">NutBlast</a>",
         url = "https://github.com/toggins/Klawiatura",
         icon = {
             path = "klawiatura.png",
@@ -10,12 +10,25 @@ local projects = {
         }
     },
     {
-        id = "nutpunch",
-        title = "nutpunch",
-        description = "UDP hole-punching & P2P networking for <strong>REAL</strong> men (and women)",
-        url = "https://github.com/Schwungus/nutpunch",
+        id = "nutblast",
+        title = "NutBlast",
+        description =
+        "WebRTC P2P networking for browser & desktop games. the <strong>successor</strong> of <a href=\"/projects#nutpunch\">NutPunch</a>.",
+        url = "https://github.com/Schwungus/NutBlast",
         icon = {
-            path = "nutpunch.png",
+            path = "NutBlast.png",
+            alt = "A warning sign with a picture of a cracked peanut shell exploding dramatically",
+            smooth = true
+        }
+    },
+    {
+        id = "nutpunch",
+        title = "NutPunch",
+        description =
+        "UDP hole-punching & P2P networking for <strong>REAL</strong> men (and women). superseded by <a href=\"/projects#nutblast\">NutBlast</a>.",
+        url = "https://github.com/Schwungus/NutPunch",
+        icon = {
+            path = "NutPunch.png",
             alt = "A warning sign with a picture of a cracked peanut shell",
             smooth = true
         }
