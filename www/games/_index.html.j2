@@ -1,0 +1,37 @@
+{% extends "_base.html" %}
+
+{% import "_icons.html" as icons %}
+
+{% block what %}games{% endblock %}
+{% block description %}games i made that you can play right in your web browser.{% endblock %}
+{% block url %}/games{% endblock %}
+
+{% block head %}
+{{ stylesheet("/games/style.css") }}
+{% endblock %}
+
+{% block content %}
+
+<h1>my web games</h1>
+
+<p>you should try playing those.</p>
+
+<p>click the github icon right next to the headings if you want to see the backing spaghetti code.</p>
+
+{% for game in games %}
+<section class="game w100">
+    <div class="heading row w100">
+        <h2{% if game.id %} id="{{ game.id }}"{% endif %}>
+            <a target="_blank" href="{{ game.play }}">{{ game.title }}</a>
+        </h2>
+        <div>
+            {% if game.github %}
+            <a target="_blank" href="{{ game.github }}">{{ icons.fa("github", "brands") }}</a>
+            {% endif %}
+        </div>
+    </div>
+    <p>{{ game.description | safe }}</p>
+</section>
+{% endfor %}
+
+{% endblock %}
