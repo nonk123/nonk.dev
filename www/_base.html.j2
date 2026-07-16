@@ -76,7 +76,9 @@
         });
     </script>
 
+    {% if chat %}
     <script src="https://iframe.chat/scripts/main.min.js"></script>
+    {% endif %}
 </head>
 
 <body>
@@ -136,6 +138,7 @@
 
     {% block append %}{% endblock %}
 
+    {% if chat %}
     <button id="toggle-chat" aria-hidden="true" onclick="toggle('show-chattable')">
         <img src="/assets/chatto.png" alt="">
         <iframe src="https://iframe.chat/embed?chat=nonkdotdev" id="chattable" frameborder="none"></iframe>
@@ -146,6 +149,7 @@
             stylesheet: "/assets/chattable.css",
         });
     </script>
+    {% endif %}
 </body>
 
 </html>
