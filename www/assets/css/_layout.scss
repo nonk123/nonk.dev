@@ -11,8 +11,9 @@ body {
     color: $white;
     image-rendering: pixelated;
 
+    width: 100%;
     min-height: 100vh;
-    padding: $vgap $sidebar-width;
+    padding: $vgap 0;
     gap: $vgap 0;
 
     display: flex;
@@ -31,27 +32,25 @@ main {
 }
 
 footer {
-    margin: 0 #{-$sidebar-width};
     padding: 0 $hgap;
 }
 
 main {
     flex-grow: 1;
-    align-content: start;
     gap: $vgap $hgap;
-
-    & > * {
-        flex-grow: 1;
-    }
+    align-content: start;
 }
 
 #sidebar {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
 
     width: $sidebar-width;
     padding: $vgap $hgap;
+
+    max-height: 100vh;
+    overflow-y: auto;
 }
 
 #logo {
@@ -77,6 +76,8 @@ main {
 
     #sidebar {
         position: static;
+        max-height: none;
+
         width: $content-width;
         padding: 0;
         margin: 0 auto;
