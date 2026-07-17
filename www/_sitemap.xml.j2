@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {% for section in sections %}
     <url>
-        <loc>https://nonk.dev{{ section.path | safe }}</loc>
+        <loc>https://nonk.dev{{ section.url | safe }}</loc>
         <lastmod>{{ section.lastmod | safe }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
