@@ -119,4 +119,4 @@ local projects = {
     }
 };
 
-render("projects/_index.html", "projects/index.html", { projects = projects });
+render("projects/_index.html", "projects.html", { projects = projects });

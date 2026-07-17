@@ -12,6 +12,7 @@ for id, article in pairs(index.articles) do
     end
 
     local ctx = {}
+
     local addendum = {
         id = id,
         default = index.default,
@@ -19,15 +20,18 @@ for id, article in pairs(index.articles) do
         paragraphs = paragraphs,
         articles = index.articles,
     }
+
     for k, v in pairs(article) do
         ctx[k] = v
     end
+
     for k, v in pairs(addendum) do
         ctx[k] = v
     end
 
-    render("blog/_article.html", "blog/" .. id .. "/index.html", ctx)
+    render("blog/_article.html", "blog/" .. id .. ".html", ctx)
+
     if id == index.default then
-        render("blog/_article.html", "blog/index.html", ctx)
+        render("blog/_article.html", "blog.html", ctx)
     end
 end

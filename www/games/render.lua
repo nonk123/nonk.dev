@@ -23,4 +23,4 @@ local games = {
     },
 };
 
-render("games/_index.html", "games/index.html", { games = games });
+render("games/_index.html", "games.html", { games = games });
