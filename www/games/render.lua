@@ -1,5 +1,11 @@
 local games = {
     {
+        id = "promt",
+        title = "ProMT Playground",
+        description = "ProMT wasted-translations playground.",
+        play = "/games/promt",
+    },
+    {
         id = "verlet",
         title = "Verlet Swing",
         description = "An arcade rope-swinging game with high-scores! Powered by Verlet integration.",

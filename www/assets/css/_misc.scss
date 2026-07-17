@@ -2,6 +2,11 @@
     width: 100%;
 }
 
+textarea {
+    max-width: 100%;
+    min-height: 5em;
+}
+
 .row,
 .col {
     display: flex;

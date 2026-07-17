@@ -1,0 +1,49 @@
+{% extends "_base.html" %}
+
+{% block what %}promt{% endblock %}
+{% block description %}ProMT wasted translation{% endblock %}
+{% block url %}/games/promt{% endblock %}
+
+{% block head %}
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        function translate() {
+            const text = promtInput.value;
+
+            if (text.length < 2)
+                return;
+
+            fetch("https://q7x.ru/promt", {
+                method: "POST",
+                body: text,
+            }).then(x => x.text()).then(text => {
+                promtOutput.value = text;
+            }).catch(() => {
+                promtOutput.value = "Translation API errored out...";
+            });
+        }
+
+        promtInput.addEventListener("focusout", translate);
+    })
+</script>
+{% endblock %}
+
+{% block content %}
+
+<h1>ProMT playground</h1>
+
+<p>unfocus the input to send a translation request to the API.</p>
+
+<p>
+    <label>Original text:<br>
+        <textarea id="promtInput" class="w100" autocomplete="off" placeholder="Text to translate"></textarea>
+    </label>
+</p>
+
+<p>
+    <label>Translation:<br>
+        <textarea id="promtOutput" class="w100" autocomplete="off" placeholder="Translated text appears here" readonly></textarea>
+    </label>
+</p>
+
+{% endblock %}
