@@ -1,11 +1,11 @@
 local sections = {
-    { url = "/",          file = "index.html.j2" },
-    { url = "/about",     file = "about.html.j2" },
-    { url = "/now",       file = "now.html.j2" },
-    { url = "/projects",  file = "projects" },
-    { url = "/blog",      file = "blog" },
-    { url = "/guestbook", file = "guestbook.html.j2" },
-    { url = "/shitposts", file = "shitposts" }
+    { url = "",          file = "index.html.j2" },
+    { url = "about",     file = "about.html.j2" },
+    { url = "now",       file = "now.html.j2" },
+    { url = "projects",  file = "projects" },
+    { url = "blog",      file = "blog" },
+    { url = "guestbook", file = "guestbook.html.j2" },
+    { url = "shitposts", file = "shitposts" }
 };
 
 local sections_ctx = {}
