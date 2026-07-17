@@ -13,7 +13,12 @@
             if (text.length < 2)
                 return;
 
-            fetch("https://q7x.ru/promt", {
+            const cyrillic = (text.match(/\p{Script=Cyrl}/gu) || []).length;
+            const nonWhitespace = (text.match(/\S/gu) || []).length;
+            const latin = nonWhitespace - cyrillic;
+            const targetLang = cyrillic > latin ? "en" : "ru";
+
+            fetch(`https://q7x.ru/promt?to=${targetLang}`, {
                 method: "POST",
                 body: text,
             }).then(x => x.text()).then(text => {
