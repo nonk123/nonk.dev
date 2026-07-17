@@ -2,6 +2,7 @@ local sections = {
     { url = "",          file = "index.html.j2" },
     { url = "about",     file = "about.html.j2" },
     { url = "now",       file = "now.html.j2" },
+    { url = "games",     file = "games" },
     { url = "projects",  file = "projects" },
     { url = "blog",      file = "blog" },
     { url = "guestbook", file = "guestbook.html.j2" },
