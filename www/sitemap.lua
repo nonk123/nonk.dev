@@ -1,20 +1,10 @@
-local sections = {
-    { url = "",          file = "index.html.j2" },
-    { url = "about",     file = "about.html.j2" },
-    { url = "now",       file = "now.html.j2" },
-    { url = "games",     file = "games" },
-    { url = "projects",  file = "projects" },
-    { url = "blog",      file = "blog" },
-    { url = "guestbook", file = "guestbook.html.j2" },
-    { url = "shitposts", file = "shitposts" }
-};
-
+local nav = json("_nav.json")
 local sections_ctx = {}
 
-for idx, section in pairs(sections) do
+for idx, section in pairs(nav) do
     sections_ctx[idx] = {
-        url = section.url,
-        lastmod = lastmod(section.file),
+        url = section.href,
+        lastmod = lastmod(section.lastmod_reference),
     }
 end
 

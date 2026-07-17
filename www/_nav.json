@@ -1,0 +1,48 @@
+[
+    {
+        "href": "/",
+        "title": "home",
+        "rel": "me",
+        "lastmod_reference": "index.html.j2"
+    },
+    {
+        "href": "/about",
+        "title": "about",
+        "rel": "me",
+        "lastmod_reference": "about.html.j2"
+    },
+    {
+        "href": "/now",
+        "title": "now",
+        "rel": "me",
+        "lastmod_reference": "now.html.j2"
+    },
+    {
+        "href": "/games",
+        "title": "games",
+        "lastmod_reference": "games"
+    },
+    {
+        "href": "/projects",
+        "title": "projects",
+        "lastmod_reference": "projects"
+    },
+    {
+        "href": "/blog",
+        "title": "blog",
+        "hover": "under construction!",
+        "lastmod_reference": "blog"
+    },
+    {
+        "href": "/guestbook",
+        "title": "guestbook",
+        "hover": "please sign!",
+        "lastmod_reference": "guestbook.html.j2"
+    },
+    {
+        "href": "/shitposts",
+        "title": "shitposts",
+        "hover": "very shitty...",
+        "lastmod_reference": "shitposts"
+    }
+]
