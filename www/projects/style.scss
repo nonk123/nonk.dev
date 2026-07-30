@@ -13,13 +13,19 @@
     border-radius: $panel-border-radius;
     gap: 0 2ch;
 
-    h2,
-    img.icon {
+    h2 {
         padding-top: $pad;
     }
 
-    img.icon {
-        width: $size;
+    a.icon {
+        margin-top: $pad;
+
+        flex: 0 0 $size;
+        height: $size;
+
+        background-repeat: no-repeat;
+        background-size: contain;
+
         &.smooth {
             image-rendering: auto;
         }

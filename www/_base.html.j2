@@ -36,8 +36,9 @@
 
     <link rel="icon" type="image/png" href="/assets/favicon.png">
 
-    <link rel="preload" href="/assets/chattable.css" as="style"> {# used way below #}
     {{ stylesheet("/assets/style.css") }}
+
+    <link rel="preload" href="/assets/logo.webp" as="image" type="image/webp">
 
     {% block head %}{% endblock %}
 
@@ -77,6 +78,7 @@
     </script>
 
     {% if chat %}
+    <link rel="preload" href="/assets/chattable.css" as="style"> {# used way below #}
     <script src="https://iframe.chat/scripts/main.min.js"></script>
     {% endif %}
 </head>

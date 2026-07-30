@@ -6,6 +6,8 @@
 {% endmacro %}
 
 {% macro fa(name, group, invert = True) %}
-<i aria-hidden="true" height="{{ ICON_SIZE }}" width="{{ ICON_SIZE }}"
-   class="fa-{{ group if group else 'solid' }} fa-{{name}}{{ ' invert' if invert else '' }}"></i>
+<span style="display: inline-block; height: {{ ICON_SIZE }}px; width: {{ ICON_SIZE }}px;">
+    <i aria-hidden="true" height="{{ ICON_SIZE }}" width="{{ ICON_SIZE }}"
+       class="fa-{{ group if group else 'solid' }} fa-{{name}}{{ ' invert' if invert else '' }}"></i>
+</span>
 {% endmacro %}
