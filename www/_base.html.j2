@@ -1,8 +1,8 @@
 {% set site_name = "nonk's website" %}
 
 {% macro stylesheet(path) %}
-<link rel="preload" href="{{ path }}" as="style">
-<link rel="stylesheet" href="{{ path }}">
+<link rel="preload" href="{{ path }}{{ nocache }}" as="style">
+<link rel="stylesheet" href="{{ path }}{{ nocache }}">
 {% endmacro %}
 
 {% macro banner(img, href, alt) %}
@@ -34,11 +34,11 @@
     <meta property="og:site_name" content="{{ site_name }}">
     <meta property="og:type" content="{% block og_type -%}profile{%- endblock %}">
 
-    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <link rel="icon" type="image/png" href="/assets/favicon.png{{ nocache }}">
 
     {{ stylesheet("/assets/style.css") }}
 
-    <link rel="preload" href="/assets/logo.webp" as="image" type="image/webp">
+    <link rel="preload" href="/assets/logo.webp{{ nocache }}" as="image" type="image/webp">
 
     {% block head %}{% endblock %}
 
