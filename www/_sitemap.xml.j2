@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {% set base = "https://nonk.dev" %}
+
     {% for section in sections %}
     <url>
-        <loc>https://nonk.dev{% if section.url != "/" %}{{ section.url | safe }}{% endif %}</loc>
+        <loc>{{ base }}{% if section.url != "/" %}{{ section.url | safe }}{% endif %}</loc>
         <lastmod>{{ section.lastmod | safe }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -10,9 +12,9 @@
     {% endfor %}
 
     {% for id, article in blog.articles | items %}
-    {% if not article.hidden %}
+    {% if not article.hidden and id != blog.default %} {# /blog is covered by the `sections` snippet above #}
     <url>
-        <loc>https://nonk.dev/blog{% if id != blog.default %}/{{ id }}{% endif %}</loc>
+        <loc>{{ base }}/blog/{{ id }}</loc>
         <lastmod>{{ article.date_mod if article.date_mod else article.date_pub }}</lastmod>
         <priority>0.7</priority>
     </url>
