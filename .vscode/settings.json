@@ -8,6 +8,9 @@
         "**/blog/md/*.txt": "html",
         "**/*.html.j2": "jinja-html"
     },
+    "search.exclude": {
+        "www/assets/ruffle/**": true,
+    },
     "[html]": {
         "editor.formatOnSave": false
     },
