@@ -10,17 +10,18 @@ body {
     padding: 0;
 }
 
-body {
-    font-size: 13pt;
-    line-height: 1.1em;
+@font-face {
+    font-family: "Monaspace Neon";
+    src: url("/assets/MonaspaceNeonVar.woff2") format("woff2");
 }
 
-@font-face {
-    font-family: Inconsolata;
-    src: url("https://nonk.dev/assets/Inconsolata.ttf") format("truetype");
+body {
+    font-size: 14px;
+    font-family: "Monaspace Neon", Consolas, monospace;
+    font-weight: 450;
+    letter-spacing: -1px;
 }
 
 * {
-    font-family: Inconsolata, Consolas, monospace;
     box-sizing: border-box;
 }
