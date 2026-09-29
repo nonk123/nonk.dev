@@ -12,14 +12,28 @@ body {
 
 @font-face {
     font-family: "Monaspace Neon";
-    src: url("/assets/MonaspaceNeonVar.woff2") format("woff2");
+    src: url("/assets/MonaspaceNeon-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
 }
 
-body {
+@font-face {
+    font-family: "Monaspace Neon";
+    src: url("/assets/MonaspaceNeon-Italic.woff2") format("woff2");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Monaspace Neon";
+    src: url("/assets/MonaspaceNeon-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root {
+    font-family: "Monaspace Neon", "Consolas", "Menlo", monospace;
     font-size: 14px;
-    font-family: "Monaspace Neon", Consolas, monospace;
-    font-weight: 450;
-    letter-spacing: -1px;
 }
 
 * {
