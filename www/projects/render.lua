@@ -2,7 +2,8 @@ local projects = {
     {
         id = "klawiatura",
         title = "Klawiatura",
-        description = "Mario Forever online, powered by <a href=\"/projects#nutblast\">NutBlast</a>",
+        description =
+        "Mario Forever online, powered by <a href=\"/projects#nutblast\">NutBlast</a>. <a target=\"_blank\" href=\"https://mario.games.nonk.dev\">Play it now!</a>",
         url = "https://github.com/toggins/Klawiatura",
         icon = {
             path = "klawiatura.png",
