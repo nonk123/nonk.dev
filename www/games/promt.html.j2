@@ -23,8 +23,8 @@
                 body: text,
             }).then(x => x.text()).then(text => {
                 promtOutput.value = text;
-            }).catch(() => {
-                promtOutput.value = "Translation API errored out...";
+            }).catch(err => {
+                promtOutput.value = err.toString();
             });
         }
 
