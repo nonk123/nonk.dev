@@ -78,7 +78,7 @@
     </script>
 
     {% if chat %}
-    <link rel="preload" href="/assets/chattable.css" as="style"> {# used way below #}
+    <link rel="preload" href="/assets/chattable.css{{ nocache }}" as="style"> {# used way below #}
     <script src="https://iframe.chat/scripts/main.min.js"></script>
     {% endif %}
 </head>
@@ -150,7 +150,7 @@
 
     <script>
         chattable.initialize({
-            stylesheet: "/assets/chattable.css",
+            stylesheet: "/assets/chattable.css{{ nocache }}",
         });
     </script>
     {% endif %}
