@@ -30,8 +30,12 @@ main {
     margin: 0 auto;
 }
 
+#dummy {
+    flex: 1 1 0;
+    margin-top: -$vgap;
+}
+
 main {
-    flex-grow: 1;
     gap: $vgap $hgap;
     align-content: start;
 }
