@@ -1,8 +1,12 @@
 @use "constants" as *;
 
 body {
+    $fade: rgba(0, 0, 0, 0.5);
+
     background-color: rgb(0, 0, 0);
-    background-image: url("https://vga9x16.ru/png?transparent=true");
+    background-image:
+        linear-gradient($fade, $fade),
+        url("https://vga9x16.ru/png?transparent=true");
     background-size: 288px 288px;
     background-repeat: repeat;
     background-position: 33% 33%;
