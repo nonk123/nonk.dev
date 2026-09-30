@@ -34,10 +34,11 @@
 {% endblock %}
 
 {% block content %}
-
 <h1>ProMT playground</h1>
 
 <p>unfocus the input to send a translation request to the API.</p>
+
+<p>input language is detected automatically between RU/EN.</p>
 
 <p>
     <label>Original text:<br>
@@ -50,5 +51,4 @@
         <textarea id="promtOutput" class="w100" autocomplete="off" placeholder="Translated text appears here" readonly></textarea>
     </label>
 </p>
-
 {% endblock %}
