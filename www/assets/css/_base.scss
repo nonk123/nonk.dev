@@ -32,8 +32,12 @@ body {
 }
 
 :root {
-    font-family: "Monaspace Neon", "Consolas", "Menlo", monospace;
+    font-family: "Monaspace Neon", Consolas, Menlo, monospace;
     font-size: 14px;
+}
+
+body {
+    font-weight: normal;
 }
 
 * {

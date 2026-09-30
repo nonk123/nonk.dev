@@ -1,25 +1,24 @@
 @use "constants" as *;
 
 .project {
-    $gap: 12px;
-    $size: 128px;
-
     background: transparentize($grayish, 0.7);
-    margin-block: $gap 0;
 
     $pad: 12px;
     padding: 0 $pad $pad $pad;
+    margin-bottom: 1rem;
 
     border-radius: $panel-border-radius;
     gap: 0 2ch;
 
     h2 {
         padding-top: $pad;
+        margin: 0;
     }
 
     a.icon {
         margin-top: $pad;
 
+        $size: 128px;
         flex: 0 0 $size;
         height: $size;
 

@@ -13,7 +13,7 @@
 <p>click the icons/headings for more info!</p>
 
 {% for project in projects %}
-<section class="project w100 row">
+<div class="project row">
     <a target="_blank" rel="nofollow" href="{{ project.url }}" aria-hidden="true"
        class="icon{% if project.icon and project.icon.smooth %} smooth{% endif %}"
        style="background-image: url('/projects/icons/{% if project.icon %}{{ project.icon.path }}{% else %}null.png{% endif %}')"
@@ -25,6 +25,6 @@
         </h2>
         <p>{{ project.description | safe }}</p>
     </div>
-</section>
+</div>
 {% endfor %}
 {% endblock %}

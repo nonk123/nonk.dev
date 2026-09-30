@@ -30,6 +30,12 @@ h1::before {
     content: "# ";
 }
 
+h1,
+h2,
+p {
+    margin: 0 0 1rem 0;
+}
+
 code {
     background: $hardblack;
 }
@@ -57,13 +63,6 @@ ul:not(.nodash) > li {
     }
 }
 
-h1,
-h2,
-ul,
-p {
-    margin-block: 0 1rem;
-}
-
 a:not(:has(> img)) {
     &,
     &:visited {
@@ -77,12 +76,9 @@ a:not(:has(> img)) {
         text-decoration: $white underline;
     }
 
-    line-height: 24px;
-
     &.strong {
         font-size: 1.2em;
         font-weight: bolder;
-        line-height: 28px;
     }
 }
 
@@ -98,5 +94,5 @@ hr {
     width: 100%;
     border: none;
     border-top: 1px dashed $white;
-    margin-block: 1em 1ex;
+    margin: 1rem 0;
 }
