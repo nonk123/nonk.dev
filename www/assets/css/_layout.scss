@@ -13,7 +13,6 @@ body {
 
     width: 100%;
     min-height: 100vh;
-    padding: $vgap 0;
     gap: $vgap 0;
 
     display: flex;
@@ -31,10 +30,6 @@ main {
     margin: 0 auto;
 }
 
-footer {
-    padding: 0 $hgap;
-}
-
 main {
     flex-grow: 1;
     gap: $vgap $hgap;
@@ -47,10 +42,15 @@ main {
     top: 0;
 
     width: $sidebar-width;
-    padding: $vgap $hgap;
-
     max-height: 100vh;
     overflow-y: auto;
+}
+
+header,
+main,
+#sidebar,
+footer {
+    padding: $vgap $hgap;
 }
 
 #logo {
@@ -61,13 +61,11 @@ main {
 
 @include mobile {
     body {
-        padding: $vgap $hgap;
         gap: $vgap $hgap;
     }
 
     footer {
         margin: 0;
-        padding: 0;
     }
 
     #logo {
@@ -79,7 +77,6 @@ main {
         max-height: none;
 
         width: $content-width;
-        padding: 0;
         margin: 0 auto;
 
         hr {
@@ -148,8 +145,6 @@ body.show-chattable #chattable {
 }
 
 #statuscafe {
-    padding: 0.5em;
-
     &-username {
         margin-bottom: 0.5em;
     }

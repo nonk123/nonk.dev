@@ -1,6 +1,5 @@
 @use "constants" as *;
 
-main,
 #content {
     padding: 0;
 }
@@ -8,6 +7,5 @@ main,
 #guestbook {
     width: 100%;
     min-height: 70vh;
-    border-radius: $panel-border-radius;
     border: none;
 }

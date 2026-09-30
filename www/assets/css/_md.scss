@@ -39,6 +39,7 @@ p {
 code {
     background: $hardblack;
 }
+
 code.block {
     display: block;
     margin: 0 2ch;
@@ -47,13 +48,16 @@ code.block {
 }
 
 $li-indent: 2ch;
+
 ul {
     padding: 0;
     list-style-type: none;
 }
+
 ul.nodash > li {
     margin-left: $li-indent;
 }
+
 ul:not(.nodash) > li {
     margin-left: calc(2 * $li-indent);
     text-indent: calc(-1 * $li-indent);
