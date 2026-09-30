@@ -1,6 +1,6 @@
 @use "constants" as *;
 
-$content-width: calc(min($content-width, 100%));
+$content-width: calc(min($content-width, 100%) - 2 * $hgap);
 
 :root {
     background: $softblack;
