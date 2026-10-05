@@ -1,6 +1,7 @@
 local posts = {
     { "gcc.mp4",             "the GCC conspiracy" },
     { "xpam.mp4",            "the ultimate universal salvation through faith" },
+    { "diddyblud.mp4",       "what's up diddy blud?" },
     { "gromitjockey.mp4",    "a shocking revelation from wallace & gromit" },
     { "bigtasty.mp4",        "how we cook the big tasty" },
     { "postal.mp4",          "postal dude irl" },
