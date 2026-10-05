@@ -1,6 +1,6 @@
 @use "constants" as *;
 
-$content-width: calc(min($content-width, 100%) - 2 * $hgap);
+$content-width: calc(min($content-width, 100%));
 
 :root {
     background: $softblack;
@@ -26,6 +26,7 @@ body > code {
 
 header,
 main {
+    box-sizing: border-box;
     width: $content-width;
     margin: 0 auto;
 }
@@ -80,6 +81,7 @@ footer {
         position: static;
         max-height: none;
 
+        box-sizing: border-box;
         width: $content-width;
         margin: 0 auto;
 
