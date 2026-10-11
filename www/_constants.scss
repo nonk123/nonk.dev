@@ -2,12 +2,12 @@ $vgap: 16px;
 $hgap: 18px;
 
 $content-width: 700px;
-$sidebar-width: 200px;
+$sidebar-width: 240px;
 
 $chat-width: 300px;
 $chat-height: 700px;
 
-$desktop-width: $content-width + 2 * $sidebar-width + 5 * $hgap;
+$desktop-width: $content-width + 2 * $sidebar-width + 2 * $hgap;
 
 $white: #f7f7f7;
 $hardblack: #080808;

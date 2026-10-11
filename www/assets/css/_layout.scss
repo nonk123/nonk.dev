@@ -17,13 +17,14 @@ body {
 
     display: flex;
     flex-flow: column nowrap;
+    align-items: center;
 }
 
 header,
-main {
-    box-sizing: border-box;
+main,
+footer {
     width: $content-width;
-    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 #dummy {
@@ -37,6 +38,8 @@ main {
 }
 
 #sidebar {
+    box-sizing: border-box;
+
     position: fixed;
     left: 0;
     top: 0;
@@ -44,6 +47,11 @@ main {
     width: $sidebar-width;
     max-height: 100vh;
     overflow-y: auto;
+}
+
+#waligie {
+    display: block;
+    margin: 0 auto;
 }
 
 header,
@@ -64,21 +72,14 @@ footer {
         gap: $vgap $hgap;
     }
 
-    footer {
-        margin: 0;
-    }
-
     #logo {
         max-height: 128px;
     }
 
     #sidebar {
         position: static;
-        max-height: none;
-
-        box-sizing: border-box;
         width: $content-width;
-        margin: 0 auto;
+        max-height: none;
 
         hr {
             display: none;
@@ -94,10 +95,6 @@ footer {
             break-inside: avoid;
         }
     }
-}
-
-:where(header, footer) {
-    padding: $vgap 0;
 }
 
 #header-links {
