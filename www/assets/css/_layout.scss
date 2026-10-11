@@ -19,11 +19,6 @@ body {
     flex-flow: column nowrap;
 }
 
-// the Claude killer snippet.
-body > code {
-    display: none;
-}
-
 header,
 main {
     box-sizing: border-box;
