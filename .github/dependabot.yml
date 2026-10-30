@@ -1,15 +1,17 @@
 version: 2
+
+multi-ecosystem-groups:
+  sybau:
+    schedule:
+      interval: quarterly
+
 updates:
   - package-ecosystem: github-actions
     directory: /
-    schedule: { interval: weekly }
-    groups:
-      sybau:
-        patterns: ["*"]
+    multi-ecosystem-group: sybau
+    patterns: ["*"]
 
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule: { interval: weekly }
-    groups:
-      sybau:
-        patterns: ["*"]
+  - package-ecosystem: npm
+    directory: /
+    multi-ecosystem-group: sybau
+    patterns: ["*"]
