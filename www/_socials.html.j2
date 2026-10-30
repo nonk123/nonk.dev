@@ -1,16 +1,7 @@
 {% import "_icons.html" as icons %}
 
-{% macro link(icon, title, href, blank = True) %}
-<li>
-    {% if icon -%}
-        {{ icon }}
-    {%- else -%}
-        {{ icons.fa("globe") }}
-    {%- endif %}
-    <a rel="me" href="{{ href }}" {% if blank -%}target="_blank"{%- endif %}>
-        {{- title -}}
-    </a>
-</li>
+{% macro link(title, href, icon = icons.fa("globe"), blank = True) %}
+<li>{{ icon }} <a href="{{ href }}" {% if blank -%}target="_blank"{%- endif %}>{{- title -}}</a></li>
 {% endmacro %}
 
 <section>
@@ -24,13 +15,13 @@
 <section>
     <p>socials:</p>
     <ul class="nodash">
-        {{ link(icons.fa("envelope"), "email", "mailto:me@nonk.dev", blank=False) }}
-        {{ link(icons.fa("github", "brands"), "github", links.github) }}
-        {{ link(icons.fa("bluesky", "brands"), "bluesky", "https://bsky.app/profile/nonk.dev") }}
-        {{ link(None, "status.cafe", "https://status.cafe/users/nonk") }}
-        {{ link(icons.fa("itch-io", "brands"), "itch.io", "https://nonk123.itch.io") }}
-        {{ link(icons.fa("youtube", "brands"), "youtube", links.youtube)}}
-        {{ link(icons.fa("steam", "brands"), "steam", links.steam) }}
+        {{ link("email", "mailto:me@nonk.dev", icon=icons.fa("envelope"), blank=False) }}
+        {{ link("github", links.github, icon=icons.fa("github", "brands")) }}
+        {{ link("bluesky", "https://bsky.app/profile/nonk.dev", icon=icons.fa("bluesky", "brands")) }}
+        {{ link("status.cafe", "https://status.cafe/users/nonk") }}
+        {{ link("itch.io", "https://nonk123.itch.io", icon=icons.fa("itch-io", "brands")) }}
+        {{ link("youtube", links.youtube, icon=icons.fa("youtube", "brands"))}}
+        {{ link("steam", links.steam, icon=icons.fa("steam", "brands")) }}
     </ul>
     <hr>
 </section>
@@ -38,8 +29,8 @@
 <section>
     <p>friends:</p>
     <ul class="nodash">
-        {{ link(icons.ass("cantsleep.cc.png"), "can't sleep", "https://cantsleep.cc")}}
-        {{ link(None, "vile beggar", "https://vilebeggar.github.io")}}
+        {{ link("can't sleep", "https://cantsleep.cc", icon=icons.ass("cantsleep.cc.png"))}}
+        <li title="closed their site :(">{{ icons.fa("globe") }} <s>vile beggar</s></li>
     </ul>
     <hr>
 </section>
@@ -47,7 +38,7 @@
 <section>
     <p>collectives:</p>
     <ul class="nodash">
-        {{ link(icons.ass("schwung.us.png", invert=False), "schwungus", "https://schwung.us")}}
+        {{ link("schwungus", "https://schwung.us", icon=icons.ass("schwung.us.png", invert=False))}}
     </ul>
     <hr>
 </section>
