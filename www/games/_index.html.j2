@@ -31,6 +31,9 @@
         </div>
     </div>
     <p>{{ game.description | safe }}</p>
+    {% for screenie in game.screenies %}
+    <p><img src="/games/{{ screenie }}"></p>
+    {% endfor %}
 </section>
 {% endfor %}
 
