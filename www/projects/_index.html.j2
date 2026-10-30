@@ -13,13 +13,13 @@
 <p>click the icons/headings for more info!</p>
 
 {% for project in projects %}
-<div class="project row">
+<div class="project row w100">
     <a target="_blank" rel="nofollow" href="{{ project.url }}" aria-hidden="true"
        class="icon{% if project.icon and project.icon.smooth %} smooth{% endif %}"
        style="background-image: url('/projects/icons/{% if project.icon %}{{ project.icon.path }}{% else %}null.png{% endif %}')"
        alt="{% if project.icon %}{{ project.icon.alt }}{% else %}'No icon' in poor handwriting{% endif %}">
     </a>
-    <div class="description">
+    <div>
         <h2 {% if project.id %}id="{{ project.id }}"{% endif %}>
             <a target="_blank" rel="nofollow" href="{{ project.url }}">{{ project.title }}</a>
         </h2>
