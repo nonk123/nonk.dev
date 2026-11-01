@@ -7,22 +7,23 @@
 {% block head %}
 {{ stylesheet("/shitposts/style.css") }}
 <script>
-    function staph() {
-        shitpost.pause();
-        shitpost.currentTime = 0.0;
-
-        const container = document.getElementById("shitpost-container");
-        container.style.display = "none";
-    }
-
     document.addEventListener("DOMContentLoaded", function () {
         const container = document.getElementById("shitpost-container");
 
-        for (const link of document.getElementsByClassName("shitpost")) {
-            link.addEventListener("click", ev => {
-                ev.preventDefault();
+        function staph(e) {
+            e.preventDefault();
+            shitpost.pause();
+            shitpost.currentTime = 0.0;
+            container.style.display = "none";
+        }
 
-                staph();
+        for (const elt of [container, ...container.childNodes])
+            elt.addEventListener("click", staph);
+
+        for (const link of document.getElementsByClassName("shitpost")) {
+            link.addEventListener("click", function(e) {
+                staph(e);
+
                 container.style.display = "block";
 
                 shitpost.src = link.attributes.href.nodeValue;
@@ -49,8 +50,8 @@
 {% endblock %}
 
 {% block append %}
-<div id="shitpost-container" style="display: none;" onclick="staph()">
-    <div id="shitpost-loading" onclick="staph()">loading...</div>
-    <video id="shitpost" loop="true" onclick="staph()"></video>
-</div>
+<a id="shitpost-container" style="display: none;" href="/shitposts">
+    <div id="shitpost-loading">loading...</div>
+    <video id="shitpost" loop="true"></video>
+</a>
 {% endblock %}

@@ -9,9 +9,6 @@
         padding: 5vh 0;
     }
 
-    user-select: none;
-    cursor: pointer;
-
     z-index: 1000;
     position: fixed;
     left: 0;
@@ -25,13 +22,10 @@
 }
 
 #shitpost-loading {
-    cursor: pointer;
     font-size: 2em;
 }
 
 #shitpost {
-    cursor: pointer;
-
     height: 100%;
     width: auto;
 
@@ -39,8 +33,4 @@
         width: 100%;
         height: auto;
     }
-}
-
-.shitpost {
-    cursor: pointer;
 }
