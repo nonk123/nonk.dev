@@ -15,6 +15,17 @@
             shitpost.pause();
             shitpost.currentTime = 0.0;
             container.style.display = "none";
+            window.location.hash = "";
+        }
+
+        function open(elt) {
+            window.location.hash = elt.id;
+
+            container.style.display = "block";
+
+            shitpost.src = elt.attributes["data-file"].nodeValue;
+            shitpost.type = "video/mp4";
+            shitpost.play();
         }
 
         for (const elt of [container, ...container.childNodes])
@@ -23,13 +34,18 @@
         for (const link of document.getElementsByClassName("shitpost")) {
             link.addEventListener("click", function(e) {
                 staph(e);
-
-                container.style.display = "block";
-
-                shitpost.src = link.attributes.href.nodeValue;
-                shitpost.type = "video/mp4";
-                shitpost.play();
+                open(link);
             });
+        }
+
+        const hash = window.location.hash;
+
+        if (hash) {
+            const id = hash.slice(1);
+            const elt = document.getElementById(id);
+
+            if (elt)
+                open(elt);
         }
     });
 </script>
@@ -41,7 +57,7 @@
 <p><img src="/shitposts/raw/utley.webp" aria-hidden="true" alt=""></p>
 <ul>{% for file, title in posts %}
     <li>
-        <a rel="noindex nofollow" href="/shitposts/raw/{{ file }}" class="shitpost">
+        <a rel="noindex nofollow" data-file="/shitposts/raw/{{ file }}" href="/shitposts#{{ file }}" class="shitpost" id="{{ file }}">
             {{- file }} -- {{ title -}}
         </a>
     </li>
