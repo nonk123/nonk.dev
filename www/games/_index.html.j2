@@ -32,7 +32,11 @@
     </div>
     <p>{{ game.description | safe }}</p>
     {% for screenie in game.screenies %}
-    <p><img src="/games/{{ screenie }}"></p>
+    <p>
+        <a target="_blank" href="{{ game.play }}">
+            <img src="/games/{{ screenie }}">
+        </a>
+    </p>
     {% endfor %}
 </section>
 {% endfor %}
