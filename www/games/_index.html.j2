@@ -25,9 +25,7 @@
             <a target="_blank" href="{{ game.play }}">{{ game.title }}</a>
         </h2>
         <div>
-            {% if game.github %}
-            <a target="_blank" href="{{ game.github }}">{{ icons.fa("github", "brands") }}</a>
-            {% endif %}
+            {% if game.github %}<a target="_blank" href="{{ game.github }}">{{ icons.github }}</a>{% endif %}
         </div>
     </div>
     <p>{{ game.description | safe }}</p>

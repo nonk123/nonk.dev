@@ -1,6 +1,6 @@
 {% import "_icons.html" as icons %}
 
-{% macro link(title, href, icon = icons.fa("globe"), blank = True) %}
+{% macro link(title, href, icon = icons.globe, blank = True) %}
 <li>{{ icon }} <a href="{{ href }}" {% if blank -%}target="_blank"{%- endif %}>{{- title -}}</a></li>
 {% endmacro %}
 
@@ -15,13 +15,13 @@
 <section>
     <p>socials:</p>
     <ul class="nodash">
-        {{ link("email", "mailto:me@nonk.dev", icon=icons.fa("envelope"), blank=False) }}
-        {{ link("github", links.github, icon=icons.fa("github", "brands")) }}
-        {{ link("bluesky", "https://bsky.app/profile/nonk.dev", icon=icons.fa("bluesky", "brands")) }}
+        {{ link("email", "mailto:me@nonk.dev", icon=icons.ass("mail.svg"), blank=False) }}
+        {{ link("github", links.github, icon=icons.github) }}
+        {{ link("bluesky", "https://bsky.app/profile/nonk.dev", icon=icons.ass("bluesky.svg")) }}
         {{ link("status.cafe", "https://status.cafe/users/nonk") }}
-        {{ link("itch.io", "https://nonk123.itch.io", icon=icons.fa("itch-io", "brands")) }}
-        {{ link("youtube", links.youtube, icon=icons.fa("youtube", "brands"))}}
-        {{ link("steam", links.steam, icon=icons.fa("steam", "brands")) }}
+        {{ link("itch.io", "https://nonk123.itch.io", icon=icons.ass("itchdotio.svg")) }}
+        {{ link("youtube", links.youtube, icon=icons.ass("youtube.svg")) }}
+        {{ link("steam", links.steam, icon=icons.ass("steam.svg")) }}
     </ul>
     <hr>
 </section>
@@ -29,8 +29,8 @@
 <section>
     <p>friends:</p>
     <ul class="nodash">
-        {{ link("can't sleep", "https://cantsleep.cc", icon=icons.ass("cantsleep.cc.png"))}}
-        <li title="closed their site :(">{{ icons.fa("globe") }} <s>vile beggar</s></li>
+        {{ link("can't sleep", "https://cantsleep.cc", icon=icons.ass("cantsleep.cc.png")) }}
+        <li title="closed their site :(">{{ icons.globe }} <s>vile beggar</s></li>
     </ul>
     <hr>
 </section>
