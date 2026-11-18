@@ -8,17 +8,18 @@ local games = {
         screenies = { "klawiatura1.png", "klawiatura2.png" },
     },
     {
+        id = "verlet",
+        title = "Verlet Swing",
+        description = "A rope-swinging racing game, powered by Verlet integration!",
+        github = "https://github.com/nonk123/VerletSwing",
+        play = "https://verlet.games.nonk.dev",
+        screenies = { "verlet1.png" },
+    },
+    {
         id = "promt",
         title = "ProMT Playground",
         description = "ProMT wasted-translations playground.",
         play = "/games/promt",
-    },
-    {
-        id = "verlet",
-        title = "Verlet Swing",
-        description = "An arcade rope-swinging game with high-scores! Powered by Verlet integration.",
-        github = "https://github.com/nonk123/VerletSwing",
-        play = "https://verlet.games.nonk.dev",
     },
 };
 
