@@ -67,10 +67,10 @@
                 .then(response => {
                     if (response.content.length) {
                         const username = document.createTextNode(" " + response.face + " " + response.timeAgo);
-                        document.getElementById("status-username").appendChild(username);
-                        document.getElementById("status-content").innerHTML = response.content;
+                        document.getElementById("statuscafe-username").appendChild(username);
+                        document.getElementById("statuscafe-content").innerHTML = response.content;
                     } else {
-                        document.getElementById("status-content").textContent = "No status yet.";
+                        document.getElementById("statuscafe-content").textContent = "No status yet.";
                     }
                 });
         });
@@ -105,11 +105,11 @@
         <section id="content" class="w100">
             {% block content required %}{% endblock %}
         </section>
-        <section id="statuscafe">
-            <div id="status-username">
+        <section id="statuscafe" class="w100">
+            <div id="statuscafe-username">
                 <a target="_blank" rel="me" href="https://status.cafe/users/nonk">nonk</a>
             </div>
-            <div id="status-content">Loading status...</div>
+            <div id="statuscafe-content">Loading status...</div>
         </section>
         <section class="row al-center">
             <div class="center">

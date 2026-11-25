@@ -143,10 +143,12 @@ body.show-chattable #chattable {
 
 #statuscafe {
     &-username {
+        min-height: 1lh;
         margin-bottom: 0.5em;
     }
 
     &-content {
+        min-height: 2lh;
         margin: 0 1em 0.5em 1em;
     }
 }
