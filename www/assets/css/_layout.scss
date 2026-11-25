@@ -3,13 +3,12 @@
 $content-width: calc(min($content-width, 100%));
 
 :root {
-    background: $softblack;
-    overflow-y: scroll;
+    image-rendering: pixelated;
 }
 
 body {
+    background: transparent;
     color: $white;
-    image-rendering: pixelated;
 
     width: 100%;
     min-height: 100vh;
@@ -18,6 +17,8 @@ body {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+
+    overflow-y: scroll;
 }
 
 header,
